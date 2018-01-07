@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/reminder"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFEEEEEE"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/app_bar6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FF009688"
+        android:fontFamily="sans-serif-medium"
+        android:textSize="20sp"
+        android:textStyle="normal"
+        android:theme="@style/app_bar_style6"
+        app:title="Reminder"
+        app:titleTextColor="#FFFFFFFF" />
+
+    <android.support.percent.PercentRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/floating_action_button1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#FF009688"
+            android:src="@drawable/plus_sign_ffffffff"
+            app:borderWidth="0dp"
+            app:layout_marginStartPercent="77.999997138977%"
+            app:layout_marginTopPercent="85.000002384186%" />
+    </android.support.percent.PercentRelativeLayout>
+</LinearLayout>

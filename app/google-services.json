@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "47925853950",
+    "firebase_url": "https://medistant-1512142546778.firebaseio.com",
+    "project_id": "medistant-1512142546778",
+    "storage_bucket": "medistant-1512142546778.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:47925853950:android:f7b92f571af72f95",
+        "android_client_info": {
+          "package_name": "com.sglabs.medistant"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "47925853950-98usmmn7ra7e8flqm8nmjvt13bvv0nf5.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "47925853950-csh6cnjaa3haettrir01fj89qlo803cb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCQuE5tDtkmCQz1N-xaBbcA2pMNplOm2bI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

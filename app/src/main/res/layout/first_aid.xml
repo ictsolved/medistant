@@ -1,0 +1,509 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/first_aid"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFEEEEEE"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FF009688"
+        android:fontFamily="sans-serif-medium"
+        android:textSize="20sp"
+        android:textStyle="normal"
+        android:theme="@style/app_bar_style"
+        app:title="First Aid"
+        app:titleTextColor="#FFFFFFFF" />
+
+    <android.support.percent.PercentRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.sglabs.medistant.elements.firstaidactivity.ScrollView1
+            android:id="@+id/scroll_view1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="0dp"
+            android:background="#FFEEEEEE"
+            android:fillViewport="true"
+            android:scrollbars="vertical">
+
+            <android.support.percent.PercentRelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <com.sglabs.medistant.elements.firstaidactivity.StaticList1 xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:id="@+id/static_list1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginTop="0dp"
+                    android:background="#FFEEEEEE"
+                    android:fillViewport="true"
+                    android:scrollbars="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <com.sglabs.medistant.elements.firstaidactivity.StaticListTile1
+                            android:id="@+id/static_list_tile1"
+                            android:layout_width="match_parent"
+                            android:layout_height="62dp"
+                            android:background="#FFEEEEEE">
+
+                            <com.sglabs.medistant.elements.firstaidactivity.View1
+                                android:id="@+id/view1"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:background="#FFFFFFFF"
+                                app:layout_heightPercent="98.000001907349%"
+                                app:layout_marginStartPercent="0%"
+                                app:layout_marginTopPercent="0%">
+
+                                <android.support.v7.widget.AppCompatImageView
+                                    android:id="@+id/image_view1"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:background="#FFFFFFFF"
+                                    android:scaleType="centerInside"
+                                    android:src="@drawable/abdomen_pain"
+                                    app:layout_marginStartPercent="0%"
+                                    app:layout_marginTopPercent="0%"
+                                    app:layout_widthPercent="25%" />
+
+                                <android.support.v7.widget.AppCompatButton
+                                    android:id="@+id/text_button1"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:background="#FFFFFFFF"
+                                    android:cropToPadding="true"
+                                    android:fontFamily="sans-serif"
+                                    android:gravity="center|start"
+                                    android:letterSpacing="0"
+                                    android:text="@string/text_button1_text"
+                                    android:textColor="#FF009688"
+                                    android:textSize="16sp"
+                                    android:textStyle="normal"
+                                    app:layout_marginStartPercent="25%"
+                                    app:layout_marginTopPercent="0%"
+                                    app:layout_widthPercent="75%" />
+                            </com.sglabs.medistant.elements.firstaidactivity.View1>
+                        </com.sglabs.medistant.elements.firstaidactivity.StaticListTile1>
+
+                        <com.sglabs.medistant.elements.firstaidactivity.StaticListTile2
+                            android:id="@+id/static_list_tile2"
+                            android:layout_width="match_parent"
+                            android:layout_height="62dp"
+                            android:background="#FFEEEEEE">
+
+                            <com.sglabs.medistant.elements.firstaidactivity.View2
+                                android:id="@+id/view2"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:background="#FFFFFFFF"
+                                app:layout_heightPercent="98.000001907349%"
+                                app:layout_marginStartPercent="0%"
+                                app:layout_marginTopPercent="0%">
+
+                                <android.support.v7.widget.AppCompatImageView
+                                    android:id="@+id/image_view2"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:background="#FFFFFFFF"
+                                    android:scaleType="centerInside"
+                                    android:src="@drawable/anim_bite"
+                                    app:layout_marginStartPercent="0%"
+                                    app:layout_marginTopPercent="0%"
+                                    app:layout_widthPercent="25%" />
+
+                                <android.support.v7.widget.AppCompatButton
+                                    android:id="@+id/text_button26"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:background="#FFFFFFFF"
+                                    android:cropToPadding="true"
+                                    android:fontFamily="sans-serif"
+                                    android:gravity="center|start"
+                                    android:letterSpacing="0"
+                                    android:text="@string/text_button26_text"
+                                    android:textColor="#FF009688"
+                                    android:textSize="16sp"
+                                    android:textStyle="normal"
+                                    app:layout_marginStartPercent="25%"
+                                    app:layout_marginTopPercent="0%"
+                                    app:layout_widthPercent="75%" />
+                            </com.sglabs.medistant.elements.firstaidactivity.View2>
+                        </com.sglabs.medistant.elements.firstaidactivity.StaticListTile2>
+
+                        <com.sglabs.medistant.elements.firstaidactivity.StaticListTile3
+                            android:id="@+id/static_list_tile3"
+                            android:layout_width="match_parent"
+                            android:layout_height="62dp"
+                            android:background="#FFEEEEEE">
+
+                            <com.sglabs.medistant.elements.firstaidactivity.View3
+                                android:id="@+id/view3"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:background="#FFFFFFFF"
+                                app:layout_heightPercent="98.000001907349%"
+                                app:layout_marginStartPercent="0%"
+                                app:layout_marginTopPercent="0%">
+
+                                <android.support.v7.widget.AppCompatImageView
+                                    android:id="@+id/image_view3"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:background="#FFFFFFFF"
+                                    android:scaleType="centerInside"
+                                    android:src="@drawable/broken_toe"
+                                    app:layout_marginStartPercent="0%"
+                                    app:layout_marginTopPercent="0%"
+                                    app:layout_widthPercent="25%" />
+
+                                <android.support.v7.widget.AppCompatButton
+                                    android:id="@+id/text_button2"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:background="#FFFFFFFF"
+                                    android:cropToPadding="true"
+                                    android:fontFamily="sans-serif"
+                                    android:gravity="center|start"
+                                    android:letterSpacing="0"
+                                    android:text="@string/text_button2_text"
+                                    android:textColor="#FF009688"
+                                    android:textSize="16sp"
+                                    android:textStyle="normal"
+                                    app:layout_marginStartPercent="25%"
+                                    app:layout_marginTopPercent="0%"
+                                    app:layout_widthPercent="75%" />
+                            </com.sglabs.medistant.elements.firstaidactivity.View3>
+                        </com.sglabs.medistant.elements.firstaidactivity.StaticListTile3>
+
+                        <com.sglabs.medistant.elements.firstaidactivity.StaticListTile4
+                            android:id="@+id/static_list_tile4"
+                            android:layout_width="match_parent"
+                            android:layout_height="62dp"
+                            android:background="#FFEEEEEE">
+
+                            <com.sglabs.medistant.elements.firstaidactivity.View4
+                                android:id="@+id/view4"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:background="#FFFFFFFF"
+                                app:layout_heightPercent="98.000001907349%"
+                                app:layout_marginStartPercent="0%"
+                                app:layout_marginTopPercent="0%">
+
+                                <android.support.v7.widget.AppCompatImageView
+                                    android:id="@+id/image_view4"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:background="#FFFFFFFF"
+                                    android:scaleType="centerInside"
+                                    android:src="@drawable/cuts_wound"
+                                    app:layout_marginStartPercent="0%"
+                                    app:layout_marginTopPercent="0%"
+                                    app:layout_widthPercent="25%" />
+
+                                <android.support.v7.widget.AppCompatButton
+                                    android:id="@+id/text_button3"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:background="#FFFFFFFF"
+                                    android:cropToPadding="true"
+                                    android:fontFamily="sans-serif"
+                                    android:gravity="center|start"
+                                    android:letterSpacing="0"
+                                    android:text="@string/text_button3_text"
+                                    android:textColor="#FF009688"
+                                    android:textSize="16sp"
+                                    android:textStyle="normal"
+                                    app:layout_marginStartPercent="25%"
+                                    app:layout_marginTopPercent="0%"
+                                    app:layout_widthPercent="75%" />
+                            </com.sglabs.medistant.elements.firstaidactivity.View4>
+                        </com.sglabs.medistant.elements.firstaidactivity.StaticListTile4>
+
+                        <com.sglabs.medistant.elements.firstaidactivity.StaticListTile5
+                            android:id="@+id/static_list_tile5"
+                            android:layout_width="match_parent"
+                            android:layout_height="62dp"
+                            android:background="#FFEEEEEE">
+
+                            <com.sglabs.medistant.elements.firstaidactivity.View5
+                                android:id="@+id/view5"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:background="#FFFFFFFF"
+                                app:layout_heightPercent="98.000001907349%"
+                                app:layout_marginStartPercent="0%"
+                                app:layout_marginTopPercent="0%">
+
+                                <android.support.v7.widget.AppCompatImageView
+                                    android:id="@+id/image_view5"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:background="#FFFFFFFF"
+                                    android:scaleType="centerInside"
+                                    android:src="@drawable/dizziness"
+                                    app:layout_marginStartPercent="0%"
+                                    app:layout_marginTopPercent="0%"
+                                    app:layout_widthPercent="25%" />
+
+                                <android.support.v7.widget.AppCompatButton
+                                    android:id="@+id/text_button4"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:background="#FFFFFFFF"
+                                    android:cropToPadding="true"
+                                    android:fontFamily="sans-serif"
+                                    android:gravity="center|start"
+                                    android:letterSpacing="0"
+                                    android:text="@string/text_button4_text"
+                                    android:textColor="#FF009688"
+                                    android:textSize="16sp"
+                                    android:textStyle="normal"
+                                    app:layout_marginStartPercent="25%"
+                                    app:layout_marginTopPercent="0%"
+                                    app:layout_widthPercent="75%" />
+                            </com.sglabs.medistant.elements.firstaidactivity.View5>
+                        </com.sglabs.medistant.elements.firstaidactivity.StaticListTile5>
+
+                        <com.sglabs.medistant.elements.firstaidactivity.StaticListTile6
+                            android:id="@+id/static_list_tile6"
+                            android:layout_width="match_parent"
+                            android:layout_height="62dp"
+                            android:background="#FFEEEEEE">
+
+                            <com.sglabs.medistant.elements.firstaidactivity.View6
+                                android:id="@+id/view6"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:background="#FFFFFFFF"
+                                app:layout_heightPercent="98.000001907349%"
+                                app:layout_marginStartPercent="0%"
+                                app:layout_marginTopPercent="0%">
+
+                                <android.support.v7.widget.AppCompatImageView
+                                    android:id="@+id/image_view6"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:background="#FFFFFFFF"
+                                    android:scaleType="centerInside"
+                                    android:src="@drawable/food_poison"
+                                    app:layout_marginStartPercent="0%"
+                                    app:layout_marginTopPercent="0%"
+                                    app:layout_widthPercent="25%" />
+
+                                <android.support.v7.widget.AppCompatButton
+                                    android:id="@+id/text_button5"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:background="#FFFFFFFF"
+                                    android:cropToPadding="true"
+                                    android:fontFamily="sans-serif"
+                                    android:gravity="center|start"
+                                    android:letterSpacing="0"
+                                    android:text="@string/text_button5_text"
+                                    android:textColor="#FF009688"
+                                    android:textSize="16sp"
+                                    android:textStyle="normal"
+                                    app:layout_marginStartPercent="25%"
+                                    app:layout_marginTopPercent="0%"
+                                    app:layout_widthPercent="75%" />
+                            </com.sglabs.medistant.elements.firstaidactivity.View6>
+                        </com.sglabs.medistant.elements.firstaidactivity.StaticListTile6>
+
+                        <com.sglabs.medistant.elements.firstaidactivity.StaticListTile7
+                            android:id="@+id/static_list_tile7"
+                            android:layout_width="match_parent"
+                            android:layout_height="62dp"
+                            android:background="#FFEEEEEE">
+
+                            <com.sglabs.medistant.elements.firstaidactivity.View7
+                                android:id="@+id/view7"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:background="#FFFFFFFF"
+                                app:layout_heightPercent="98.000001907349%"
+                                app:layout_marginStartPercent="0%"
+                                app:layout_marginTopPercent="0%">
+
+                                <android.support.v7.widget.AppCompatImageView
+                                    android:id="@+id/image_view7"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:background="#FFFFFFFF"
+                                    android:scaleType="centerInside"
+                                    android:src="@drawable/heart_palpitation"
+                                    app:layout_marginStartPercent="0%"
+                                    app:layout_marginTopPercent="0%"
+                                    app:layout_widthPercent="25%" />
+
+                                <android.support.v7.widget.AppCompatButton
+                                    android:id="@+id/text_button6"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:background="#FFFFFFFF"
+                                    android:cropToPadding="true"
+                                    android:fontFamily="sans-serif"
+                                    android:gravity="center|start"
+                                    android:letterSpacing="0"
+                                    android:text="@string/text_button6_text"
+                                    android:textColor="#FF009688"
+                                    android:textSize="16sp"
+                                    android:textStyle="normal"
+                                    app:layout_marginStartPercent="25%"
+                                    app:layout_marginTopPercent="0%"
+                                    app:layout_widthPercent="75%" />
+                            </com.sglabs.medistant.elements.firstaidactivity.View7>
+                        </com.sglabs.medistant.elements.firstaidactivity.StaticListTile7>
+
+                        <com.sglabs.medistant.elements.firstaidactivity.StaticListTile8
+                            android:id="@+id/static_list_tile8"
+                            android:layout_width="match_parent"
+                            android:layout_height="62dp"
+                            android:background="#FFEEEEEE">
+
+                            <com.sglabs.medistant.elements.firstaidactivity.View8
+                                android:id="@+id/view8"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:background="#FFFFFFFF"
+                                app:layout_heightPercent="98.000001907349%"
+                                app:layout_marginStartPercent="0%"
+                                app:layout_marginTopPercent="0%">
+
+                                <android.support.v7.widget.AppCompatImageView
+                                    android:id="@+id/image_view8"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:background="#FFFFFFFF"
+                                    android:scaleType="centerInside"
+                                    android:src="@drawable/insect_bite"
+                                    app:layout_marginStartPercent="0%"
+                                    app:layout_marginTopPercent="0%"
+                                    app:layout_widthPercent="25%" />
+
+                                <android.support.v7.widget.AppCompatButton
+                                    android:id="@+id/text_button7"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:background="#FFFFFFFF"
+                                    android:cropToPadding="true"
+                                    android:fontFamily="sans-serif"
+                                    android:gravity="center|start"
+                                    android:letterSpacing="0"
+                                    android:text="@string/text_button7_text"
+                                    android:textColor="#FF009688"
+                                    android:textSize="16sp"
+                                    android:textStyle="normal"
+                                    app:layout_marginStartPercent="25%"
+                                    app:layout_marginTopPercent="0%"
+                                    app:layout_widthPercent="75%" />
+                            </com.sglabs.medistant.elements.firstaidactivity.View8>
+                        </com.sglabs.medistant.elements.firstaidactivity.StaticListTile8>
+
+                        <com.sglabs.medistant.elements.firstaidactivity.StaticListTile9
+                            android:id="@+id/static_list_tile9"
+                            android:layout_width="match_parent"
+                            android:layout_height="62dp"
+                            android:background="#FFEEEEEE">
+
+                            <com.sglabs.medistant.elements.firstaidactivity.View9
+                                android:id="@+id/view9"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:background="#FFFFFFFF"
+                                app:layout_heightPercent="98.000001907349%"
+                                app:layout_marginStartPercent="0%"
+                                app:layout_marginTopPercent="0%">
+
+                                <android.support.v7.widget.AppCompatImageView
+                                    android:id="@+id/image_view9"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:background="#FFFFFFFF"
+                                    android:scaleType="centerInside"
+                                    android:src="@drawable/nose_bleed"
+                                    app:layout_marginStartPercent="0%"
+                                    app:layout_marginTopPercent="0%"
+                                    app:layout_widthPercent="25%" />
+
+                                <android.support.v7.widget.AppCompatButton
+                                    android:id="@+id/text_button8"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:background="#FFFFFFFF"
+                                    android:cropToPadding="true"
+                                    android:fontFamily="sans-serif"
+                                    android:gravity="center|start"
+                                    android:letterSpacing="0"
+                                    android:text="@string/text_button8_text"
+                                    android:textColor="#FF009688"
+                                    android:textSize="16sp"
+                                    android:textStyle="normal"
+                                    app:layout_marginStartPercent="25%"
+                                    app:layout_marginTopPercent="0%"
+                                    app:layout_widthPercent="75%" />
+                            </com.sglabs.medistant.elements.firstaidactivity.View9>
+                        </com.sglabs.medistant.elements.firstaidactivity.StaticListTile9>
+
+                        <com.sglabs.medistant.elements.firstaidactivity.StaticListTile10
+                            android:id="@+id/static_list_tile10"
+                            android:layout_width="match_parent"
+                            android:layout_height="62dp"
+                            android:background="#FFEEEEEE">
+
+                            <com.sglabs.medistant.elements.firstaidactivity.View10
+                                android:id="@+id/view10"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:background="#FFFFFFFF"
+                                app:layout_heightPercent="98.000001907349%"
+                                app:layout_marginStartPercent="0%"
+                                app:layout_marginTopPercent="0%">
+
+                                <android.support.v7.widget.AppCompatImageView
+                                    android:id="@+id/image_view10"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:background="#FFFFFFFF"
+                                    android:scaleType="centerInside"
+                                    android:src="@drawable/sun_burn"
+                                    app:layout_marginStartPercent="0%"
+                                    app:layout_marginTopPercent="0%"
+                                    app:layout_widthPercent="25%" />
+
+                                <android.support.v7.widget.AppCompatButton
+                                    android:id="@+id/text_button9"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:background="#FFFFFFFF"
+                                    android:cropToPadding="true"
+                                    android:fontFamily="sans-serif"
+                                    android:gravity="center|start"
+                                    android:letterSpacing="0"
+                                    android:text="@string/text_button9_text"
+                                    android:textColor="#FF009688"
+                                    android:textSize="16sp"
+                                    android:textStyle="normal"
+                                    app:layout_marginStartPercent="25%"
+                                    app:layout_marginTopPercent="0%"
+                                    app:layout_widthPercent="75%" />
+                            </com.sglabs.medistant.elements.firstaidactivity.View10>
+                        </com.sglabs.medistant.elements.firstaidactivity.StaticListTile10>
+                    </LinearLayout>
+                </com.sglabs.medistant.elements.firstaidactivity.StaticList1>
+            </android.support.percent.PercentRelativeLayout>
+        </com.sglabs.medistant.elements.firstaidactivity.ScrollView1>
+    </android.support.percent.PercentRelativeLayout>
+</LinearLayout>

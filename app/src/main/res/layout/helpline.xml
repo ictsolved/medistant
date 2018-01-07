@@ -1,0 +1,889 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/helpline"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFEEEEEE"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/app_bar5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FF009688"
+        android:fontFamily="sans-serif-medium"
+        android:textSize="20sp"
+        android:textStyle="normal"
+        android:theme="@style/app_bar_style5"
+        app:title="Helpline"
+        app:titleTextColor="#FFFFFFFF" />
+
+    <android.support.percent.PercentRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.sglabs.medistant.elements.helplineactivity.HelpScroll
+            android:id="@+id/help_scroll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="0dp"
+            android:background="#FFFFFFFF"
+            android:fillViewport="true"
+            android:scrollbars="vertical">
+
+            <android.support.percent.PercentRelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <com.sglabs.medistant.elements.helplineactivity.HelpList xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:id="@+id/help_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginTop="0dp"
+                    android:background="#FFFFFFFF"
+                    android:fillViewport="true"
+                    android:scrollbars="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <com.sglabs.medistant.elements.helplineactivity.ListPolice
+                            android:id="@+id/list_police"
+                            android:layout_width="match_parent"
+                            android:layout_height="62dp"
+                            android:background="#FFEEEEEE">
+
+                            <com.sglabs.medistant.elements.helplineactivity.View1
+                                android:id="@+id/view11"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:background="#FFFFFFFF"
+                                app:layout_heightPercent="98.000001907349%"
+                                app:layout_marginStartPercent="0%"
+                                app:layout_marginTopPercent="0%">
+
+                                <android.support.v7.widget.AppCompatImageView
+                                    android:id="@+id/image_view11"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:background="#FFFFFFFF"
+                                    android:scaleType="centerInside"
+                                    android:src="@drawable/help_call"
+                                    app:layout_marginStartPercent="85.000002384186%"
+                                    app:layout_marginTopPercent="0%"
+                                    app:layout_widthPercent="15.000000596046%" />
+
+                                <android.support.v7.widget.AppCompatTextView
+                                    android:id="@+id/text_view1"
+                                    android:layout_width="0dp"
+                                    android:layout_height="0dp"
+                                    android:background="#00000000"
+                                    android:cropToPadding="true"
+                                    android:ellipsize="end"
+                                    android:fontFamily="sans-serif"
+                                    android:gravity="center|start"
+                                    android:letterSpacing="0"
+                                    android:lineSpacingMultiplier="1"
+                                    android:maxLines="1"
+                                    android:outlineProvider="bounds"
+                                    android:text="@string/text_view1_text"
+                                    android:textColor="#FF009688"
+                                    android:textSize="16sp"
+                                    android:textStyle="normal"
+                                    app:layout_heightPercent="50%"
+                                    app:layout_marginStartPercent="25%"
+                                    app:layout_marginTopPercent="0%"
+                                    app:layout_widthPercent="60.000002384186%" />
+
+                                <android.support.v7.widget.AppCompatTextView
+                                    android:id="@+id/text_view2"
+                                    android:layout_width="0dp"
+                                    android:layout_height="0dp"
+                                    android:background="#00000000"
+                                    android:cropToPadding="true"
+                                    android:ellipsize="end"
+                                    android:fontFamily="sans-serif"
+                                    android:gravity="center|start"
+                                    android:letterSpacing="0"
+                                    android:lineSpacingMultiplier="1"
+                                    android:maxLines="1"
+                                    android:outlineProvider="bounds"
+                                    android:text="@string/text_view2_text"
+                                    android:textColor="#FF009688"
+                                    android:textSize="16sp"
+                                    android:textStyle="normal"
+                                    app:layout_heightPercent="50%"
+                                    app:layout_marginStartPercent="25%"
+                                    app:layout_marginTopPercent="50%"
+                                    app:layout_widthPercent="60.000002384186%" />
+
+                                <android.support.v7.widget.AppCompatImageView
+                                    android:id="@+id/image_view111"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:background="#FFFFFFFF"
+                                    android:scaleType="centerInside"
+                                    android:src="@drawable/help_police1"
+                                    app:layout_marginStartPercent="0%"
+                                    app:layout_marginTopPercent="0%"
+                                    app:layout_widthPercent="25%" />
+                            </com.sglabs.medistant.elements.helplineactivity.View1>
+                        </com.sglabs.medistant.elements.helplineactivity.ListPolice>
+
+                        <com.sglabs.medistant.elements.helplineactivity.StaticListTile1
+                            android:id="@+id/static_list_tile11"
+                            android:layout_width="match_parent"
+                            android:layout_height="61dp"
+                            android:background="#FFEEEEEE">
+
+                            <com.sglabs.medistant.elements.helplineactivity.View2
+                                android:id="@+id/view21"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:background="#FFFFFFFF"
+                                app:layout_heightPercent="98.000001907349%"
+                                app:layout_marginStartPercent="0%"
+                                app:layout_marginTopPercent="0%">
+
+                                <android.support.v7.widget.AppCompatImageView
+                                    android:id="@+id/image_view21"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:background="#FFFFFFFF"
+                                    android:scaleType="centerInside"
+                                    android:src="@drawable/help_call"
+                                    app:layout_marginStartPercent="85.000002384186%"
+                                    app:layout_marginTopPercent="0%"
+                                    app:layout_widthPercent="15.000000596046%" />
+
+                                <android.support.v7.widget.AppCompatTextView
+                                    android:id="@+id/text_view3"
+                                    android:layout_width="0dp"
+                                    android:layout_height="0dp"
+                                    android:background="#00000000"
+                                    android:cropToPadding="true"
+                                    android:ellipsize="end"
+                                    android:fontFamily="sans-serif"
+                                    android:gravity="center|start"
+                                    android:letterSpacing="0"
+                                    android:lineSpacingMultiplier="1"
+                                    android:maxLines="1"
+                                    android:outlineProvider="bounds"
+                                    android:text="@string/text_view3_text"
+                                    android:textColor="#FF009688"
+                                    android:textSize="16sp"
+                                    android:textStyle="normal"
+                                    app:layout_heightPercent="50%"
+                                    app:layout_marginStartPercent="25%"
+                                    app:layout_marginTopPercent="0%"
+                                    app:layout_widthPercent="60.000002384186%" />
+
+                                <android.support.v7.widget.AppCompatTextView
+                                    android:id="@+id/text_view4"
+                                    android:layout_width="0dp"
+                                    android:layout_height="0dp"
+                                    android:background="#00000000"
+                                    android:cropToPadding="true"
+                                    android:ellipsize="end"
+                                    android:fontFamily="sans-serif"
+                                    android:gravity="center|start"
+                                    android:letterSpacing="0"
+                                    android:lineSpacingMultiplier="1"
+                                    android:maxLines="1"
+                                    android:outlineProvider="bounds"
+                                    android:text="@string/text_view4_text"
+                                    android:textColor="#FF009688"
+                                    android:textSize="16sp"
+                                    android:textStyle="normal"
+                                    app:layout_heightPercent="50%"
+                                    app:layout_marginStartPercent="25%"
+                                    app:layout_marginTopPercent="50%"
+                                    app:layout_widthPercent="60.000002384186%" />
+
+                                <android.support.v7.widget.AppCompatImageView
+                                    android:id="@+id/image_view12"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:background="#FFFFFFFF"
+                                    android:scaleType="centerInside"
+                                    android:src="@drawable/help_firebrigade"
+                                    app:layout_marginStartPercent="0%"
+                                    app:layout_marginTopPercent="0%"
+                                    app:layout_widthPercent="25%" />
+                            </com.sglabs.medistant.elements.helplineactivity.View2>
+                        </com.sglabs.medistant.elements.helplineactivity.StaticListTile1>
+
+                        <com.sglabs.medistant.elements.helplineactivity.StaticListTile2
+                            android:id="@+id/static_list_tile21"
+                            android:layout_width="match_parent"
+                            android:layout_height="61dp"
+                            android:background="#FFEEEEEE">
+
+                            <com.sglabs.medistant.elements.helplineactivity.View3
+                                android:id="@+id/view31"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:background="#FFFFFFFF"
+                                app:layout_heightPercent="98.000001907349%"
+                                app:layout_marginStartPercent="0%"
+                                app:layout_marginTopPercent="0%">
+
+                                <android.support.v7.widget.AppCompatImageView
+                                    android:id="@+id/image_view31"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:background="#FFFFFFFF"
+                                    android:scaleType="centerInside"
+                                    android:src="@drawable/help_call"
+                                    app:layout_marginStartPercent="85.000002384186%"
+                                    app:layout_marginTopPercent="0%"
+                                    app:layout_widthPercent="15.000000596046%" />
+
+                                <android.support.v7.widget.AppCompatTextView
+                                    android:id="@+id/text_view5"
+                                    android:layout_width="0dp"
+                                    android:layout_height="0dp"
+                                    android:background="#00000000"
+                                    android:cropToPadding="true"
+                                    android:ellipsize="end"
+                                    android:fontFamily="sans-serif"
+                                    android:gravity="center|start"
+                                    android:letterSpacing="0"
+                                    android:lineSpacingMultiplier="1"
+                                    android:maxLines="1"
+                                    android:outlineProvider="bounds"
+                                    android:text="@string/text_view5_text"
+                                    android:textColor="#FF009688"
+                                    android:textSize="16sp"
+                                    android:textStyle="normal"
+                                    app:layout_heightPercent="50%"
+                                    app:layout_marginStartPercent="25%"
+                                    app:layout_marginTopPercent="0%"
+                                    app:layout_widthPercent="60.000002384186%" />
+
+                                <android.support.v7.widget.AppCompatTextView
+                                    android:id="@+id/text_view6"
+                                    android:layout_width="0dp"
+                                    android:layout_height="0dp"
+                                    android:background="#00000000"
+                                    android:cropToPadding="true"
+                                    android:ellipsize="end"
+                                    android:fontFamily="sans-serif"
+                                    android:gravity="center|start"
+                                    android:letterSpacing="0"
+                                    android:lineSpacingMultiplier="1"
+                                    android:maxLines="1"
+                                    android:outlineProvider="bounds"
+                                    android:text="@string/text_view6_text"
+                                    android:textColor="#FF009688"
+                                    android:textSize="16sp"
+                                    android:textStyle="normal"
+                                    app:layout_heightPercent="50%"
+                                    app:layout_marginStartPercent="25%"
+                                    app:layout_marginTopPercent="50%"
+                                    app:layout_widthPercent="60.000002384186%" />
+
+                                <android.support.v7.widget.AppCompatImageView
+                                    android:id="@+id/image_view13"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:background="#FFFFFFFF"
+                                    android:scaleType="centerInside"
+                                    android:src="@drawable/help_ambulance"
+                                    app:layout_marginStartPercent="0%"
+                                    app:layout_marginTopPercent="0%"
+                                    app:layout_widthPercent="25%" />
+                            </com.sglabs.medistant.elements.helplineactivity.View3>
+                        </com.sglabs.medistant.elements.helplineactivity.StaticListTile2>
+
+                        <com.sglabs.medistant.elements.helplineactivity.StaticListTile3
+                            android:id="@+id/static_list_tile31"
+                            android:layout_width="match_parent"
+                            android:layout_height="61dp"
+                            android:background="#FFEEEEEE">
+
+                            <com.sglabs.medistant.elements.helplineactivity.View4
+                                android:id="@+id/view41"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:background="#FFFFFFFF"
+                                app:layout_heightPercent="98.000001907349%"
+                                app:layout_marginStartPercent="0%"
+                                app:layout_marginTopPercent="0%">
+
+                                <android.support.v7.widget.AppCompatImageView
+                                    android:id="@+id/image_view41"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:background="#FFFFFFFF"
+                                    android:scaleType="centerInside"
+                                    android:src="@drawable/help_call"
+                                    app:layout_marginStartPercent="85.000002384186%"
+                                    app:layout_marginTopPercent="0%"
+                                    app:layout_widthPercent="15.000000596046%" />
+
+                                <android.support.v7.widget.AppCompatTextView
+                                    android:id="@+id/text_view7"
+                                    android:layout_width="0dp"
+                                    android:layout_height="0dp"
+                                    android:background="#00000000"
+                                    android:cropToPadding="true"
+                                    android:ellipsize="end"
+                                    android:fontFamily="sans-serif"
+                                    android:gravity="center|start"
+                                    android:letterSpacing="0"
+                                    android:lineSpacingMultiplier="1"
+                                    android:maxLines="1"
+                                    android:outlineProvider="bounds"
+                                    android:text="@string/text_view7_text"
+                                    android:textColor="#FF009688"
+                                    android:textSize="16sp"
+                                    android:textStyle="normal"
+                                    app:layout_heightPercent="50%"
+                                    app:layout_marginStartPercent="25%"
+                                    app:layout_marginTopPercent="0%"
+                                    app:layout_widthPercent="60.000002384186%" />
+
+                                <android.support.v7.widget.AppCompatTextView
+                                    android:id="@+id/text_view8"
+                                    android:layout_width="0dp"
+                                    android:layout_height="0dp"
+                                    android:background="#00000000"
+                                    android:cropToPadding="true"
+                                    android:ellipsize="end"
+                                    android:fontFamily="sans-serif"
+                                    android:gravity="center|start"
+                                    android:letterSpacing="0"
+                                    android:lineSpacingMultiplier="1"
+                                    android:maxLines="1"
+                                    android:outlineProvider="bounds"
+                                    android:text="@string/text_view8_text"
+                                    android:textColor="#FF009688"
+                                    android:textSize="16sp"
+                                    android:textStyle="normal"
+                                    app:layout_heightPercent="50%"
+                                    app:layout_marginStartPercent="25%"
+                                    app:layout_marginTopPercent="50%"
+                                    app:layout_widthPercent="60.000002384186%" />
+
+                                <android.support.v7.widget.AppCompatImageView
+                                    android:id="@+id/image_view14"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:background="#FFFFFFFF"
+                                    android:scaleType="centerInside"
+                                    android:src="@drawable/help_police"
+                                    app:layout_marginStartPercent="0%"
+                                    app:layout_marginTopPercent="0%"
+                                    app:layout_widthPercent="25%" />
+                            </com.sglabs.medistant.elements.helplineactivity.View4>
+                        </com.sglabs.medistant.elements.helplineactivity.StaticListTile3>
+
+                        <com.sglabs.medistant.elements.helplineactivity.StaticListTile4
+                            android:id="@+id/static_list_tile41"
+                            android:layout_width="match_parent"
+                            android:layout_height="61dp"
+                            android:background="#FFEEEEEE">
+
+                            <com.sglabs.medistant.elements.helplineactivity.View5
+                                android:id="@+id/view51"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:background="#FFFFFFFF"
+                                app:layout_heightPercent="98.000001907349%"
+                                app:layout_marginStartPercent="0%"
+                                app:layout_marginTopPercent="0%">
+
+                                <android.support.v7.widget.AppCompatImageView
+                                    android:id="@+id/image_view51"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:background="#FFFFFFFF"
+                                    android:scaleType="centerInside"
+                                    android:src="@drawable/help_call"
+                                    app:layout_marginStartPercent="85.000002384186%"
+                                    app:layout_marginTopPercent="0%"
+                                    app:layout_widthPercent="15.000000596046%" />
+
+                                <android.support.v7.widget.AppCompatTextView
+                                    android:id="@+id/text_view9"
+                                    android:layout_width="0dp"
+                                    android:layout_height="0dp"
+                                    android:background="#00000000"
+                                    android:cropToPadding="true"
+                                    android:ellipsize="end"
+                                    android:fontFamily="sans-serif"
+                                    android:gravity="center|start"
+                                    android:letterSpacing="0"
+                                    android:lineSpacingMultiplier="1"
+                                    android:maxLines="1"
+                                    android:outlineProvider="bounds"
+                                    android:text="@string/text_view9_text"
+                                    android:textColor="#FF009688"
+                                    android:textSize="16sp"
+                                    android:textStyle="normal"
+                                    app:layout_heightPercent="50%"
+                                    app:layout_marginStartPercent="25%"
+                                    app:layout_marginTopPercent="0%"
+                                    app:layout_widthPercent="60.000002384186%" />
+
+                                <android.support.v7.widget.AppCompatTextView
+                                    android:id="@+id/text_view10"
+                                    android:layout_width="0dp"
+                                    android:layout_height="0dp"
+                                    android:background="#00000000"
+                                    android:cropToPadding="true"
+                                    android:ellipsize="end"
+                                    android:fontFamily="sans-serif"
+                                    android:gravity="center|start"
+                                    android:letterSpacing="0"
+                                    android:lineSpacingMultiplier="1"
+                                    android:maxLines="1"
+                                    android:outlineProvider="bounds"
+                                    android:text="@string/text_view10_text"
+                                    android:textColor="#FF009688"
+                                    android:textSize="16sp"
+                                    android:textStyle="normal"
+                                    app:layout_heightPercent="50%"
+                                    app:layout_marginStartPercent="25%"
+                                    app:layout_marginTopPercent="50%"
+                                    app:layout_widthPercent="60.000002384186%" />
+
+                                <android.support.v7.widget.AppCompatImageView
+                                    android:id="@+id/image_view15"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:background="#FFFFFFFF"
+                                    android:scaleType="centerInside"
+                                    android:src="@drawable/help_children"
+                                    app:layout_marginStartPercent="0%"
+                                    app:layout_marginTopPercent="0%"
+                                    app:layout_widthPercent="25%" />
+                            </com.sglabs.medistant.elements.helplineactivity.View5>
+                        </com.sglabs.medistant.elements.helplineactivity.StaticListTile4>
+
+                        <com.sglabs.medistant.elements.helplineactivity.StaticListTile5
+                            android:id="@+id/static_list_tile51"
+                            android:layout_width="match_parent"
+                            android:layout_height="61dp"
+                            android:background="#FFEEEEEE">
+
+                            <com.sglabs.medistant.elements.helplineactivity.View6
+                                android:id="@+id/view61"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:background="#FFFFFFFF"
+                                app:layout_heightPercent="98.000001907349%"
+                                app:layout_marginStartPercent="0%"
+                                app:layout_marginTopPercent="0%">
+
+                                <android.support.v7.widget.AppCompatImageView
+                                    android:id="@+id/image_view61"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:background="#FFFFFFFF"
+                                    android:scaleType="centerInside"
+                                    android:src="@drawable/help_call"
+                                    app:layout_marginStartPercent="85.000002384186%"
+                                    app:layout_marginTopPercent="0%"
+                                    app:layout_widthPercent="15.000000596046%" />
+
+                                <android.support.v7.widget.AppCompatTextView
+                                    android:id="@+id/text_view11"
+                                    android:layout_width="0dp"
+                                    android:layout_height="0dp"
+                                    android:background="#00000000"
+                                    android:cropToPadding="true"
+                                    android:ellipsize="end"
+                                    android:fontFamily="sans-serif"
+                                    android:gravity="center|start"
+                                    android:letterSpacing="0"
+                                    android:lineSpacingMultiplier="1"
+                                    android:maxLines="1"
+                                    android:outlineProvider="bounds"
+                                    android:text="@string/text_view11_text"
+                                    android:textColor="#FF009688"
+                                    android:textSize="16sp"
+                                    android:textStyle="normal"
+                                    app:layout_heightPercent="50%"
+                                    app:layout_marginStartPercent="25%"
+                                    app:layout_marginTopPercent="0%"
+                                    app:layout_widthPercent="60.000002384186%" />
+
+                                <android.support.v7.widget.AppCompatTextView
+                                    android:id="@+id/text_view12"
+                                    android:layout_width="0dp"
+                                    android:layout_height="0dp"
+                                    android:background="#00000000"
+                                    android:cropToPadding="true"
+                                    android:ellipsize="end"
+                                    android:fontFamily="sans-serif"
+                                    android:gravity="center|start"
+                                    android:letterSpacing="0"
+                                    android:lineSpacingMultiplier="1"
+                                    android:maxLines="1"
+                                    android:outlineProvider="bounds"
+                                    android:text="@string/text_view12_text"
+                                    android:textColor="#FF009688"
+                                    android:textSize="16sp"
+                                    android:textStyle="normal"
+                                    app:layout_heightPercent="50%"
+                                    app:layout_marginStartPercent="25%"
+                                    app:layout_marginTopPercent="50%"
+                                    app:layout_widthPercent="60.000002384186%" />
+
+                                <android.support.v7.widget.AppCompatImageView
+                                    android:id="@+id/image_view16"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:background="#FFFFFFFF"
+                                    android:scaleType="centerInside"
+                                    android:src="@drawable/help_eye"
+                                    app:layout_marginStartPercent="0%"
+                                    app:layout_marginTopPercent="0%"
+                                    app:layout_widthPercent="25%" />
+                            </com.sglabs.medistant.elements.helplineactivity.View6>
+                        </com.sglabs.medistant.elements.helplineactivity.StaticListTile5>
+
+                        <com.sglabs.medistant.elements.helplineactivity.StaticListTile6
+                            android:id="@+id/static_list_tile61"
+                            android:layout_width="match_parent"
+                            android:layout_height="61dp"
+                            android:background="#FFEEEEEE">
+
+                            <com.sglabs.medistant.elements.helplineactivity.View7
+                                android:id="@+id/view71"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:background="#FFFFFFFF"
+                                app:layout_heightPercent="98.000001907349%"
+                                app:layout_marginStartPercent="0%"
+                                app:layout_marginTopPercent="0%">
+
+                                <android.support.v7.widget.AppCompatImageView
+                                    android:id="@+id/image_view71"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:background="#FFFFFFFF"
+                                    android:scaleType="centerInside"
+                                    android:src="@drawable/help_call"
+                                    app:layout_marginStartPercent="85.000002384186%"
+                                    app:layout_marginTopPercent="0%"
+                                    app:layout_widthPercent="15.000000596046%" />
+
+                                <android.support.v7.widget.AppCompatTextView
+                                    android:id="@+id/text_view13"
+                                    android:layout_width="0dp"
+                                    android:layout_height="0dp"
+                                    android:background="#00000000"
+                                    android:cropToPadding="true"
+                                    android:ellipsize="end"
+                                    android:fontFamily="sans-serif"
+                                    android:gravity="center|start"
+                                    android:letterSpacing="0"
+                                    android:lineSpacingMultiplier="1"
+                                    android:maxLines="1"
+                                    android:outlineProvider="bounds"
+                                    android:text="@string/text_view13_text"
+                                    android:textColor="#FF009688"
+                                    android:textSize="16sp"
+                                    android:textStyle="normal"
+                                    app:layout_heightPercent="50%"
+                                    app:layout_marginStartPercent="25%"
+                                    app:layout_marginTopPercent="0%"
+                                    app:layout_widthPercent="60.000002384186%" />
+
+                                <android.support.v7.widget.AppCompatTextView
+                                    android:id="@+id/text_view14"
+                                    android:layout_width="0dp"
+                                    android:layout_height="0dp"
+                                    android:background="#00000000"
+                                    android:cropToPadding="true"
+                                    android:ellipsize="end"
+                                    android:fontFamily="sans-serif"
+                                    android:gravity="center|start"
+                                    android:letterSpacing="0"
+                                    android:lineSpacingMultiplier="1"
+                                    android:maxLines="1"
+                                    android:outlineProvider="bounds"
+                                    android:text="@string/text_view14_text"
+                                    android:textColor="#FF009688"
+                                    android:textSize="16sp"
+                                    android:textStyle="normal"
+                                    app:layout_heightPercent="50%"
+                                    app:layout_marginStartPercent="25%"
+                                    app:layout_marginTopPercent="50%"
+                                    app:layout_widthPercent="60.000002384186%" />
+
+                                <android.support.v7.widget.AppCompatImageView
+                                    android:id="@+id/image_view17"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:background="#FFFFFFFF"
+                                    android:scaleType="centerInside"
+                                    android:src="@drawable/help_maiti"
+                                    app:layout_marginStartPercent="0%"
+                                    app:layout_marginTopPercent="0%"
+                                    app:layout_widthPercent="25%" />
+                            </com.sglabs.medistant.elements.helplineactivity.View7>
+                        </com.sglabs.medistant.elements.helplineactivity.StaticListTile6>
+
+                        <com.sglabs.medistant.elements.helplineactivity.StaticListTile7
+                            android:id="@+id/static_list_tile71"
+                            android:layout_width="match_parent"
+                            android:layout_height="61dp"
+                            android:background="#FFEEEEEE">
+
+                            <com.sglabs.medistant.elements.helplineactivity.View8
+                                android:id="@+id/view81"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:background="#FFFFFFFF"
+                                app:layout_heightPercent="98.000001907349%"
+                                app:layout_marginStartPercent="0%"
+                                app:layout_marginTopPercent="0%">
+
+                                <android.support.v7.widget.AppCompatImageView
+                                    android:id="@+id/image_view81"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:background="#FFFFFFFF"
+                                    android:scaleType="centerInside"
+                                    android:src="@drawable/help_call"
+                                    app:layout_marginStartPercent="85.000002384186%"
+                                    app:layout_marginTopPercent="0%"
+                                    app:layout_widthPercent="15.000000596046%" />
+
+                                <android.support.v7.widget.AppCompatTextView
+                                    android:id="@+id/text_view15"
+                                    android:layout_width="0dp"
+                                    android:layout_height="0dp"
+                                    android:background="#00000000"
+                                    android:cropToPadding="true"
+                                    android:ellipsize="end"
+                                    android:fontFamily="sans-serif"
+                                    android:gravity="center|start"
+                                    android:letterSpacing="0"
+                                    android:lineSpacingMultiplier="1"
+                                    android:maxLines="1"
+                                    android:outlineProvider="bounds"
+                                    android:text="@string/text_view15_text"
+                                    android:textColor="#FF009688"
+                                    android:textSize="16sp"
+                                    android:textStyle="normal"
+                                    app:layout_heightPercent="50%"
+                                    app:layout_marginStartPercent="25%"
+                                    app:layout_marginTopPercent="0%"
+                                    app:layout_widthPercent="60.000002384186%" />
+
+                                <android.support.v7.widget.AppCompatTextView
+                                    android:id="@+id/text_view16"
+                                    android:layout_width="0dp"
+                                    android:layout_height="0dp"
+                                    android:background="#00000000"
+                                    android:cropToPadding="true"
+                                    android:ellipsize="end"
+                                    android:fontFamily="sans-serif"
+                                    android:gravity="center|start"
+                                    android:letterSpacing="0"
+                                    android:lineSpacingMultiplier="1"
+                                    android:maxLines="1"
+                                    android:outlineProvider="bounds"
+                                    android:text="@string/text_view16_text"
+                                    android:textColor="#FF009688"
+                                    android:textSize="16sp"
+                                    android:textStyle="normal"
+                                    app:layout_heightPercent="50%"
+                                    app:layout_marginStartPercent="25%"
+                                    app:layout_marginTopPercent="50%"
+                                    app:layout_widthPercent="60.000002384186%" />
+
+                                <android.support.v7.widget.AppCompatImageView
+                                    android:id="@+id/image_view18"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:background="#FFFFFFFF"
+                                    android:scaleType="centerInside"
+                                    android:src="@drawable/donate_blood"
+                                    app:layout_marginStartPercent="0%"
+                                    app:layout_marginTopPercent="0%"
+                                    app:layout_widthPercent="25%" />
+                            </com.sglabs.medistant.elements.helplineactivity.View8>
+                        </com.sglabs.medistant.elements.helplineactivity.StaticListTile7>
+
+                        <com.sglabs.medistant.elements.helplineactivity.StaticListTile8
+                            android:id="@+id/static_list_tile81"
+                            android:layout_width="match_parent"
+                            android:layout_height="61dp"
+                            android:background="#FFEEEEEE">
+
+                            <com.sglabs.medistant.elements.helplineactivity.View9
+                                android:id="@+id/view91"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:background="#FFFFFFFF"
+                                app:layout_heightPercent="98.000001907349%"
+                                app:layout_marginStartPercent="0%"
+                                app:layout_marginTopPercent="0%">
+
+                                <android.support.v7.widget.AppCompatImageView
+                                    android:id="@+id/image_view91"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:background="#FFFFFFFF"
+                                    android:scaleType="centerInside"
+                                    android:src="@drawable/help_call"
+                                    app:layout_marginStartPercent="85.000002384186%"
+                                    app:layout_marginTopPercent="0%"
+                                    app:layout_widthPercent="15.000000596046%" />
+
+                                <android.support.v7.widget.AppCompatImageView
+                                    android:id="@+id/image_view19"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:background="#FFFFFFFF"
+                                    android:scaleType="centerInside"
+                                    android:src="@drawable/help_hospital"
+                                    app:layout_marginStartPercent="0%"
+                                    app:layout_marginTopPercent="0%"
+                                    app:layout_widthPercent="25%" />
+
+                                <android.support.v7.widget.AppCompatTextView
+                                    android:id="@+id/text_view17"
+                                    android:layout_width="0dp"
+                                    android:layout_height="0dp"
+                                    android:background="#00000000"
+                                    android:cropToPadding="true"
+                                    android:ellipsize="end"
+                                    android:fontFamily="sans-serif"
+                                    android:gravity="center|start"
+                                    android:letterSpacing="0"
+                                    android:lineSpacingMultiplier="1"
+                                    android:maxLines="1"
+                                    android:outlineProvider="bounds"
+                                    android:text="@string/text_view17_text"
+                                    android:textColor="#FF009688"
+                                    android:textSize="16sp"
+                                    android:textStyle="normal"
+                                    app:layout_heightPercent="50%"
+                                    app:layout_marginStartPercent="25%"
+                                    app:layout_marginTopPercent="0%"
+                                    app:layout_widthPercent="60.000002384186%" />
+
+                                <android.support.v7.widget.AppCompatTextView
+                                    android:id="@+id/text_view18"
+                                    android:layout_width="0dp"
+                                    android:layout_height="0dp"
+                                    android:background="#00000000"
+                                    android:cropToPadding="true"
+                                    android:ellipsize="end"
+                                    android:fontFamily="sans-serif"
+                                    android:gravity="center|start"
+                                    android:letterSpacing="0"
+                                    android:lineSpacingMultiplier="1"
+                                    android:maxLines="1"
+                                    android:outlineProvider="bounds"
+                                    android:text="@string/text_view18_text"
+                                    android:textColor="#FF009688"
+                                    android:textSize="16sp"
+                                    android:textStyle="normal"
+                                    app:layout_heightPercent="50%"
+                                    app:layout_marginStartPercent="25%"
+                                    app:layout_marginTopPercent="50%"
+                                    app:layout_widthPercent="60.000002384186%" />
+                            </com.sglabs.medistant.elements.helplineactivity.View9>
+                        </com.sglabs.medistant.elements.helplineactivity.StaticListTile8>
+
+                        <com.sglabs.medistant.elements.helplineactivity.StaticListTile9
+                            android:id="@+id/static_list_tile91"
+                            android:layout_width="match_parent"
+                            android:layout_height="61dp"
+                            android:background="#FFEEEEEE">
+
+                            <com.sglabs.medistant.elements.helplineactivity.View10
+                                android:id="@+id/view101"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:background="#FFFFFFFF"
+                                app:layout_heightPercent="98.000001907349%"
+                                app:layout_marginStartPercent="0%"
+                                app:layout_marginTopPercent="0%">
+
+                                <android.support.v7.widget.AppCompatImageView
+                                    android:id="@+id/image_view101"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:background="#FFFFFFFF"
+                                    android:scaleType="centerInside"
+                                    android:src="@drawable/help_call"
+                                    app:layout_marginStartPercent="85.000002384186%"
+                                    app:layout_marginTopPercent="0%"
+                                    app:layout_widthPercent="15.000000596046%" />
+
+                                <android.support.v7.widget.AppCompatImageView
+                                    android:id="@+id/image_view20"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:background="#FFFFFFFF"
+                                    android:scaleType="centerInside"
+                                    android:src="@drawable/help_building"
+                                    app:layout_marginStartPercent="0%"
+                                    app:layout_marginTopPercent="0%"
+                                    app:layout_widthPercent="25%" />
+
+                                <android.support.v7.widget.AppCompatTextView
+                                    android:id="@+id/text_view19"
+                                    android:layout_width="0dp"
+                                    android:layout_height="0dp"
+                                    android:background="#00000000"
+                                    android:cropToPadding="true"
+                                    android:ellipsize="end"
+                                    android:fontFamily="sans-serif"
+                                    android:gravity="center|start"
+                                    android:letterSpacing="0"
+                                    android:lineSpacingMultiplier="1"
+                                    android:maxLines="1"
+                                    android:outlineProvider="bounds"
+                                    android:text="@string/text_view19_text"
+                                    android:textColor="#FF009688"
+                                    android:textSize="16sp"
+                                    android:textStyle="normal"
+                                    app:layout_heightPercent="50%"
+                                    app:layout_marginStartPercent="25%"
+                                    app:layout_marginTopPercent="0%"
+                                    app:layout_widthPercent="60.000002384186%" />
+
+                                <android.support.v7.widget.AppCompatTextView
+                                    android:id="@+id/text_view20"
+                                    android:layout_width="0dp"
+                                    android:layout_height="0dp"
+                                    android:background="#00000000"
+                                    android:cropToPadding="true"
+                                    android:ellipsize="end"
+                                    android:fontFamily="sans-serif"
+                                    android:gravity="center|start"
+                                    android:letterSpacing="0"
+                                    android:lineSpacingMultiplier="1"
+                                    android:maxLines="1"
+                                    android:outlineProvider="bounds"
+                                    android:text="@string/text_view20_text"
+                                    android:textColor="#FF009688"
+                                    android:textSize="16sp"
+                                    android:textStyle="normal"
+                                    app:layout_heightPercent="50%"
+                                    app:layout_marginStartPercent="25%"
+                                    app:layout_marginTopPercent="50%"
+                                    app:layout_widthPercent="60.000002384186%" />
+                            </com.sglabs.medistant.elements.helplineactivity.View10>
+                        </com.sglabs.medistant.elements.helplineactivity.StaticListTile9>
+                    </LinearLayout>
+                </com.sglabs.medistant.elements.helplineactivity.HelpList>
+            </android.support.percent.PercentRelativeLayout>
+        </com.sglabs.medistant.elements.helplineactivity.HelpScroll>
+    </android.support.percent.PercentRelativeLayout>
+</LinearLayout>
