@@ -134,9 +134,9 @@
 
 
 
-     <color name="primary">#315e97</color>
-    <color name="primaryDark">#294E7D</color>
-    <color name="accent">#897dae</color>
+     <color name="primary">#009688</color>
+    <color name="primaryDark">#00897B</color>
+    <color name="accent">#26A69A</color>
     <color name="accentLight">#ff988db6</color>
     <color name="background">#eeeeee</color>
     <color name="lightGray">#e6e6e6</color>
