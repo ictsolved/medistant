@@ -80,7 +80,7 @@ public class SlideActivity extends AppCompatActivity {
             getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_STABLE | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN);
         }
 
-        setContentView(R.layout.activity_slide);
+        setContentView(R.layout.info_slider);
 
         viewPager = (ViewPager) findViewById(R.id.view_pager);
         dotsLayout = (LinearLayout) findViewById(R.id.layoutDots);
@@ -91,10 +91,10 @@ public class SlideActivity extends AppCompatActivity {
         // layouts of all welcome sliders
         // add few more layouts if you want
         layouts = new int[]{
-                R.layout.activity_slide_1,
-                R.layout.activity_slide_2,
-                R.layout.activity_slide_3,
-                R.layout.activity_slide_4};
+                R.layout.info_slider_1,
+                R.layout.info_slider_2,
+                R.layout.info_slider_3,
+                R.layout.info_slider_4};
 
         // adding bottom dots
         addBottomDots(0);

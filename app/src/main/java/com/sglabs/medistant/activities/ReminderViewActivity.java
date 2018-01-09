@@ -44,7 +44,7 @@ import java.util.Calendar;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class ViewActivity extends AppCompatActivity {
+public class ReminderViewActivity extends AppCompatActivity {
 
     @BindView(R.id.notification_title)
     TextView notificationTitleText;

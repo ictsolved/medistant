@@ -17,7 +17,7 @@ import com.sglabs.medistant.utils.NotificationUtil;
 
 import java.util.Calendar;
 
-public class SnoozeDialogActivity extends AppCompatActivity {
+public class ReminderSnoozeDialogActivity extends AppCompatActivity {
 
     private NumberPicker hourPicker;
     private NumberPicker minutePicker;

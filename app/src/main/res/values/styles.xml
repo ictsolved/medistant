@@ -30,20 +30,6 @@
         <item name="android:scaleType">fitCenter</item>
     </style>
 
-    <style name="app_bar_style2" parent="@style/Widget.AppCompat.ActionBar">
-        <item name="android:background">@color/app_bar_background_color2</item>
-        <item name="android:actionOverflowButtonStyle">@style/app_bar_overflow2</item>
-        <item name="actionOverflowButtonStyle">@style/app_bar_overflow2</item>
-        <item name="android:textColorPrimary">@color/app_bar_text_color2</item>
-    </style>
-
-    <style name="app_bar_overflow2" parent="@style/Widget.AppCompat.ActionButton.Overflow">
-        <item name="android:layout_width">24dp</item>
-        <item name="android:layout_height">24dp</item>
-        <item name="android:adjustViewBounds">true</item>
-        <item name="android:scaleType">fitCenter</item>
-    </style>
-
     <style name="app_bar_style3" parent="@style/Widget.AppCompat.ActionBar">
         <item name="android:background">@color/app_bar_background_color3</item>
         <item name="android:actionOverflowButtonStyle">@style/app_bar_overflow3</item>
@@ -82,20 +68,6 @@
 
     <style name="app_bar_overflow5" parent="@style/Widget.AppCompat.ActionButton.Overflow">
         <item name="android:src">@drawable/android_app_bar_more_vert_icon_32x48_ffffffff</item>
-        <item name="android:layout_width">24dp</item>
-        <item name="android:layout_height">24dp</item>
-        <item name="android:adjustViewBounds">true</item>
-        <item name="android:scaleType">fitCenter</item>
-    </style>
-
-    <style name="app_bar_style6" parent="@style/Widget.AppCompat.ActionBar">
-        <item name="android:background">@color/app_bar_background_color6</item>
-        <item name="android:actionOverflowButtonStyle">@style/app_bar_overflow6</item>
-        <item name="actionOverflowButtonStyle">@style/app_bar_overflow6</item>
-        <item name="android:textColorPrimary">@color/app_bar_text_color6</item>
-    </style>
-
-    <style name="app_bar_overflow6" parent="@style/Widget.AppCompat.ActionButton.Overflow">
         <item name="android:layout_width">24dp</item>
         <item name="android:layout_height">24dp</item>
         <item name="android:adjustViewBounds">true</item>

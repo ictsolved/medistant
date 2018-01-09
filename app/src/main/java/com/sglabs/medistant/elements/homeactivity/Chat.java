@@ -9,52 +9,52 @@ import android.util.AttributeSet;
 import android.view.View;
 
 import com.sglabs.medistant.R;
-import com.sglabs.medistant.activities.AppointmentActivity;
+import com.sglabs.medistant.activities.ChatActivity;
 import com.sglabs.medistant.activities.HomeActivity;
 
-public class View1 extends PercentRelativeLayout {
-    public AppCompatButton textButton5;
+public class Chat extends PercentRelativeLayout {
+    public AppCompatButton textButton3;
 
-    public AppCompatImageButton imageButton1;
+    public AppCompatImageButton imageButton3;
 
-    public View1(Context context, AttributeSet attrs) {
-        super(context, attrs);
+    public Chat(Context context) {
+        super(context);
     }
 
-    public View1(Context context, AttributeSet attrs, int defStyle) {
+    public Chat(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
     }
 
-    public View1(Context context) {
-        super(context);
+    public Chat(Context context, AttributeSet attrs) {
+        super(context, attrs);
     }
 
     @Override
     public void onFinishInflate() {
         super.onFinishInflate();
 
-        textButton5 = (AppCompatButton) findViewById(R.id.text_button51);
+        textButton3 = (AppCompatButton) findViewById(R.id.text_button31);
 
-        textButton5.setTransformationMethod(null);
+        textButton3.setTransformationMethod(null);
 
-        textButton5.setOnClickListener(
+        textButton3.setOnClickListener(
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
                         HomeActivity activity = ((HomeActivity) getContext());
-                        Intent transitionIntent = new Intent(activity, AppointmentActivity.class);
+                        Intent transitionIntent = new Intent(activity, ChatActivity.class);
                         activity.startActivity(transitionIntent);
                     }
                 });
 
-        imageButton1 = (AppCompatImageButton) findViewById(R.id.image_button1);
+        imageButton3 = (AppCompatImageButton) findViewById(R.id.image_button3);
 
-        imageButton1.setOnClickListener(
+        imageButton3.setOnClickListener(
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View view1) {
                         HomeActivity activity1 = ((HomeActivity) getContext());
-                        Intent transitionIntent1 = new Intent(activity1, AppointmentActivity.class);
+                        Intent transitionIntent1 = new Intent(activity1, ChatActivity.class);
                         activity1.startActivity(transitionIntent1);
                     }
                 });

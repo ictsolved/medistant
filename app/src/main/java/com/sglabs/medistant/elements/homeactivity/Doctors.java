@@ -8,20 +8,20 @@ import android.util.AttributeSet;
 
 import com.sglabs.medistant.R;
 
-public class View4 extends PercentRelativeLayout {
+public class Doctors extends PercentRelativeLayout {
     public AppCompatButton textButton4;
 
     public AppCompatImageButton imageButton7;
 
-    public View4(Context context, AttributeSet attrs) {
+    public Doctors(Context context, AttributeSet attrs) {
         super(context, attrs);
     }
 
-    public View4(Context context) {
+    public Doctors(Context context) {
         super(context);
     }
 
-    public View4(Context context, AttributeSet attrs, int defStyle) {
+    public Doctors(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
     }
 

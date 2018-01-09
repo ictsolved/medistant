@@ -13,35 +13,35 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.sglabs.medistant.R;
-import com.sglabs.medistant.elements.homeactivity.View1;
-import com.sglabs.medistant.elements.homeactivity.View2;
-import com.sglabs.medistant.elements.homeactivity.View3;
-import com.sglabs.medistant.elements.homeactivity.View4;
-import com.sglabs.medistant.elements.homeactivity.View5;
-import com.sglabs.medistant.elements.homeactivity.View6;
-import com.sglabs.medistant.elements.homeactivity.View7;
-import com.sglabs.medistant.elements.homeactivity.View8;
+import com.sglabs.medistant.elements.homeactivity.Appointment;
+import com.sglabs.medistant.elements.homeactivity.BloodDonation;
+import com.sglabs.medistant.elements.homeactivity.Chat;
+import com.sglabs.medistant.elements.homeactivity.Doctors;
+import com.sglabs.medistant.elements.homeactivity.FirstAid;
+import com.sglabs.medistant.elements.homeactivity.HealthPlaces;
+import com.sglabs.medistant.elements.homeactivity.Helpline;
+import com.sglabs.medistant.elements.homeactivity.Reminder;
 
 public class HomeActivity extends AppCompatActivity {
     public LinearLayout mMainLayout;
 
     public Toolbar appBar;
 
-    public View1 view1;
+    public Appointment view1;
 
-    public View3 view3;
+    public BloodDonation view3;
 
-    public View4 view4;
+    public Doctors view4;
 
-    public View5 view5;
+    public Chat view5;
 
-    public View2 view2;
+    public Reminder view2;
 
-    public View7 view7;
+    public HealthPlaces view7;
 
-    public View6 view6;
+    public FirstAid view6;
 
-    public View8 view8;
+    public Helpline view8;
     boolean doubleBackToExitPressedOnce = false;
 
     @Override
@@ -106,21 +106,21 @@ public class HomeActivity extends AppCompatActivity {
             }
         }
 
-        this.view1 = (View1) findViewById(R.id.view12);
+        this.view1 = (Appointment) findViewById(R.id.view12);
 
-        this.view3 = (View3) findViewById(R.id.view32);
+        this.view3 = (BloodDonation) findViewById(R.id.view32);
 
-        this.view4 = (View4) findViewById(R.id.view42);
+        this.view4 = (Doctors) findViewById(R.id.view42);
 
-        this.view5 = (View5) findViewById(R.id.view52);
+        this.view5 = (Chat) findViewById(R.id.view52);
 
-        this.view2 = (View2) findViewById(R.id.view22);
+        this.view2 = (Reminder) findViewById(R.id.view22);
 
-        this.view7 = (View7) findViewById(R.id.view72);
+        this.view7 = (HealthPlaces) findViewById(R.id.view72);
 
-        this.view6 = (View6) findViewById(R.id.view62);
+        this.view6 = (FirstAid) findViewById(R.id.view62);
 
-        this.view8 = (View8) findViewById(R.id.view82);
+        this.view8 = (Helpline) findViewById(R.id.view82);
     }
 
     @Override

@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "47925853950-67tm9uppsrrcmrb8s2gf4447acte5uj4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.sglabs.medistant",
+            "certificate_hash": "ee3595f121566843d479512449df8b7defe95f81"
+          }
+        },
+        {
           "client_id": "47925853950-98usmmn7ra7e8flqm8nmjvt13bvv0nf5.apps.googleusercontent.com",
           "client_type": 3
         },
@@ -33,8 +41,13 @@
           "status": 1
         },
         "appinvite_service": {
-          "status": 1,
-          "other_platform_oauth_client": []
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "47925853950-98usmmn7ra7e8flqm8nmjvt13bvv0nf5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         },
         "ads_service": {
           "status": 2

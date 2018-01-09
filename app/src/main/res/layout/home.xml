@@ -23,7 +23,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <com.sglabs.medistant.elements.homeactivity.View1
+        <com.sglabs.medistant.elements.homeactivity.Appointment
             android:id="@+id/view12"
             android:layout_width="0dp"
             android:layout_height="0dp"
@@ -65,9 +65,9 @@
                 app:layout_heightPercent="69.999998807907%"
                 app:layout_marginStartPercent="0%"
                 app:layout_marginTopPercent="0%" />
-        </com.sglabs.medistant.elements.homeactivity.View1>
+        </com.sglabs.medistant.elements.homeactivity.Appointment>
 
-        <com.sglabs.medistant.elements.homeactivity.View3
+        <com.sglabs.medistant.elements.homeactivity.BloodDonation
             android:id="@+id/view32"
             android:layout_width="0dp"
             android:layout_height="0dp"
@@ -109,9 +109,9 @@
                 app:layout_heightPercent="69.999998807907%"
                 app:layout_marginStartPercent="0%"
                 app:layout_marginTopPercent="0%" />
-        </com.sglabs.medistant.elements.homeactivity.View3>
+        </com.sglabs.medistant.elements.homeactivity.BloodDonation>
 
-        <com.sglabs.medistant.elements.homeactivity.View4
+        <com.sglabs.medistant.elements.homeactivity.Doctors
             android:id="@+id/view42"
             android:layout_width="0dp"
             android:layout_height="0dp"
@@ -153,9 +153,9 @@
                 app:layout_heightPercent="69.999998807907%"
                 app:layout_marginStartPercent="0%"
                 app:layout_marginTopPercent="0%" />
-        </com.sglabs.medistant.elements.homeactivity.View4>
+        </com.sglabs.medistant.elements.homeactivity.Doctors>
 
-        <com.sglabs.medistant.elements.homeactivity.View5
+        <com.sglabs.medistant.elements.homeactivity.Chat
             android:id="@+id/view52"
             android:layout_width="0dp"
             android:layout_height="0dp"
@@ -197,9 +197,9 @@
                 app:layout_heightPercent="69.999998807907%"
                 app:layout_marginStartPercent="0%"
                 app:layout_marginTopPercent="0%" />
-        </com.sglabs.medistant.elements.homeactivity.View5>
+        </com.sglabs.medistant.elements.homeactivity.Chat>
 
-        <com.sglabs.medistant.elements.homeactivity.View2
+        <com.sglabs.medistant.elements.homeactivity.Reminder
             android:id="@+id/view22"
             android:layout_width="0dp"
             android:layout_height="0dp"
@@ -241,9 +241,9 @@
                 app:layout_heightPercent="69.999998807907%"
                 app:layout_marginStartPercent="0%"
                 app:layout_marginTopPercent="0%" />
-        </com.sglabs.medistant.elements.homeactivity.View2>
+        </com.sglabs.medistant.elements.homeactivity.Reminder>
 
-        <com.sglabs.medistant.elements.homeactivity.View7
+        <com.sglabs.medistant.elements.homeactivity.HealthPlaces
             android:id="@+id/view72"
             android:layout_width="0dp"
             android:layout_height="0dp"
@@ -285,9 +285,9 @@
                 app:layout_heightPercent="69.999998807907%"
                 app:layout_marginStartPercent="0%"
                 app:layout_marginTopPercent="0%" />
-        </com.sglabs.medistant.elements.homeactivity.View7>
+        </com.sglabs.medistant.elements.homeactivity.HealthPlaces>
 
-        <com.sglabs.medistant.elements.homeactivity.View6
+        <com.sglabs.medistant.elements.homeactivity.FirstAid
             android:id="@+id/view62"
             android:layout_width="0dp"
             android:layout_height="0dp"
@@ -329,9 +329,9 @@
                 app:layout_heightPercent="69.999998807907%"
                 app:layout_marginStartPercent="0%"
                 app:layout_marginTopPercent="0%" />
-        </com.sglabs.medistant.elements.homeactivity.View6>
+        </com.sglabs.medistant.elements.homeactivity.FirstAid>
 
-        <com.sglabs.medistant.elements.homeactivity.View8
+        <com.sglabs.medistant.elements.homeactivity.Helpline
             android:id="@+id/view82"
             android:layout_width="0dp"
             android:layout_height="0dp"
@@ -373,6 +373,6 @@
                 app:layout_heightPercent="69.999998807907%"
                 app:layout_marginStartPercent="0%"
                 app:layout_marginTopPercent="0%" />
-        </com.sglabs.medistant.elements.homeactivity.View8>
+        </com.sglabs.medistant.elements.homeactivity.Helpline>
     </android.support.percent.PercentRelativeLayout>
 </LinearLayout>

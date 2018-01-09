@@ -6,7 +6,7 @@ import android.preference.Preference;
 
 import com.sglabs.medistant.R;
 
-public class PreferenceFragment extends android.preference.PreferenceFragment implements SharedPreferences.OnSharedPreferenceChangeListener {
+public class ReminderPreferenceFragment extends android.preference.PreferenceFragment implements SharedPreferences.OnSharedPreferenceChangeListener {
 
     @Override
     public void onCreate(final Bundle savedInstanceState) {

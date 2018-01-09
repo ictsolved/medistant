@@ -9,52 +9,52 @@ import android.util.AttributeSet;
 import android.view.View;
 
 import com.sglabs.medistant.R;
-import com.sglabs.medistant.activities.BloodDonationActivity;
+import com.sglabs.medistant.activities.AppointmentActivity;
 import com.sglabs.medistant.activities.HomeActivity;
 
-public class View3 extends PercentRelativeLayout {
-    public AppCompatButton textButton2;
+public class Appointment extends PercentRelativeLayout {
+    public AppCompatButton textButton5;
 
-    public AppCompatImageButton imageButton2;
+    public AppCompatImageButton imageButton1;
 
-    public View3(Context context, AttributeSet attrs, int defStyle) {
+    public Appointment(Context context, AttributeSet attrs) {
+        super(context, attrs);
+    }
+
+    public Appointment(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
     }
 
-    public View3(Context context) {
+    public Appointment(Context context) {
         super(context);
-    }
-
-    public View3(Context context, AttributeSet attrs) {
-        super(context, attrs);
     }
 
     @Override
     public void onFinishInflate() {
         super.onFinishInflate();
 
-        textButton2 = (AppCompatButton) findViewById(R.id.text_button21);
+        textButton5 = (AppCompatButton) findViewById(R.id.text_button51);
 
-        textButton2.setTransformationMethod(null);
+        textButton5.setTransformationMethod(null);
 
-        textButton2.setOnClickListener(
+        textButton5.setOnClickListener(
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
                         HomeActivity activity = ((HomeActivity) getContext());
-                        Intent transitionIntent = new Intent(activity, BloodDonationActivity.class);
+                        Intent transitionIntent = new Intent(activity, AppointmentActivity.class);
                         activity.startActivity(transitionIntent);
                     }
                 });
 
-        imageButton2 = (AppCompatImageButton) findViewById(R.id.image_button2);
+        imageButton1 = (AppCompatImageButton) findViewById(R.id.image_button1);
 
-        imageButton2.setOnClickListener(
+        imageButton1.setOnClickListener(
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View view1) {
                         HomeActivity activity1 = ((HomeActivity) getContext());
-                        Intent transitionIntent1 = new Intent(activity1, BloodDonationActivity.class);
+                        Intent transitionIntent1 = new Intent(activity1, AppointmentActivity.class);
                         activity1.startActivity(transitionIntent1);
                     }
                 });

@@ -20,7 +20,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.sglabs.medistant.R;
-import com.sglabs.medistant.activities.ViewActivity;
+import com.sglabs.medistant.activities.ReminderViewActivity;
 import com.sglabs.medistant.models.Reminder;
 import com.sglabs.medistant.utils.DateAndTimeUtil;
 
@@ -42,7 +42,7 @@ public class ReminderAdapter extends RecyclerView.Adapter<ReminderAdapter.ViewHo
 
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
-        return new ViewHolder(LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.item_notification_list, viewGroup, false));
+        return new ViewHolder(LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.reminder_item_notification_list, viewGroup, false));
     }
 
     @Override
@@ -68,7 +68,7 @@ public class ReminderAdapter extends RecyclerView.Adapter<ReminderAdapter.ViewHo
         viewHolder.view.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(context, ViewActivity.class);
+                Intent intent = new Intent(context, ReminderViewActivity.class);
                 intent.putExtra("NOTIFICATION_ID", reminderList.get(viewHolder.getAdapterPosition()).getId());
 
                 // Add shared element transition animation if on Lollipop or later

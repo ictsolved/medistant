@@ -12,7 +12,7 @@ import android.widget.ImageView;
 
 import com.astuetz.PagerSlidingTabStrip;
 import com.sglabs.medistant.R;
-import com.sglabs.medistant.fragments.TabFragment;
+import com.sglabs.medistant.fragments.ReminderTabFragment;
 import com.sglabs.medistant.models.Reminder;
 
 public class ViewPageAdapter extends FragmentPagerAdapter implements PagerSlidingTabStrip.CustomTabProvider {
@@ -65,7 +65,7 @@ public class ViewPageAdapter extends FragmentPagerAdapter implements PagerSlidin
                 bundle.putInt("TYPE", Reminder.INACTIVE);
                 break;
         }
-        Fragment fragment = new TabFragment();
+        Fragment fragment = new ReminderTabFragment();
         fragment.setArguments(bundle);
         return fragment;
     }

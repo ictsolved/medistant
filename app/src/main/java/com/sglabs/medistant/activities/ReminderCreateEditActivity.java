@@ -46,8 +46,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
-public class ReminderCreateEditActivity extends AppCompatActivity implements ColorChooserDialog.ColorCallback,
-        IconPicker.IconSelectionListener, AdvancedRepeatSelector.AdvancedRepeatSelectionListener,
+public class ReminderCreateEditActivity extends AppCompatActivity implements AdvancedRepeatSelector.AdvancedRepeatSelectionListener,
         DaysOfWeekSelector.DaysOfWeekSelectionListener, RepeatSelector.RepeatSelectionListener {
 
     @BindView(R.id.create_coordinator)
@@ -76,14 +75,6 @@ public class ReminderCreateEditActivity extends AppCompatActivity implements Col
     TextView showText;
     @BindView(R.id.times)
     TextView timesText;
-    @BindView(R.id.select_icon_text)
-    TextView iconText;
-    @BindView(R.id.select_colour_text)
-    TextView colourText;
-    @BindView(R.id.colour_icon)
-    ImageView imageColourSelect;
-    @BindView(R.id.selected_icon)
-    ImageView imageIconSelect;
     @BindView(R.id.error_time)
     ImageView imageWarningTime;
     @BindView(R.id.error_date)
@@ -152,14 +143,8 @@ public class ReminderCreateEditActivity extends AppCompatActivity implements Col
         dateText.setText(DateAndTimeUtil.toStringReadableDate(calendar));
         timeText.setText(DateAndTimeUtil.toStringReadableTime(calendar, this));
         timesEditText.setText(String.valueOf(reminder.getNumberToShow()));
-        colourText.setText(colour);
-        imageColourSelect.setColorFilter(Color.parseColor(colour));
         timesText.setVisibility(View.VISIBLE);
 
-        if (!getString(R.string.default_icon).equals(icon)) {
-            imageIconSelect.setImageResource(getResources().getIdentifier(reminder.getIcon(), "drawable", getPackageName()));
-            iconText.setText(R.string.custom_icon);
-        }
 
         if (reminder.getRepeatType() != Reminder.DOES_NOT_REPEAT) {
             if (reminder.getInterval() > 1) {
@@ -221,42 +206,6 @@ public class ReminderCreateEditActivity extends AppCompatActivity implements Col
         DatePicker.show();
     }
 
-    @OnClick(R.id.icon_select)
-    public void iconSelector() {
-        DialogFragment dialog = new IconPicker();
-        dialog.show(getSupportFragmentManager(), "IconPicker");
-    }
-
-    @Override
-    public void onIconSelection(DialogFragment dialog, String iconName, String iconType, int iconResId) {
-        icon = iconName;
-        iconText.setText(iconType);
-        imageIconSelect.setImageResource(iconResId);
-        dialog.dismiss();
-    }
-
-    @OnClick(R.id.colour_select)
-    public void colourSelector() {
-        DatabaseHelper database = DatabaseHelper.getInstance(this);
-        int[] colours = database.getColoursArray();
-        database.close();
-
-        new ColorChooserDialog.Builder(this, R.string.select_colour)
-                .allowUserColorInputAlpha(false)
-                .customColors(colours, null)
-                .preselect(Color.parseColor(colour))
-                .show();
-    }
-
-    @Override
-    public void onColorSelection(@NonNull ColorChooserDialog dialog, @ColorInt int selectedColour) {
-        colour = String.format("#%06X", (0xFFFFFF & selectedColour));
-        imageColourSelect.setColorFilter(selectedColour);
-        colourText.setText(colour);
-        DatabaseHelper database = DatabaseHelper.getInstance(this);
-        database.addColour(new Colour(selectedColour, DateAndTimeUtil.toStringDateTimeWithSeconds(Calendar.getInstance())));
-        database.close();
-    }
 
     @OnClick(R.id.repeat_row)
     public void repeatSelector() {

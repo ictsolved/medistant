@@ -13,7 +13,7 @@ import android.preference.PreferenceManager;
 import android.support.v4.app.NotificationCompat;
 
 import com.sglabs.medistant.R;
-import com.sglabs.medistant.activities.ViewActivity;
+import com.sglabs.medistant.activities.ReminderViewActivity;
 import com.sglabs.medistant.models.Reminder;
 import com.sglabs.medistant.receivers.DismissReceiver;
 import com.sglabs.medistant.receivers.NagReceiver;
@@ -25,7 +25,7 @@ public class NotificationUtil {
 
     public static void createNotification(Context context, Reminder reminder) {
         // Create intent for reminder_notification onClick behaviour
-        Intent viewIntent = new Intent(context, ViewActivity.class);
+        Intent viewIntent = new Intent(context, ReminderViewActivity.class);
         viewIntent.putExtra("NOTIFICATION_ID", reminder.getId());
         viewIntent.putExtra("NOTIFICATION_DISMISS", true);
         PendingIntent pending = PendingIntent.getActivity(context, reminder.getId(), viewIntent, PendingIntent.FLAG_UPDATE_CURRENT);

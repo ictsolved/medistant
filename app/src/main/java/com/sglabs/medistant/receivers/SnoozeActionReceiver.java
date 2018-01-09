@@ -5,7 +5,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.preference.PreferenceManager;
 
-import com.sglabs.medistant.activities.SnoozeDialogActivity;
+import com.sglabs.medistant.activities.ReminderSnoozeDialogActivity;
 import com.sglabs.medistant.utils.AlarmUtil;
 
 public class SnoozeActionReceiver extends BroadcastReceiver {
@@ -23,7 +23,7 @@ public class SnoozeActionReceiver extends BroadcastReceiver {
         Intent closeIntent = new Intent(Intent.ACTION_CLOSE_SYSTEM_DIALOGS);
         context.sendBroadcast(closeIntent);
 
-        Intent snoozeIntent = new Intent(context, SnoozeDialogActivity.class);
+        Intent snoozeIntent = new Intent(context, ReminderSnoozeDialogActivity.class);
         snoozeIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         snoozeIntent.putExtra("NOTIFICATION_ID", reminderId);
         context.startActivity(snoozeIntent);

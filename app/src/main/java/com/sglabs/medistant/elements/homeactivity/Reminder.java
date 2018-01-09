@@ -9,52 +9,52 @@ import android.util.AttributeSet;
 import android.view.View;
 
 import com.sglabs.medistant.R;
-import com.sglabs.medistant.activities.FirstAidActivity;
 import com.sglabs.medistant.activities.HomeActivity;
+import com.sglabs.medistant.activities.ReminderActivity;
 
-public class View6 extends PercentRelativeLayout {
-    public AppCompatButton textButton8;
+public class Reminder extends PercentRelativeLayout {
+    public AppCompatButton textButton6;
 
-    public AppCompatImageButton imageButton4;
+    public AppCompatImageButton imageButton5;
 
-    public View6(Context context, AttributeSet attrs) {
-        super(context, attrs);
+    public Reminder(Context context) {
+        super(context);
     }
 
-    public View6(Context context, AttributeSet attrs, int defStyle) {
+    public Reminder(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
     }
 
-    public View6(Context context) {
-        super(context);
+    public Reminder(Context context, AttributeSet attrs) {
+        super(context, attrs);
     }
 
     @Override
     public void onFinishInflate() {
         super.onFinishInflate();
 
-        textButton8 = (AppCompatButton) findViewById(R.id.text_button81);
+        textButton6 = (AppCompatButton) findViewById(R.id.text_button61);
 
-        textButton8.setTransformationMethod(null);
+        textButton6.setTransformationMethod(null);
 
-        textButton8.setOnClickListener(
+        textButton6.setOnClickListener(
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
                         HomeActivity activity = ((HomeActivity) getContext());
-                        Intent transitionIntent = new Intent(activity, FirstAidActivity.class);
+                        Intent transitionIntent = new Intent(activity, ReminderActivity.class);
                         activity.startActivity(transitionIntent);
                     }
                 });
 
-        imageButton4 = (AppCompatImageButton) findViewById(R.id.image_button4);
+        imageButton5 = (AppCompatImageButton) findViewById(R.id.image_button5);
 
-        imageButton4.setOnClickListener(
+        imageButton5.setOnClickListener(
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View view1) {
                         HomeActivity activity1 = ((HomeActivity) getContext());
-                        Intent transitionIntent1 = new Intent(activity1, FirstAidActivity.class);
+                        Intent transitionIntent1 = new Intent(activity1, ReminderActivity.class);
                         activity1.startActivity(transitionIntent1);
                     }
                 });

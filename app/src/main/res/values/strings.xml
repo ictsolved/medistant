@@ -1,52 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <resources>
-    <string name="register_sex_prompt" formatted="false">Select Gender</string>
     <string name="donate_avail_title" formatted="false">Available Donors</string>
     <string name="text_button6_text" formatted="false">Heart Palpitation</string>
     <string name="text_button1_text1" formatted="false">Health Centers</string>
-    <string name="login_btn_text" formatted="false">Login</string>
-    <string name="register_confpw_hint" formatted="false">Confirm Password</string>
     <string name="text_view20_text" formatted="false">014234068</string>
     <string name="text_button8_text" formatted="false">Nose Bleeding</string>
-    <string name="register_confpw_text" formatted="false" />
     <string name="text_button2_text" formatted="false">Broken Toe</string>
     <string name="text_button5_text1" formatted="false">Appointment</string>
-    <string name="account_login_title" formatted="false">Login</string>
-    <string name="register_email_text" formatted="false" />
     <string name="text_view4_text" formatted="false">101</string>
-    <string name="login_email_text" formatted="false" />
     <string name="text_button4_text1" formatted="false">Doctors</string>
     <string name="text_view13_text" formatted="false">Maiti Nepal</string>
     <string name="text_button8_text1" formatted="false">First Aid</string>
-    <string name="register_name_text" formatted="false" />
     <string name="text_button7_text1" formatted="false">Helpline</string>
     <string name="text_view12_text" formatted="false">014493684</string>
-    <string name="login_email_hint" formatted="false">Email</string>
     <string name="text_button1_text" formatted="false">Abdominal Pain</string>
     <string name="text_view6_text" formatted="false">102</string>
     <string name="text_button2_text1" formatted="false">Blood Donation</string>
-    <string name="register_name_hint" formatted="false">Full Name</string>
-    <string name="register_pw_text" formatted="false" />
     <string name="text_view18_text" formatted="false">015521333</string>
     <string name="text_view9_text" formatted="false">Child Helpline Nepal (Free)</string>
     <string name="text_button3_text" formatted="false">Cuts and Wounds</string>
     <string name="text_button7_text" formatted="false">Insect Bite</string>
     <string name="text_button9_text" formatted="false">Sunburn</string>
-    <string name="register_email_hint" formatted="false">Email</string>
     <string name="text_button4_text" formatted="false">Dizziness</string>
     <string name="text_button5_text" formatted="false">Food Poisoning</string>
     <string name="text_view16_text" formatted="false">014225344</string>
     <string name="text_view15_text" formatted="false">Nepal Blood Bank</string>
     <string name="text_view17_text" formatted="false">Patan Mental Hospital</string>
-    <string name="register_pw_hint" formatted="false">Password</string>
     <string name="text_view10_text" formatted="false">1098</string>
-    <string name="account_register_title" formatted="false">Register</string>
     <string name="text_view2_text" formatted="false">100</string>
     <string name="text_button6_text1" formatted="false">Reminder</string>
-    <string name="register_dob_hint" formatted="false">Date of Birth</string>
     <string name="text_view19_text" formatted="false">American Embassy</string>
     <string name="text_view3_text" formatted="false">Fire Brigade (Free)</string>
-    <string name="login_pw_text" formatted="false" />
     <string name="text_view14_text" formatted="false">014492904</string>
     <string name="text_view1_text" formatted="false">Police Control Room (Free)</string>
     <string name="text_button26_text" formatted="false">Animal Bites</string>
@@ -56,13 +40,9 @@
     <string name="donate_req_title" formatted="false">Donation Requests</string>
     <string name="app_name" formatted="false">Medistant</string>
     <string name="tagline" formatted="false">Powered by Academia</string>
-    <string name="login_pw_hint" formatted="false">Password</string>
-    <string name="register_submit_text" formatted="false">Submit</string>
     <string name="history_pager_view_title" formatted="false">History</string>
-    <string name="blood_donate_checkbox_text" formatted="false">I am in for blood donation</string>
     <string name="text_view5_text" formatted="false">Ambulance (Free)</string>
     <string name="text_view11_text" formatted="false">Nepal Eye Bank</string>
-    <string name="register_dob_text" formatted="false" />
     <string name="text_button3_text1" formatted="false">Chat</string>
 
     <!--slider strings-->

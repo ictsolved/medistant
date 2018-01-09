@@ -9,23 +9,23 @@ import android.util.AttributeSet;
 import android.view.View;
 
 import com.sglabs.medistant.R;
-import com.sglabs.medistant.activities.HealthPlacesActivity;
+import com.sglabs.medistant.activities.HelplineActivity;
 import com.sglabs.medistant.activities.HomeActivity;
 
-public class View7 extends PercentRelativeLayout {
-    public AppCompatButton textButton1;
+public class Helpline extends PercentRelativeLayout {
+    public AppCompatButton textButton7;
 
-    public AppCompatImageButton imageButton6;
+    public AppCompatImageButton imageButton8;
 
-    public View7(Context context, AttributeSet attrs, int defStyle) {
-        super(context, attrs, defStyle);
-    }
-
-    public View7(Context context) {
+    public Helpline(Context context) {
         super(context);
     }
 
-    public View7(Context context, AttributeSet attrs) {
+    public Helpline(Context context, AttributeSet attrs, int defStyle) {
+        super(context, attrs, defStyle);
+    }
+
+    public Helpline(Context context, AttributeSet attrs) {
         super(context, attrs);
     }
 
@@ -33,28 +33,28 @@ public class View7 extends PercentRelativeLayout {
     public void onFinishInflate() {
         super.onFinishInflate();
 
-        textButton1 = (AppCompatButton) findViewById(R.id.text_button11);
+        textButton7 = (AppCompatButton) findViewById(R.id.text_button71);
 
-        textButton1.setTransformationMethod(null);
+        textButton7.setTransformationMethod(null);
 
-        textButton1.setOnClickListener(
+        textButton7.setOnClickListener(
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
                         HomeActivity activity = ((HomeActivity) getContext());
-                        Intent transitionIntent = new Intent(activity, HealthPlacesActivity.class);
+                        Intent transitionIntent = new Intent(activity, HelplineActivity.class);
                         activity.startActivity(transitionIntent);
                     }
                 });
 
-        imageButton6 = (AppCompatImageButton) findViewById(R.id.image_button6);
+        imageButton8 = (AppCompatImageButton) findViewById(R.id.image_button8);
 
-        imageButton6.setOnClickListener(
+        imageButton8.setOnClickListener(
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View view1) {
                         HomeActivity activity1 = ((HomeActivity) getContext());
-                        Intent transitionIntent1 = new Intent(activity1, HealthPlacesActivity.class);
+                        Intent transitionIntent1 = new Intent(activity1, HelplineActivity.class);
                         activity1.startActivity(transitionIntent1);
                     }
                 });

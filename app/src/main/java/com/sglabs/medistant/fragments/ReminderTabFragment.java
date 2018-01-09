@@ -26,7 +26,7 @@ import java.util.List;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class TabFragment extends Fragment {
+public class ReminderTabFragment extends Fragment {
 
     @BindView(R.id.recycler_view)
     RecyclerView recyclerView;

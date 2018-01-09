@@ -6,7 +6,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 
 import com.sglabs.medistant.R;
-import com.sglabs.medistant.fragments.PreferenceFragment;
+import com.sglabs.medistant.fragments.ReminderPreferenceFragment;
 
 public class PreferenceActivity extends AppCompatActivity {
 
@@ -20,7 +20,7 @@ public class PreferenceActivity extends AppCompatActivity {
         if (toolbar != null) toolbar.setNavigationIcon(R.drawable.ic_arrow_back_white_24dp);
         if (getActionBar() != null) getActionBar().setDisplayHomeAsUpEnabled(true);
 
-        getFragmentManager().beginTransaction().replace(R.id.content_frame, new PreferenceFragment()).commit();
+        getFragmentManager().beginTransaction().replace(R.id.content_frame, new ReminderPreferenceFragment()).commit();
     }
 
     @Override
