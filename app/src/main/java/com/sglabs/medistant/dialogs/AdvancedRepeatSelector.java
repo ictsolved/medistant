@@ -14,10 +14,6 @@ import com.sglabs.medistant.R;
 
 public class AdvancedRepeatSelector extends DialogFragment {
 
-    public interface AdvancedRepeatSelectionListener {
-        void onAdvancedRepeatSelection(int type, int interval, String repeatText);
-    }
-
     AdvancedRepeatSelectionListener listener;
 
     @Override
@@ -26,7 +22,8 @@ public class AdvancedRepeatSelector extends DialogFragment {
         listener = (AdvancedRepeatSelectionListener) context;
     }
 
-    @Override @NonNull
+    @Override
+    @NonNull
     public Dialog onCreateDialog(Bundle savedInstanceState) {
         View view = getActivity().getLayoutInflater().inflate(R.layout.number_picker, null);
         AlertDialog.Builder builder = new AlertDialog.Builder(getContext(), R.style.Dialog);
@@ -78,5 +75,9 @@ public class AdvancedRepeatSelector extends DialogFragment {
         values[3] = getResources().getQuantityString(R.plurals.month, number);
         values[4] = getResources().getQuantityString(R.plurals.year, number);
         return values;
+    }
+
+    public interface AdvancedRepeatSelectionListener {
+        void onAdvancedRepeatSelection(int type, int interval, String repeatText);
     }
 }

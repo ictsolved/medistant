@@ -42,6 +42,7 @@ public class HomeActivity extends AppCompatActivity {
     public View6 view6;
 
     public View8 view8;
+    boolean doubleBackToExitPressedOnce = false;
 
     @Override
     protected void onResume() {
@@ -122,7 +123,6 @@ public class HomeActivity extends AppCompatActivity {
         this.view8 = (View8) findViewById(R.id.view82);
     }
 
-    boolean doubleBackToExitPressedOnce = false;
     @Override
     public void onBackPressed() {
         if (doubleBackToExitPressedOnce) {

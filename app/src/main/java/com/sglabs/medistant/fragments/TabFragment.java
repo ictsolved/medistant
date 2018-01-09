@@ -16,10 +16,10 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.sglabs.medistant.database.DatabaseHelper;
-import com.sglabs.medistant.models.Reminder;
 import com.sglabs.medistant.R;
 import com.sglabs.medistant.adapters.ReminderAdapter;
+import com.sglabs.medistant.database.DatabaseHelper;
+import com.sglabs.medistant.models.Reminder;
 
 import java.util.List;
 
@@ -28,14 +28,24 @@ import butterknife.ButterKnife;
 
 public class TabFragment extends Fragment {
 
-    @BindView(R.id.recycler_view) RecyclerView recyclerView;
-    @BindView(R.id.empty_text) TextView emptyText;
-    @BindView(R.id.empty_view) LinearLayout linearLayout;
-    @BindView(R.id.empty_icon) ImageView imageView;
+    @BindView(R.id.recycler_view)
+    RecyclerView recyclerView;
+    @BindView(R.id.empty_text)
+    TextView emptyText;
+    @BindView(R.id.empty_view)
+    LinearLayout linearLayout;
+    @BindView(R.id.empty_icon)
+    ImageView imageView;
 
     private ReminderAdapter reminderAdapter;
     private List<Reminder> reminderList;
     private int remindersType;
+    private BroadcastReceiver messageReceiver = new BroadcastReceiver() {
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            updateList();
+        }
+    };
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -85,13 +95,6 @@ public class TabFragment extends Fragment {
             linearLayout.setVisibility(View.GONE);
         }
     }
-
-    private BroadcastReceiver messageReceiver = new BroadcastReceiver() {
-        @Override
-        public void onReceive(Context context, Intent intent) {
-            updateList();
-        }
-    };
 
     @Override
     public void onResume() {

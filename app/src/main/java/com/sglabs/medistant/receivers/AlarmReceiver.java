@@ -6,11 +6,9 @@ import android.content.Intent;
 import android.support.v4.content.LocalBroadcastManager;
 
 import com.sglabs.medistant.database.DatabaseHelper;
-import com.sglabs.medistant.utils.AlarmUtil;
 import com.sglabs.medistant.models.Reminder;
+import com.sglabs.medistant.utils.AlarmUtil;
 import com.sglabs.medistant.utils.NotificationUtil;
-
-import java.util.Calendar;
 
 public class AlarmReceiver extends BroadcastReceiver {
 

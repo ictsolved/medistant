@@ -13,10 +13,6 @@ import com.sglabs.medistant.models.Reminder;
 
 public class RepeatSelector extends DialogFragment {
 
-    public interface RepeatSelectionListener {
-        void onRepeatSelection(DialogFragment dialog, int interval, String repeatText);
-    }
-
     RepeatSelectionListener listener;
 
     @Override
@@ -25,7 +21,8 @@ public class RepeatSelector extends DialogFragment {
         listener = (RepeatSelectionListener) context;
     }
 
-    @Override @NonNull
+    @Override
+    @NonNull
     public Dialog onCreateDialog(Bundle savedInstanceState) {
         final String[] repeatArray = getResources().getStringArray(R.array.repeat_array);
         AlertDialog.Builder builder = new AlertDialog.Builder(getContext(), R.style.Dialog);
@@ -34,7 +31,7 @@ public class RepeatSelector extends DialogFragment {
                 if (which == Reminder.SPECIFIC_DAYS) {
                     DialogFragment daysOfWeekDialog = new DaysOfWeekSelector();
                     daysOfWeekDialog.show(getActivity().getSupportFragmentManager(), "DaysOfWeekSelector");
-                }  else if (which == Reminder.ADVANCED) {
+                } else if (which == Reminder.ADVANCED) {
                     DialogFragment advancedDialog = new AdvancedRepeatSelector();
                     advancedDialog.show(getActivity().getSupportFragmentManager(), "AdvancedSelector");
                 } else {
@@ -43,5 +40,9 @@ public class RepeatSelector extends DialogFragment {
             }
         });
         return builder.create();
+    }
+
+    public interface RepeatSelectionListener {
+        void onRepeatSelection(DialogFragment dialog, int interval, String repeatText);
     }
 }

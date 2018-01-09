@@ -15,10 +15,6 @@ import java.util.Arrays;
 
 public class DaysOfWeekSelector extends DialogFragment {
 
-    public interface DaysOfWeekSelectionListener {
-        void onDaysOfWeekSelected(boolean[] days);
-    }
-
     DaysOfWeekSelectionListener listener;
 
     @Override
@@ -27,7 +23,8 @@ public class DaysOfWeekSelector extends DialogFragment {
         listener = (DaysOfWeekSelectionListener) context;
     }
 
-    @Override @NonNull
+    @Override
+    @NonNull
     public Dialog onCreateDialog(Bundle savedInstanceState) {
         final boolean[] values = new boolean[7];
         String[] weekDays = DateAndTimeUtil.getWeekDays();
@@ -54,5 +51,9 @@ public class DaysOfWeekSelector extends DialogFragment {
         });
 
         return builder.create();
+    }
+
+    public interface DaysOfWeekSelectionListener {
+        void onDaysOfWeekSelected(boolean[] days);
     }
 }

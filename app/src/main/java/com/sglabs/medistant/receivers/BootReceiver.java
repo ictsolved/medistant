@@ -5,8 +5,8 @@ import android.content.Context;
 import android.content.Intent;
 
 import com.sglabs.medistant.database.DatabaseHelper;
-import com.sglabs.medistant.utils.AlarmUtil;
 import com.sglabs.medistant.models.Reminder;
+import com.sglabs.medistant.utils.AlarmUtil;
 import com.sglabs.medistant.utils.DateAndTimeUtil;
 
 import java.util.Calendar;

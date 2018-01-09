@@ -22,10 +22,14 @@ import butterknife.OnClick;
 
 public class MainActivity extends AppCompatActivity implements ReminderAdapter.RecyclerListener {
 
-    @BindView(R.id.tabs) PagerSlidingTabStrip pagerSlidingTabStrip;
-    @BindView(R.id.toolbar) Toolbar toolbar;
-    @BindView(R.id.viewpager) ViewPager viewPager;
-    @BindView(R.id.fab_button) FloatingActionButton floatingActionButton;
+    @BindView(R.id.tabs)
+    PagerSlidingTabStrip pagerSlidingTabStrip;
+    @BindView(R.id.toolbar)
+    Toolbar toolbar;
+    @BindView(R.id.viewpager)
+    ViewPager viewPager;
+    @BindView(R.id.fab_button)
+    FloatingActionButton floatingActionButton;
 
     private boolean fabIsHidden = false;
 
@@ -82,10 +86,6 @@ public class MainActivity extends AppCompatActivity implements ReminderAdapter.R
             case R.id.action_settings:
                 Intent preferenceIntent = new Intent(this, PreferenceActivity.class);
                 startActivity(preferenceIntent);
-                return true;
-            case R.id.action_about:
-                Intent aboutIntent = new Intent(this, AboutActivity.class);
-                startActivity(aboutIntent);
                 return true;
         }
         return super.onOptionsItemSelected(item);

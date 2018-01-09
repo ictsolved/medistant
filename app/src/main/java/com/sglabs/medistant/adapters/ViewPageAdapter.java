@@ -11,8 +11,8 @@ import android.widget.FrameLayout;
 import android.widget.ImageView;
 
 import com.astuetz.PagerSlidingTabStrip;
-import com.sglabs.medistant.fragments.TabFragment;
 import com.sglabs.medistant.R;
+import com.sglabs.medistant.fragments.TabFragment;
 import com.sglabs.medistant.models.Reminder;
 
 public class ViewPageAdapter extends FragmentPagerAdapter implements PagerSlidingTabStrip.CustomTabProvider {

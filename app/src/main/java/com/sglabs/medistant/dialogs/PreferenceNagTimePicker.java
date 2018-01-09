@@ -10,7 +10,7 @@ import android.widget.NumberPicker;
 
 import com.sglabs.medistant.R;
 
-public class PreferenceNagTimePicker extends DialogPreference{
+public class PreferenceNagTimePicker extends DialogPreference {
 
     public static final int MAX_VALUE = 60;
     public static final int MIN_VALUE = 0;

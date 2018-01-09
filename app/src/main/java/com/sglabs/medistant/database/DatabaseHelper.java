@@ -16,12 +16,8 @@ import java.util.List;
 
 public class DatabaseHelper extends SQLiteOpenHelper {
 
-    private static DatabaseHelper instance;
-    private Context context;
-
     private static final int DATABASE_VERSION = 4;
     private static final String DATABASE_NAME = "RECURRENCE_DB";
-
     private static final String NOTIFICATION_TABLE = "NOTIFICATIONS";
     private static final String COL_ID = "ID";
     private static final String COL_TITLE = "TITLE";
@@ -34,12 +30,10 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     private static final String COL_ICON = "ICON";
     private static final String COL_COLOUR = "COLOUR";
     private static final String COL_INTERVAL = "INTERVAL";
-
     private static final String ICON_TABLE = "ICONS";
     private static final String COL_ICON_ID = "ID";
     private static final String COL_ICON_NAME = "NAME";
     private static final String COL_ICON_USE_FREQUENCY = "USE_FREQUENCY";
-
     private static final String DAYS_OF_WEEK_TABLE = "DAYS_OF_WEEK";
     private static final String COL_SUNDAY = "SUNDAY";
     private static final String COL_MONDAY = "MONDAY";
@@ -48,21 +42,14 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     private static final String COL_THURSDAY = "THURSDAY";
     private static final String COL_FRIDAY = "FRIDAY";
     private static final String COL_SATURDAY = "SATURDAY";
-
     private static final String PICKER_COLOUR_TABLE = "PICKER_COLOURS";
     private static final String COL_PICKER_COLOUR = "COLOUR";
     private static final String COL_PICKER_DATE_AND_TIME = "DATE_AND_TIME";
-
     private static final String DEFAULT_ICON = "ic_notifications_white_24dp";
     private static final String DEFAULT_COLOUR = "#8E8E8E";
     private static final String OLD_COLOUR = "#9E9E9E";
-
-    public static synchronized DatabaseHelper getInstance(Context context) {
-        if (instance == null) {
-            instance = new DatabaseHelper(context.getApplicationContext());
-        }
-        return instance;
-    }
+    private static DatabaseHelper instance;
+    private Context context;
 
     /**
      * Constructor is private to prevent direct instantiation
@@ -71,6 +58,13 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     private DatabaseHelper(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
         this.context = context;
+    }
+
+    public static synchronized DatabaseHelper getInstance(Context context) {
+        if (instance == null) {
+            instance = new DatabaseHelper(context.getApplicationContext());
+        }
+        return instance;
     }
 
     public void onCreate(SQLiteDatabase database) {
@@ -357,7 +351,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     private void addAllColours(SQLiteDatabase database) {
         int[] colours = context.getResources().getIntArray(R.array.int_colours_array);
-        for(int colour : colours) {
+        for (int colour : colours) {
             ContentValues values = new ContentValues();
             values.put(COL_PICKER_COLOUR, colour);
             values.put(COL_PICKER_DATE_AND_TIME, 0);

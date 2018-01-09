@@ -13,11 +13,11 @@ import android.preference.PreferenceManager;
 import android.support.v4.app.NotificationCompat;
 
 import com.sglabs.medistant.R;
+import com.sglabs.medistant.activities.ViewActivity;
 import com.sglabs.medistant.models.Reminder;
 import com.sglabs.medistant.receivers.DismissReceiver;
 import com.sglabs.medistant.receivers.NagReceiver;
 import com.sglabs.medistant.receivers.SnoozeActionReceiver;
-import com.sglabs.medistant.activities.ViewActivity;
 
 import java.util.Calendar;
 

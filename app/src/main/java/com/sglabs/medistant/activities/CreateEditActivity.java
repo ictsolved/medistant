@@ -26,6 +26,7 @@ import android.widget.TextView;
 import android.widget.TimePicker;
 
 import com.afollestad.materialdialogs.color.ColorChooserDialog;
+import com.sglabs.medistant.R;
 import com.sglabs.medistant.database.DatabaseHelper;
 import com.sglabs.medistant.dialogs.AdvancedRepeatSelector;
 import com.sglabs.medistant.dialogs.DaysOfWeekSelector;
@@ -33,7 +34,6 @@ import com.sglabs.medistant.dialogs.IconPicker;
 import com.sglabs.medistant.dialogs.RepeatSelector;
 import com.sglabs.medistant.models.Colour;
 import com.sglabs.medistant.models.Reminder;
-import com.sglabs.medistant.R;
 import com.sglabs.medistant.receivers.AlarmReceiver;
 import com.sglabs.medistant.utils.AlarmUtil;
 import com.sglabs.medistant.utils.AnimationUtil;
@@ -50,27 +50,48 @@ public class CreateEditActivity extends AppCompatActivity implements ColorChoose
         IconPicker.IconSelectionListener, AdvancedRepeatSelector.AdvancedRepeatSelectionListener,
         DaysOfWeekSelector.DaysOfWeekSelectionListener, RepeatSelector.RepeatSelectionListener {
 
-    @BindView(R.id.create_coordinator) CoordinatorLayout coordinatorLayout;
-    @BindView(R.id.notification_title) EditText titleEditText;
-    @BindView(R.id.notification_content) EditText contentEditText;
-    @BindView(R.id.time) TextView timeText;
-    @BindView(R.id.date) TextView dateText;
-    @BindView(R.id.repeat_day) TextView repeatText;
-    @BindView(R.id.switch_toggle) SwitchCompat foreverSwitch;
-    @BindView(R.id.show_times_number) EditText timesEditText;
-    @BindView(R.id.forever_row) LinearLayout foreverRow;
-    @BindView(R.id.bottom_row) LinearLayout bottomRow;
-    @BindView(R.id.bottom_view) View bottomView;
-    @BindView(R.id.show) TextView showText;
-    @BindView(R.id.times) TextView timesText;
-    @BindView(R.id.select_icon_text) TextView iconText;
-    @BindView(R.id.select_colour_text) TextView colourText;
-    @BindView(R.id.colour_icon) ImageView imageColourSelect;
-    @BindView(R.id.selected_icon) ImageView imageIconSelect;
-    @BindView(R.id.error_time) ImageView imageWarningTime;
-    @BindView(R.id.error_date) ImageView imageWarningDate;
-    @BindView(R.id.error_show) ImageView imageWarningShow;
-    @BindView(R.id.toolbar) Toolbar toolbar;
+    @BindView(R.id.create_coordinator)
+    CoordinatorLayout coordinatorLayout;
+    @BindView(R.id.notification_title)
+    EditText titleEditText;
+    @BindView(R.id.notification_content)
+    EditText contentEditText;
+    @BindView(R.id.time)
+    TextView timeText;
+    @BindView(R.id.date)
+    TextView dateText;
+    @BindView(R.id.repeat_day)
+    TextView repeatText;
+    @BindView(R.id.switch_toggle)
+    SwitchCompat foreverSwitch;
+    @BindView(R.id.show_times_number)
+    EditText timesEditText;
+    @BindView(R.id.forever_row)
+    LinearLayout foreverRow;
+    @BindView(R.id.bottom_row)
+    LinearLayout bottomRow;
+    @BindView(R.id.bottom_view)
+    View bottomView;
+    @BindView(R.id.show)
+    TextView showText;
+    @BindView(R.id.times)
+    TextView timesText;
+    @BindView(R.id.select_icon_text)
+    TextView iconText;
+    @BindView(R.id.select_colour_text)
+    TextView colourText;
+    @BindView(R.id.colour_icon)
+    ImageView imageColourSelect;
+    @BindView(R.id.selected_icon)
+    ImageView imageIconSelect;
+    @BindView(R.id.error_time)
+    ImageView imageWarningTime;
+    @BindView(R.id.error_date)
+    ImageView imageWarningDate;
+    @BindView(R.id.error_show)
+    ImageView imageWarningShow;
+    @BindView(R.id.toolbar)
+    Toolbar toolbar;
 
     private String icon;
     private String colour;

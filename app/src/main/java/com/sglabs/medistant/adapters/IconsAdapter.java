@@ -16,21 +16,10 @@ import java.util.List;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class IconsAdapter extends RecyclerView.Adapter<IconsAdapter.ViewHolder>{
+public class IconsAdapter extends RecyclerView.Adapter<IconsAdapter.ViewHolder> {
 
     private IconPicker iconPicker;
     private List<Icon> iconList;
-
-    public class ViewHolder extends RecyclerView.ViewHolder {
-        @BindView(R.id.icon) ImageView imageView;
-        private View view;
-
-        public ViewHolder(final View view) {
-            super(view);
-            this.view = view;
-            ButterKnife.bind(this, view);
-        }
-    }
 
     public IconsAdapter(IconPicker iconPicker, List<Icon> iconList) {
         this.iconPicker = iconPicker;
@@ -71,5 +60,17 @@ public class IconsAdapter extends RecyclerView.Adapter<IconsAdapter.ViewHolder>{
                 ((IconPicker.IconSelectionListener) viewHolder.view.getContext()).onIconSelection(iconPicker, iconName, name, iconResId);
             }
         });
+    }
+
+    public class ViewHolder extends RecyclerView.ViewHolder {
+        @BindView(R.id.icon)
+        ImageView imageView;
+        private View view;
+
+        public ViewHolder(final View view) {
+            super(view);
+            this.view = view;
+            ButterKnife.bind(this, view);
+        }
     }
 }

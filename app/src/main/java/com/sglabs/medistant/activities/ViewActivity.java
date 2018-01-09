@@ -28,9 +28,9 @@ import android.widget.LinearLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
 
+import com.sglabs.medistant.R;
 import com.sglabs.medistant.database.DatabaseHelper;
 import com.sglabs.medistant.models.Reminder;
-import com.sglabs.medistant.R;
 import com.sglabs.medistant.receivers.AlarmReceiver;
 import com.sglabs.medistant.receivers.DismissReceiver;
 import com.sglabs.medistant.receivers.SnoozeReceiver;
@@ -46,25 +46,47 @@ import butterknife.ButterKnife;
 
 public class ViewActivity extends AppCompatActivity {
 
-    @BindView(R.id.notification_title) TextView notificationTitleText;
-    @BindView(R.id.notification_time) TextView notificationTimeText;
-    @BindView(R.id.notification_content) TextView contentText;
-    @BindView(R.id.notification_icon) ImageView iconImage;
-    @BindView(R.id.notification_circle) ImageView circleImage;
-    @BindView(R.id.time) TextView timeText;
-    @BindView(R.id.date) TextView dateText;
-    @BindView(R.id.repeat) TextView repeatText;
-    @BindView(R.id.shown) TextView shownText;
-    @BindView(R.id.toolbar) Toolbar toolbar;
-    @BindView(R.id.detail_layout) LinearLayout linearLayout;
-    @BindView(R.id.toolbar_shadow) View shadowView;
-    @BindView(R.id.scroll) ScrollView scrollView;
-    @BindView(R.id.header) View headerView;
-    @BindView(R.id.view_coordinator) CoordinatorLayout coordinatorLayout;
+    @BindView(R.id.notification_title)
+    TextView notificationTitleText;
+    @BindView(R.id.notification_time)
+    TextView notificationTimeText;
+    @BindView(R.id.notification_content)
+    TextView contentText;
+    @BindView(R.id.notification_icon)
+    ImageView iconImage;
+    @BindView(R.id.notification_circle)
+    ImageView circleImage;
+    @BindView(R.id.time)
+    TextView timeText;
+    @BindView(R.id.date)
+    TextView dateText;
+    @BindView(R.id.repeat)
+    TextView repeatText;
+    @BindView(R.id.shown)
+    TextView shownText;
+    @BindView(R.id.toolbar)
+    Toolbar toolbar;
+    @BindView(R.id.detail_layout)
+    LinearLayout linearLayout;
+    @BindView(R.id.toolbar_shadow)
+    View shadowView;
+    @BindView(R.id.scroll)
+    ScrollView scrollView;
+    @BindView(R.id.header)
+    View headerView;
+    @BindView(R.id.view_coordinator)
+    CoordinatorLayout coordinatorLayout;
 
     private Reminder reminder;
     private boolean hideMarkAsDone;
     private boolean reminderChanged;
+    private BroadcastReceiver messageReceiver = new BroadcastReceiver() {
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            reminderChanged = true;
+            updateReminder();
+        }
+    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -227,7 +249,8 @@ public class ViewActivity extends AppCompatActivity {
     }
 
     public void actionShareText() {
-        Intent intent = new Intent(); intent.setAction(Intent.ACTION_SEND);
+        Intent intent = new Intent();
+        intent.setAction(Intent.ACTION_SEND);
         intent.setType("text/plain");
         intent.putExtra(Intent.EXTRA_TEXT, reminder.getTitle() + "\n" + reminder.getContent());
         startActivity(Intent.createChooser(intent, getString(R.string.action_share)));
@@ -259,14 +282,6 @@ public class ViewActivity extends AppCompatActivity {
         LocalBroadcastManager.getInstance(this).unregisterReceiver(messageReceiver);
         super.onPause();
     }
-
-    private BroadcastReceiver messageReceiver = new BroadcastReceiver() {
-        @Override
-        public void onReceive(Context context, Intent intent) {
-            reminderChanged = true;
-            updateReminder();
-        }
-    };
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

@@ -11,7 +11,6 @@ import android.view.View;
 import com.sglabs.medistant.R;
 import com.sglabs.medistant.activities.HomeActivity;
 import com.sglabs.medistant.activities.MainActivity;
-import com.sglabs.medistant.activities.ReminderActivity;
 
 public class View2 extends PercentRelativeLayout {
     public AppCompatButton textButton6;

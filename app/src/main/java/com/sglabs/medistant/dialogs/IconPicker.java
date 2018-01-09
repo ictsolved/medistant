@@ -19,10 +19,6 @@ import com.sglabs.medistant.database.DatabaseHelper;
 
 public class IconPicker extends DialogFragment {
 
-    public interface IconSelectionListener {
-        void onIconSelection(DialogFragment dialog, String iconName, String iconType, int iconResId);
-    }
-
     IconSelectionListener listener;
 
     @Override
@@ -31,7 +27,8 @@ public class IconPicker extends DialogFragment {
         listener = (IconSelectionListener) context;
     }
 
-    @Override @NonNull
+    @Override
+    @NonNull
     public Dialog onCreateDialog(Bundle savedInstanceState) {
         LayoutInflater inflater = getActivity().getLayoutInflater();
         View dialogView = inflater.inflate(R.layout.view_dialog_icons, null);
@@ -49,6 +46,10 @@ public class IconPicker extends DialogFragment {
         builder.setTitle(R.string.select_icon);
         builder.setView(dialogView);
         return builder.create();
+    }
+
+    public interface IconSelectionListener {
+        void onIconSelection(DialogFragment dialog, String iconName, String iconType, int iconResId);
     }
 
     public class ItemOffsetDecoration extends RecyclerView.ItemDecoration {

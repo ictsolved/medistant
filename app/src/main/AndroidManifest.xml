@@ -15,8 +15,8 @@
     <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT" />
 
     <application
-        android:allowBackup="true"
         android:name=".Application"
+        android:allowBackup="true"
         android:icon="@drawable/app_icon"
         android:label="@string/app_name"
         android:supportsRtl="true"
@@ -143,8 +143,6 @@
         </activity>
 
 
-
-
         <activity
             android:name=".activities.LoginActivity"
             android:theme="@style/AppTheme.NoActionBar">
@@ -168,9 +166,6 @@
             android:theme="@style/AppTheme.NoActionBar"></activity>
 
 
-
-
-
         <activity
             android:name=".activities.MainActivity"
             android:label="@string/app_name"
@@ -183,42 +178,36 @@
 
         <activity
             android:name=".activities.CreateEditActivity"
-            android:theme="@style/AppThemeLight"
-            android:configChanges="orientation|screenSize"/>
+            android:configChanges="orientation|screenSize"
+            android:theme="@style/AppThemeLight" />
 
         <activity
             android:name=".activities.ViewActivity"
-            android:theme="@style/AppThemeLight"/>
+            android:theme="@style/AppThemeLight" />
 
         <activity
             android:name=".activities.PreferenceActivity"
             android:label="@string/settings"
-            android:theme="@style/AppTheme"/>
-
-        <activity
-            android:name=".activities.AboutActivity"
-            android:label="@string/about"
-            android:theme="@style/AppThemeLight"/>
+            android:theme="@style/AppTheme" />
 
         <activity
             android:name=".activities.SnoozeDialogActivity"
+            android:excludeFromRecents="true"
             android:taskAffinity=""
-            android:theme="@style/AppThemeTransparent"
-            android:excludeFromRecents="true"/>
+            android:theme="@style/AppThemeTransparent" />
 
         <activity
             android:name=".activities.shortcut.CreateEditShortcut"
-            android:taskAffinity=""
-            android:theme="@style/AppThemeDialog"
             android:configChanges="orientation|screenSize"
-            android:excludeFromRecents="true">
+            android:excludeFromRecents="true"
+            android:taskAffinity=""
+            android:theme="@style/AppThemeDialog">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
 
-        <activity
-            android:name=".activities.shortcut.ShortcutActivity">
+        <activity android:name=".activities.shortcut.ShortcutActivity">
             <intent-filter>
                 <action android:name="android.intent.action.CREATE_SHORTCUT" />
                 <category android:name="android.intent.category.DEFAULT" />
@@ -237,7 +226,7 @@
 
         <receiver
             android:name=".receivers.BootReceiver"
-            android:enabled="true" >
+            android:enabled="true">
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
                 <action android:name="android.intent.action.MY_PACKAGE_REPLACED" />

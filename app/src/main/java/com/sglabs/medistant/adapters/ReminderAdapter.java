@@ -19,9 +19,9 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.sglabs.medistant.R;
 import com.sglabs.medistant.activities.ViewActivity;
 import com.sglabs.medistant.models.Reminder;
-import com.sglabs.medistant.R;
 import com.sglabs.medistant.utils.DateAndTimeUtil;
 
 import java.util.Calendar;
@@ -34,26 +34,6 @@ public class ReminderAdapter extends RecyclerView.Adapter<ReminderAdapter.ViewHo
 
     private Context context;
     private List<Reminder> reminderList;
-
-    public class ViewHolder extends RecyclerView.ViewHolder {
-        @BindView(R.id.notification_title) TextView title;
-        @BindView(R.id.notification_time) TextView time;
-        @BindView(R.id.notification_content) TextView content;
-        @BindView(R.id.header_separator) TextView textSeparator;
-        @BindView(R.id.notification_icon) ImageView icon;
-        @BindView(R.id.notification_circle) ImageView circle;
-        private View view;
-
-        public ViewHolder(final View view) {
-            super(view);
-            this.view = view;
-            ButterKnife.bind(this, view);
-        }
-    }
-
-    public interface RecyclerListener {
-        void hideFab();
-    }
 
     public ReminderAdapter(Context context, List<Reminder> reminderList) {
         this.context = context;
@@ -69,7 +49,7 @@ public class ReminderAdapter extends RecyclerView.Adapter<ReminderAdapter.ViewHo
     public void onBindViewHolder(final ViewHolder viewHolder, int position) {
         Calendar calendar = DateAndTimeUtil.parseDateAndTime(reminderList.get(position).getDateAndTime());
         // Show header for item if it is the first in date group
-        if (position > 0 && reminderList.get(position).getDate().equals(reminderList.get(position - 1).getDate()) ) {
+        if (position > 0 && reminderList.get(position).getDate().equals(reminderList.get(position - 1).getDate())) {
             viewHolder.textSeparator.setVisibility(View.GONE);
         } else {
             String appropriateDate = DateAndTimeUtil.getAppropriateDateFormat(context, calendar);
@@ -121,5 +101,31 @@ public class ReminderAdapter extends RecyclerView.Adapter<ReminderAdapter.ViewHo
     @Override
     public int getItemCount() {
         return reminderList.size();
+    }
+
+    public interface RecyclerListener {
+        void hideFab();
+    }
+
+    public class ViewHolder extends RecyclerView.ViewHolder {
+        @BindView(R.id.notification_title)
+        TextView title;
+        @BindView(R.id.notification_time)
+        TextView time;
+        @BindView(R.id.notification_content)
+        TextView content;
+        @BindView(R.id.header_separator)
+        TextView textSeparator;
+        @BindView(R.id.notification_icon)
+        ImageView icon;
+        @BindView(R.id.notification_circle)
+        ImageView circle;
+        private View view;
+
+        public ViewHolder(final View view) {
+            super(view);
+            this.view = view;
+            ButterKnife.bind(this, view);
+        }
     }
 }
