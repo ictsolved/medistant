@@ -154,7 +154,7 @@ public class SlideActivity extends AppCompatActivity {
 
     private void launchHomeScreen() {
         prefManager.setFirstTimeLaunch(false);
-        startActivity(new Intent(SlideActivity.this, LoginActivity.class));
+        startActivity(new Intent(SlideActivity.this, HomeActivity.class));
         finish();
     }
 

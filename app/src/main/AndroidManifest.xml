@@ -10,6 +10,9 @@
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
     <uses-permission android:name="android.permission.READ_PROFILE" />
     <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT" />
 
     <application
         android:allowBackup="true"
@@ -152,7 +155,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".activities.MainActivity"
+            android:name=".activities.ProfileActivity"
             android:label="@string/title_activity_profile"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
@@ -163,6 +166,83 @@
             android:name=".activities.ResetPasswordActivity"
             android:label="@string/title_activity_reset_password"
             android:theme="@style/AppTheme.NoActionBar"></activity>
+
+
+
+
+
+        <activity
+            android:name=".activities.MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/StartTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".activities.CreateEditActivity"
+            android:theme="@style/AppThemeLight"
+            android:configChanges="orientation|screenSize"/>
+
+        <activity
+            android:name=".activities.ViewActivity"
+            android:theme="@style/AppThemeLight"/>
+
+        <activity
+            android:name=".activities.PreferenceActivity"
+            android:label="@string/settings"
+            android:theme="@style/AppTheme"/>
+
+        <activity
+            android:name=".activities.AboutActivity"
+            android:label="@string/about"
+            android:theme="@style/AppThemeLight"/>
+
+        <activity
+            android:name=".activities.SnoozeDialogActivity"
+            android:taskAffinity=""
+            android:theme="@style/AppThemeTransparent"
+            android:excludeFromRecents="true"/>
+
+        <activity
+            android:name=".activities.shortcut.CreateEditShortcut"
+            android:taskAffinity=""
+            android:theme="@style/AppThemeDialog"
+            android:configChanges="orientation|screenSize"
+            android:excludeFromRecents="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".activities.shortcut.ShortcutActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.CREATE_SHORTCUT" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <receiver android:name=".receivers.AlarmReceiver" />
+
+        <receiver android:name=".receivers.SnoozeActionReceiver" />
+
+        <receiver android:name=".receivers.SnoozeReceiver" />
+
+        <receiver android:name=".receivers.DismissReceiver" />
+
+        <receiver android:name=".receivers.NagReceiver" />
+
+        <receiver
+            android:name=".receivers.BootReceiver"
+            android:enabled="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.MY_PACKAGE_REPLACED" />
+            </intent-filter>
+        </receiver>
 
     </application>
 
