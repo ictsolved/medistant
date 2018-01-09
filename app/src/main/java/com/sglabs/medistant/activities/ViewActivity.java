@@ -91,7 +91,7 @@ public class ViewActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_view);
+        setContentView(R.layout.reminder_view);
         ButterKnife.bind(this);
         setupTransitions();
 
@@ -112,15 +112,15 @@ public class ViewActivity extends AppCompatActivity {
         Intent intent = getIntent();
         int mReminderId = intent.getIntExtra("NOTIFICATION_ID", 0);
 
-        // Arrived to activity from notification on click
-        // Cancel notification and nag alarm
+        // Arrived to activity from reminder_notification on click
+        // Cancel reminder_notification and nag alarm
         if (intent.getBooleanExtra("NOTIFICATION_DISMISS", false)) {
             Intent dismissIntent = new Intent().setClass(this, DismissReceiver.class);
             dismissIntent.putExtra("NOTIFICATION_ID", mReminderId);
             sendBroadcast(dismissIntent);
         }
 
-        // Check if notification has been deleted
+        // Check if reminder_notification has been deleted
         if (database.isNotificationPresent(mReminderId)) {
             reminder = database.getNotification(mReminderId);
             database.close();
@@ -224,7 +224,7 @@ public class ViewActivity extends AppCompatActivity {
     }
 
     public void actionEdit() {
-        Intent intent = new Intent(this, CreateEditActivity.class);
+        Intent intent = new Intent(this, ReminderCreateEditActivity.class);
         intent.putExtra("NOTIFICATION_ID", reminder.getId());
         startActivity(intent);
         finish();
@@ -257,7 +257,7 @@ public class ViewActivity extends AppCompatActivity {
     }
 
     public void returnHome() {
-        Intent intent = new Intent(this, MainActivity.class);
+        Intent intent = new Intent(this, ReminderActivity.class);
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         startActivity(intent);
         finish();

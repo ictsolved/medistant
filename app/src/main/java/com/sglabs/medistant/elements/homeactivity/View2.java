@@ -10,7 +10,7 @@ import android.view.View;
 
 import com.sglabs.medistant.R;
 import com.sglabs.medistant.activities.HomeActivity;
-import com.sglabs.medistant.activities.MainActivity;
+import com.sglabs.medistant.activities.ReminderActivity;
 
 public class View2 extends PercentRelativeLayout {
     public AppCompatButton textButton6;
@@ -42,7 +42,7 @@ public class View2 extends PercentRelativeLayout {
                     @Override
                     public void onClick(View view) {
                         HomeActivity activity = ((HomeActivity) getContext());
-                        Intent transitionIntent = new Intent(activity, MainActivity.class);
+                        Intent transitionIntent = new Intent(activity, ReminderActivity.class);
                         activity.startActivity(transitionIntent);
                     }
                 });
@@ -54,7 +54,7 @@ public class View2 extends PercentRelativeLayout {
                     @Override
                     public void onClick(View view1) {
                         HomeActivity activity1 = ((HomeActivity) getContext());
-                        Intent transitionIntent1 = new Intent(activity1, MainActivity.class);
+                        Intent transitionIntent1 = new Intent(activity1, ReminderActivity.class);
                         activity1.startActivity(transitionIntent1);
                     }
                 });

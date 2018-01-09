@@ -38,7 +38,7 @@ public class ViewPageAdapter extends FragmentPagerAdapter implements PagerSlidin
 
     @Override
     public View getCustomTabView(ViewGroup parent, int position) {
-        FrameLayout customLayout = (FrameLayout) LayoutInflater.from(parent.getContext()).inflate(R.layout.custom_tab, parent, false);
+        FrameLayout customLayout = (FrameLayout) LayoutInflater.from(parent.getContext()).inflate(R.layout.reminder_custom_tab, parent, false);
         ((ImageView) customLayout.findViewById(R.id.image)).setImageResource(ICONS[position]);
         return customLayout;
     }

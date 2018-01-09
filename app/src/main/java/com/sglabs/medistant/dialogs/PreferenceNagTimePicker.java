@@ -21,7 +21,7 @@ public class PreferenceNagTimePicker extends DialogPreference {
 
     public PreferenceNagTimePicker(Context context, AttributeSet attrs) {
         super(context, attrs);
-        setDialogLayoutResource(R.layout.number_picker);
+        setDialogLayoutResource(R.layout.reminder_repeat);
         sharedPreferences = PreferenceManager.getDefaultSharedPreferences(context);
         setPersistent(false);
     }

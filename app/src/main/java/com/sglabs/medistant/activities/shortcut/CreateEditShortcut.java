@@ -5,9 +5,9 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.view.inputmethod.InputMethodManager;
 
-import com.sglabs.medistant.activities.CreateEditActivity;
+import com.sglabs.medistant.activities.ReminderCreateEditActivity;
 
-public class CreateEditShortcut extends CreateEditActivity {
+public class CreateEditShortcut extends ReminderCreateEditActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

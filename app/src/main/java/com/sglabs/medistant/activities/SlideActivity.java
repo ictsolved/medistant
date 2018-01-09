@@ -75,7 +75,7 @@ public class SlideActivity extends AppCompatActivity {
             finish();
         }
 
-        // Making notification bar transparent
+        // Making reminder_notification bar transparent
         if (Build.VERSION.SDK_INT >= 21) {
             getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_STABLE | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN);
         }
@@ -99,7 +99,7 @@ public class SlideActivity extends AppCompatActivity {
         // adding bottom dots
         addBottomDots(0);
 
-        // making notification bar transparent
+        // making reminder_notification bar transparent
         changeStatusBarColor();
 
         myViewPagerAdapter = new MyViewPagerAdapter();
@@ -159,7 +159,7 @@ public class SlideActivity extends AppCompatActivity {
     }
 
     /**
-     * Making notification bar transparent
+     * Making reminder_notification bar transparent
      */
     private void changeStatusBarColor() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {

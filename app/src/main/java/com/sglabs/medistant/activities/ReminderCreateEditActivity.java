@@ -46,7 +46,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
-public class CreateEditActivity extends AppCompatActivity implements ColorChooserDialog.ColorCallback,
+public class ReminderCreateEditActivity extends AppCompatActivity implements ColorChooserDialog.ColorCallback,
         IconPicker.IconSelectionListener, AdvancedRepeatSelector.AdvancedRepeatSelectionListener,
         DaysOfWeekSelector.DaysOfWeekSelectionListener, RepeatSelector.RepeatSelectionListener {
 
@@ -106,7 +106,7 @@ public class CreateEditActivity extends AppCompatActivity implements ColorChoose
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_create);
+        setContentView(R.layout.reminder_activity_create);
         ButterKnife.bind(this);
 
         setSupportActionBar(toolbar);
@@ -120,7 +120,7 @@ public class CreateEditActivity extends AppCompatActivity implements ColorChoose
         repeatType = Reminder.DOES_NOT_REPEAT;
         id = getIntent().getIntExtra("NOTIFICATION_ID", 0);
 
-        // Check whether to edit or create a new notification
+        // Check whether to edit or create a new reminder_notification
         if (id == 0) {
             DatabaseHelper database = DatabaseHelper.getInstance(this);
             id = database.getLastNotificationId() + 1;
@@ -196,7 +196,7 @@ public class CreateEditActivity extends AppCompatActivity implements ColorChoose
 
     @OnClick(R.id.time_row)
     public void timePicker() {
-        TimePickerDialog TimePicker = new TimePickerDialog(CreateEditActivity.this, new TimePickerDialog.OnTimeSetListener() {
+        TimePickerDialog TimePicker = new TimePickerDialog(ReminderCreateEditActivity.this, new TimePickerDialog.OnTimeSetListener() {
             @Override
             public void onTimeSet(TimePicker timePicker, int hour, int minute) {
                 calendar.set(Calendar.HOUR_OF_DAY, hour);
@@ -209,7 +209,7 @@ public class CreateEditActivity extends AppCompatActivity implements ColorChoose
 
     @OnClick(R.id.date_row)
     public void datePicker(View view) {
-        DatePickerDialog DatePicker = new DatePickerDialog(CreateEditActivity.this, new DatePickerDialog.OnDateSetListener() {
+        DatePickerDialog DatePicker = new DatePickerDialog(ReminderCreateEditActivity.this, new DatePickerDialog.OnDateSetListener() {
             @Override
             public void onDateSet(DatePicker DatePicker, int year, int month, int dayOfMonth) {
                 calendar.set(Calendar.YEAR, year);
@@ -357,7 +357,7 @@ public class CreateEditActivity extends AppCompatActivity implements ColorChoose
             calendar.set(Calendar.DAY_OF_MONTH, nowCalendar.get(Calendar.DAY_OF_MONTH));
         }
 
-        // Check if the number of times to show notification is empty
+        // Check if the number of times to show reminder_notification is empty
         if (timesEditText.getText().toString().isEmpty()) {
             timesEditText.setText("1");
         }
@@ -378,7 +378,7 @@ public class CreateEditActivity extends AppCompatActivity implements ColorChoose
             Snackbar.make(coordinatorLayout, R.string.toast_title_empty, Snackbar.LENGTH_SHORT).show();
             AnimationUtil.shakeView(titleEditText, this);
 
-            // Check if times to show notification is too low
+            // Check if times to show reminder_notification is too low
         } else if (timesToShow <= timesShown && !foreverSwitch.isChecked()) {
             Snackbar.make(coordinatorLayout, R.string.toast_higher_number, Snackbar.LENGTH_SHORT).show();
             imageWarningShow.setVisibility(View.VISIBLE);

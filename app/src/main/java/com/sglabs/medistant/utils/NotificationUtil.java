@@ -24,13 +24,13 @@ import java.util.Calendar;
 public class NotificationUtil {
 
     public static void createNotification(Context context, Reminder reminder) {
-        // Create intent for notification onClick behaviour
+        // Create intent for reminder_notification onClick behaviour
         Intent viewIntent = new Intent(context, ViewActivity.class);
         viewIntent.putExtra("NOTIFICATION_ID", reminder.getId());
         viewIntent.putExtra("NOTIFICATION_DISMISS", true);
         PendingIntent pending = PendingIntent.getActivity(context, reminder.getId(), viewIntent, PendingIntent.FLAG_UPDATE_CURRENT);
 
-        // Create intent for notification snooze click behaviour
+        // Create intent for reminder_notification snooze click behaviour
         Intent snoozeIntent = new Intent(context, SnoozeActionReceiver.class);
         snoozeIntent.putExtra("NOTIFICATION_ID", reminder.getId());
         PendingIntent pendingSnooze = PendingIntent.getBroadcast(context, reminder.getId(), snoozeIntent, PendingIntent.FLAG_UPDATE_CURRENT);

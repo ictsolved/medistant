@@ -31,7 +31,7 @@ public class IconPicker extends DialogFragment {
     @NonNull
     public Dialog onCreateDialog(Bundle savedInstanceState) {
         LayoutInflater inflater = getActivity().getLayoutInflater();
-        View dialogView = inflater.inflate(R.layout.view_dialog_icons, null);
+        View dialogView = inflater.inflate(R.layout.reminder_icons, null);
 
         RecyclerView recyclerView = (RecyclerView) dialogView.findViewById(R.id.icons_recycler_view);
         recyclerView.setLayoutManager(new GridLayoutManager(getContext(), getResources().getInteger(R.integer.grid_columns)));

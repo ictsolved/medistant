@@ -1,110 +1,93 @@
 package com.sglabs.medistant.activities;
 
 import android.content.Intent;
-import android.content.res.ColorStateList;
-import android.graphics.Color;
-import android.graphics.PorterDuff;
-import android.os.Build;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
-import android.support.v4.content.ContextCompat;
+import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.View;
-import android.widget.LinearLayout;
-import android.widget.TextView;
+import android.util.TypedValue;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.Window;
 
+import com.astuetz.PagerSlidingTabStrip;
 import com.sglabs.medistant.R;
+import com.sglabs.medistant.adapters.ReminderAdapter;
+import com.sglabs.medistant.adapters.ViewPageAdapter;
 
-public class ReminderActivity extends AppCompatActivity {
-    public LinearLayout mMainLayout;
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
 
-    public Toolbar appBar;
+public class ReminderActivity extends AppCompatActivity implements ReminderAdapter.RecyclerListener {
 
-    public FloatingActionButton floatingActionButton1;
+    @BindView(R.id.tabs)
+    PagerSlidingTabStrip pagerSlidingTabStrip;
+    @BindView(R.id.toolbar)
+    Toolbar toolbar;
+    @BindView(R.id.viewpager)
+    ViewPager viewPager;
+    @BindView(R.id.fab_button)
+    FloatingActionButton floatingActionButton;
 
-    public ReminderActivity getContext() {
-        return this;
+    private boolean fabIsHidden = false;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.reminder_main);
+        ButterKnife.bind(this);
+
+        setSupportActionBar(toolbar);
+        if (getSupportActionBar() != null) {
+            getSupportActionBar().setTitle(null);
+        }
+
+        ViewPageAdapter adapter = new ViewPageAdapter(getSupportFragmentManager());
+        viewPager.setAdapter(adapter);
+
+        pagerSlidingTabStrip.setViewPager(viewPager);
+        int pageMargin = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 4, getResources().getDisplayMetrics());
+        viewPager.setPageMargin(pageMargin);
+    }
+
+    @OnClick(R.id.fab_button)
+    public void fabClicked() {
+        Intent intent = new Intent(this, ReminderCreateEditActivity.class);
+        startActivity(intent);
+    }
+
+    @Override
+    public void hideFab() {
+        floatingActionButton.hide();
+        fabIsHidden = true;
     }
 
     @Override
     protected void onResume() {
         super.onResume();
-
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            getWindow().setStatusBarColor(Color.parseColor("#FF00897B"));
+        if (fabIsHidden) {
+            floatingActionButton.show();
+            fabIsHidden = false;
         }
     }
 
     @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_main, menu);
+        return true;
     }
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-
-        setContentView(R.layout.reminder);
-
-        mMainLayout = (LinearLayout) findViewById(R.id.reminder);
-
-        this.setup();
-    }
-
-    @Override
-    protected void onPause() {
-        super.onPause();
-    }
-
-    @Override
-    protected void onStop() {
-        super.onStop();
-    }
-
-    @Override
-    protected void onStart() {
-        super.onStart();
-    }
-
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-    }
-
-    private void setup() {
-        appBar = (Toolbar) findViewById(R.id.app_bar6);
-
-        ReminderActivity.this.setSupportActionBar(appBar);
-
-        for (int i = 0; i < appBar.getChildCount(); ++i) {
-            View child = appBar.getChildAt(i);
-            if (child instanceof TextView) {
-                child.setBackgroundColor(Color.TRANSPARENT);
-                break;
-            }
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.action_settings:
+                Intent preferenceIntent = new Intent(this, PreferenceActivity.class);
+                startActivity(preferenceIntent);
+                return true;
         }
-
-        appBar.setNavigationIcon(ContextCompat.getDrawable(getContext(), R.drawable.back_btn_ffffffff));
-
-        appBar
-                .getNavigationIcon()
-                .mutate()
-                .setColorFilter(Color.parseColor("#FFFFFFFF"), PorterDuff.Mode.SRC_ATOP);
-
-        appBar.setNavigationOnClickListener(
-                new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-                        ReminderActivity activity = ReminderActivity.this;
-                        Intent transitionIntent = new Intent(activity, HomeActivity.class);
-                        activity.startActivity(transitionIntent);
-                    }
-                });
-
-        floatingActionButton1 = (FloatingActionButton) findViewById(R.id.floating_action_button1);
-
-        floatingActionButton1.setBackgroundTintList(
-                ColorStateList.valueOf(Color.parseColor("#FF009688")));
+        return super.onOptionsItemSelected(item);
     }
 }

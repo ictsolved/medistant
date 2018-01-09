@@ -25,7 +25,7 @@ public class AdvancedRepeatSelector extends DialogFragment {
     @Override
     @NonNull
     public Dialog onCreateDialog(Bundle savedInstanceState) {
-        View view = getActivity().getLayoutInflater().inflate(R.layout.number_picker, null);
+        View view = getActivity().getLayoutInflater().inflate(R.layout.reminder_repeat, null);
         AlertDialog.Builder builder = new AlertDialog.Builder(getContext(), R.style.Dialog);
         builder.setTitle(R.string.repeat_every);
 
