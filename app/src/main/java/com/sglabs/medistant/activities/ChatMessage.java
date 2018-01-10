@@ -1,47 +1,75 @@
+/**
+ * Copyright Google Inc. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
 package com.sglabs.medistant.activities;
 
-import java.util.Date;
-
-/**
- * Created by Hathibelagal on 7/10/16.
- */
 public class ChatMessage {
 
-    private String messageText;
-    private String messageUser;
-    private long messageTime;
-
-    public ChatMessage(String messageText, String messageUser) {
-        this.messageText = messageText;
-        this.messageUser = messageUser;
-        messageTime = new Date().getTime();
-    }
+    private String id;
+    private String text;
+    private String name;
+    private String photoUrl;
+    private String imageUrl;
 
     public ChatMessage() {
-
     }
 
-    public String getMessageText() {
-        return messageText;
+    public ChatMessage(String text, String name, String photoUrl, String imageUrl) {
+        this.text = text;
+        this.name = name;
+        this.photoUrl = photoUrl;
+        this.imageUrl = imageUrl;
     }
 
-    public void setMessageText(String messageText) {
-        this.messageText = messageText;
+    public String getId() {
+        return id;
     }
 
-    public String getMessageUser() {
-        return messageUser;
+    public void setId(String id) {
+        this.id = id;
     }
 
-    public void setMessageUser(String messageUser) {
-        this.messageUser = messageUser;
+    public String getText() {
+        return text;
     }
 
-    public long getMessageTime() {
-        return messageTime;
+    public void setText(String text) {
+        this.text = text;
     }
 
-    public void setMessageTime(long messageTime) {
-        this.messageTime = messageTime;
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getPhotoUrl() {
+        return photoUrl;
+    }
+
+    public void setPhotoUrl(String photoUrl) {
+        this.photoUrl = photoUrl;
+    }
+
+    public String getImageUrl() {
+        return imageUrl;
+    }
+
+    public void setImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl;
     }
 }
