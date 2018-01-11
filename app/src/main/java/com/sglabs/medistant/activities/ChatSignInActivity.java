@@ -84,6 +84,7 @@ public class ChatSignInActivity extends AppCompatActivity implements GoogleApiCl
             Toast.makeText(this, "Sign In to Continue", Toast.LENGTH_SHORT).show();
         } else {
             startActivity(new Intent(this, HomeActivity.class));
+            finish();
         }
     }
 
