@@ -120,6 +120,10 @@
         <item name="android:windowTitleStyle">@style/CustomWindowTitle</item>
         <item name="android:windowTitleBackgroundStyle">@style/CustomWindowTitleBackground</item>
         <item name="android:windowNoTitle">false</item>
+        <item name="actionOverflowButtonStyle">@style/OverFlow</item>
+        <item name="android:colorButtonNormal">@drawable/button_selector</item>
+        <item name="colorButtonNormal">@drawable/button_selector</item>
+        <item name="android:buttonStyle">@style/FriendlyButtonStyle</item>
     </style>
 
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
@@ -131,10 +135,7 @@
         <item name="android:colorBackground">@color/background</item>
         <item name="android:dividerHeight">@dimen/line_separator_height</item>
         <item name="android:dialogTheme">@style/Dialog</item>
-        <item name="actionOverflowButtonStyle">@style/OverFlow</item>
-        <item name="android:colorButtonNormal">@drawable/button_selector</item>
-        <item name="colorButtonNormal">@drawable/button_selector</item>
-        <item name="android:buttonStyle">@style/FriendlyButtonStyle</item>
+        
     </style>
 
     <style name="AppThemeLight" parent="Theme.AppCompat.Light.NoActionBar">

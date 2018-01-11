@@ -6,14 +6,27 @@
              android:gravity="center"
              android:orientation="vertical">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/helpline"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFEEEEEE"
+        android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/app_bar5"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="30sp"
-        android:textStyle="bold"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="40dp"
-        android:text="@string/sign_in"/>
+        android:background="#FF009688"
+        android:fontFamily="sans-serif-medium"
+        android:textSize="20sp"
+        android:textStyle="normal"
+        android:theme="@style/app_bar_style5"
+        app:title="Medistant"
+        app:titleTextColor="#FFFFFFFF" />
+    </LinearLayout>
+
 
     <com.google.android.gms.common.SignInButton
         android:id="@+id/sign_in_button"

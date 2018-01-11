@@ -16,6 +16,9 @@
 package com.sglabs.medistant.activities;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.graphics.Color;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
@@ -47,6 +50,10 @@ public class ChatSignInActivity extends AppCompatActivity implements GoogleApiCl
 
     private GoogleApiClient mGoogleApiClient;
     private FirebaseAuth mFirebaseAuth;
+    private FirebaseUser mFirebaseUser;
+    private String mUsername;
+    private String mPhotoUrl;
+    private SharedPreferences mSharedPreferences;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -70,6 +77,14 @@ public class ChatSignInActivity extends AppCompatActivity implements GoogleApiCl
 
         // Initialize FirebaseAuth
         mFirebaseAuth = FirebaseAuth.getInstance();
+        mFirebaseUser = mFirebaseAuth.getCurrentUser();
+
+        if (mFirebaseUser == null) {
+            // Not signed in, launch the Sign In activity
+            Toast.makeText(this, "Sign In to Continue", Toast.LENGTH_SHORT).show();
+        } else {
+            startActivity(new Intent(this, HomeActivity.class));
+        }
     }
 
     private void handleFirebaseAuthResult(AuthResult authResult) {
@@ -147,6 +162,15 @@ public class ChatSignInActivity extends AppCompatActivity implements GoogleApiCl
         // be available.
         Log.d(TAG, "onConnectionFailed:" + connectionResult);
         Toast.makeText(this, "Google Play Services error.", Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            getWindow().setStatusBarColor(Color.parseColor("#FF00897B"));
+        }
     }
 
 }

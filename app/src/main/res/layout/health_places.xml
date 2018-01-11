@@ -15,7 +15,7 @@
         android:fontFamily="sans-serif-medium"
         android:textSize="20sp"
         android:textStyle="normal"
-        android:theme="@style/app_bar_style4"
+        android:theme="@style/app_bar_style"
         app:title="Nearby"
         app:titleTextColor="#FFFFFFFF" />
 

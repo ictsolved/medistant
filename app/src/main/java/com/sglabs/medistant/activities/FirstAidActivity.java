@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -16,9 +17,6 @@ import com.sglabs.medistant.R;
 import com.sglabs.medistant.elements.firstaidactivity.ScrollView1;
 
 public class FirstAidActivity extends AppCompatActivity {
-    public LinearLayout mMainLayout;
-
-    public Toolbar appBar;
 
     public ScrollView1 scrollView1;
 
@@ -48,7 +46,10 @@ public class FirstAidActivity extends AppCompatActivity {
 
         setContentView(R.layout.first_aid);
 
-        mMainLayout = (LinearLayout) findViewById(R.id.first_aid);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        if (toolbar != null) toolbar.setNavigationIcon(R.drawable.ic_arrow_back_white_24dp);
+        if (getActionBar() != null) getActionBar().setDisplayHomeAsUpEnabled(true);
 
         this.setup();
     }
@@ -72,35 +73,17 @@ public class FirstAidActivity extends AppCompatActivity {
     }
 
     private void setup() {
-        appBar = (Toolbar) findViewById(R.id.app_bar);
-
-        FirstAidActivity.this.setSupportActionBar(appBar);
-
-        for (int i = 0; i < appBar.getChildCount(); ++i) {
-            View child = appBar.getChildAt(i);
-            if (child instanceof TextView) {
-                child.setBackgroundColor(Color.TRANSPARENT);
-                break;
-            }
-        }
-
-        appBar.setNavigationIcon(ContextCompat.getDrawable(getContext(), R.drawable.back_btn_ffffffff));
-
-        appBar
-                .getNavigationIcon()
-                .mutate()
-                .setColorFilter(Color.parseColor("#FFFFFFFF"), PorterDuff.Mode.SRC_ATOP);
-
-        appBar.setNavigationOnClickListener(
-                new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-                        FirstAidActivity activity = FirstAidActivity.this;
-                        Intent transitionIntent = new Intent(activity, HomeActivity.class);
-                        activity.startActivity(transitionIntent);
-                    }
-                });
 
         this.scrollView1 = (ScrollView1) findViewById(R.id.scroll_view1);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                onBackPressed();
+                return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 }

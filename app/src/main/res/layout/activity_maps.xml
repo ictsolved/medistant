@@ -13,16 +13,26 @@
           tools:context="com.sglabs.medistant.MapsActivity"/>
 
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
                   xmlns:tools="http://schemas.android.com/tools"
-                  android:layout_width="match_parent"
+        android:id="@+id/health_places"
+        android:layout_width="match_parent"
                   android:layout_height="wrap_content"
                   android:orientation="vertical">
 
-        <Button
-            android:id="@+id/btnRestaurant"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Nearby Restaurants" />
+
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            android:theme="@style/Toolbar"
+            app:popupTheme="@style/Theme.AppCompat.Light.DarkActionBar"
+            app:title="Health Centers" />
+
+
+
 
         <Button
             android:id="@+id/btnHospital"
@@ -30,11 +40,9 @@
             android:layout_height="wrap_content"
             android:text="Nearby Hospitals" />
 
-        <Button
-            android:id="@+id/btnSchool"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Nearby Schools" />
+
+
+
 
     </LinearLayout>
 </FrameLayout>

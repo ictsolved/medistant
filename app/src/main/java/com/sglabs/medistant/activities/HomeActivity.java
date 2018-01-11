@@ -25,8 +25,6 @@ import com.sglabs.medistant.elements.homeactivity.Reminder;
 public class HomeActivity extends AppCompatActivity {
     public LinearLayout mMainLayout;
 
-    public Toolbar appBar;
-
     public Appointment view1;
 
     public BloodDonation view3;
@@ -94,17 +92,6 @@ public class HomeActivity extends AppCompatActivity {
     }
 
     private void setup() {
-        appBar = (Toolbar) findViewById(R.id.app_bar3);
-
-        HomeActivity.this.setSupportActionBar(appBar);
-
-        for (int i = 0; i < appBar.getChildCount(); ++i) {
-            View child = appBar.getChildAt(i);
-            if (child instanceof TextView) {
-                child.setBackgroundColor(Color.TRANSPARENT);
-                break;
-            }
-        }
 
         this.view1 = (Appointment) findViewById(R.id.view12);
 
