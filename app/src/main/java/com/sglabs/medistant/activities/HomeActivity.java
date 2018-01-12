@@ -34,6 +34,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.sglabs.medistant.R;
+import com.sglabs.medistant.activities.lapitchat.MainActivity;
 import com.sglabs.medistant.elements.homeactivity.Appointment;
 import com.sglabs.medistant.elements.homeactivity.BloodDonation;
 import com.sglabs.medistant.elements.homeactivity.Chat;
@@ -182,7 +183,7 @@ public class HomeActivity extends AppCompatActivity {
         int i = item.getItemId();
         if (i == R.id.action_logout) {
             FirebaseAuth.getInstance().signOut();
-            startActivity(new Intent(this, ChatSignInActivity.class));
+            startActivity(new Intent(this, MainActivity.class));
             finish();
             return true;
         } else {

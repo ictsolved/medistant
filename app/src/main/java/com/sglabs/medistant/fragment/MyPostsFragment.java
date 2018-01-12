@@ -1,3 +1,4 @@
+/*
 package com.sglabs.medistant.fragment;
 
 import com.google.firebase.database.DatabaseReference;
@@ -14,3 +15,4 @@ public class MyPostsFragment extends PostListFragment {
                 .child(getUid());
     }
 }
+*/

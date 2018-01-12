@@ -177,44 +177,6 @@
             </intent-filter>
         </receiver>
 
-        <activity android:name="com.sglabs.medistant.activities.ChatActivity"
-            android:theme="@style/AppThemeChat"
-            android:label="Chat" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-                <category android:name="android.intent.category.DEFAULT"/>
-            </intent-filter>
-            <intent-filter>
-                <action android:name="android.intent.action.VIEW"/>
-                <category android:name="android.intent.category.DEFAULT"/>
-                <category android:name="android.intent.category.BROWSABLE"/>
-                <data
-                    android:host="friendlychat.firebase.google.com"
-                    android:scheme="http"
-                    android:pathPrefix="/message"
-                    />
-            </intent-filter>
-        </activity>
-
-        <activity android:name=".activities.ChatSignInActivity"
-        android:theme="@style/AppThemeChat"    />
-
-        <service
-            android:name=".activities.ChatFirebaseMessagingService"
-            android:exported="false">
-            <intent-filter>
-                <action android:name="com.google.firebase.MESSAGING_EVENT" />
-            </intent-filter>
-        </service>
-
-        <service
-            android:name=".activities.ChatFirebaseInstanceIdService"
-            android:exported="false">
-            <intent-filter>
-                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
-            </intent-filter>
-        </service>
-
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/google_maps_key"/>
@@ -230,18 +192,73 @@
 
 
         <activity
-            android:name=".activities.MainActivity"
+            android:name=".activities.MainActivityAppointment"
             android:label="Appointment"
             android:theme="@style/AppTheme" />
-        <activity android:name=".activities.NewPostActivity" />
-        <activity android:name=".activities.SignInActivity">
+        <activity android:name=".activities.NewPostActivityAppointment" />
+        <activity android:name=".activities.SignInActivityAppointment">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name=".activities.PostDetailActivity"></activity>
+        <activity android:name=".activities.PostDetailActivityAppointment"></activity>
+
+
+
+
+
+        <service android:name=".activities.lapitchat.FirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <activity android:name=".activities.lapitchat.MainActivity"
+            android:theme="@style/AppThemeLapit" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activities.lapitchat.StartActivity"
+            android:theme="@style/AppThemeLapit" />
+        <activity
+            android:name=".activities.lapitchat.RegisterActivity"
+            android:parentActivityName=".activities.lapitchat.StartActivity"
+            android:theme="@style/AppThemeLapit" />
+        <activity
+            android:name=".activities.lapitchat.LoginActivity"
+            android:parentActivityName=".activities.lapitchat.StartActivity"
+            android:theme="@style/AppThemeLapit" />
+        <activity android:name=".activities.lapitchat.SettingsActivity"
+            android:theme="@style/AppThemeLapit" />
+        <activity
+            android:name=".activities.lapitchat.StatusActivity"
+            android:parentActivityName=".activities.lapitchat.SettingsActivity"
+            android:theme="@style/AppThemeLapit" />
+        <activity
+            android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
+            android:theme="@style/Base.Theme.AppCompat" />
+        <activity
+            android:name=".activities.lapitchat.UsersActivity"
+            android:parentActivityName=".activities.lapitchat.MainActivity"
+            android:theme="@style/AppThemeLapit" />
+        <activity android:name=".activities.lapitchat.ProfileActivity"
+            android:theme="@style/AppThemeLapit" >
+            <intent-filter>
+                <action android:name="in.tvac.akshaye.lapitchat_TARGET_NOTIFICATION" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activities.lapitchat.ChatActivity"
+            android:parentActivityName=".activities.lapitchat.MainActivity"
+            android:theme="@style/AppThemeLapit" ></activity>
+
+
 
     </application>
 

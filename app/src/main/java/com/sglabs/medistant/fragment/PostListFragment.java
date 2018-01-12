@@ -1,3 +1,4 @@
+/*
 package com.sglabs.medistant.fragment;
 
 import android.content.Intent;
@@ -20,7 +21,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.MutableData;
 import com.google.firebase.database.Query;
 import com.google.firebase.database.Transaction;
-import com.sglabs.medistant.activities.PostDetailActivity;
+import com.sglabs.medistant.activities.PostDetailActivityAppointment;
 import com.sglabs.medistant.R;
 import com.sglabs.medistant.models.Post;
 import com.sglabs.medistant.viewholder.PostViewHolder;
@@ -89,9 +90,9 @@ public abstract class PostListFragment extends Fragment {
                 viewHolder.itemView.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        // Launch PostDetailActivity
-                        Intent intent = new Intent(getActivity(), PostDetailActivity.class);
-                        intent.putExtra(PostDetailActivity.EXTRA_POST_KEY, postKey);
+                        // Launch PostDetailActivityAppointment
+                        Intent intent = new Intent(getActivity(), PostDetailActivityAppointment.class);
+                        intent.putExtra(PostDetailActivityAppointment.EXTRA_POST_KEY, postKey);
                         startActivity(intent);
                     }
                 });
@@ -181,3 +182,4 @@ public abstract class PostListFragment extends Fragment {
     public abstract Query getQuery(DatabaseReference databaseReference);
 
 }
+*/

@@ -1,3 +1,4 @@
+/*
 package com.sglabs.medistant.fragment;
 
 import com.google.firebase.database.DatabaseReference;
@@ -19,3 +20,4 @@ public class RecentPostsFragment extends PostListFragment {
         return recentPostsQuery;
     }
 }
+*/

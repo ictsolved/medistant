@@ -1,3 +1,4 @@
+/*
 package com.sglabs.medistant.activities;
 
 import android.content.Context;
@@ -26,9 +27,9 @@ import com.sglabs.medistant.models.Post;
 import java.util.ArrayList;
 import java.util.List;
 
-public class PostDetailActivity extends BaseActivity implements View.OnClickListener {
+public class PostDetailActivityAppointment extends AppointmentBaseActivity implements View.OnClickListener {
 
-    private static final String TAG = "PostDetailActivity";
+    private static final String TAG = "PostDetailActivityAppointment";
 
     public static final String EXTRA_POST_KEY = "post_key";
 
@@ -98,7 +99,7 @@ public class PostDetailActivity extends BaseActivity implements View.OnClickList
                 // Getting Post failed, log a message
                 Log.w(TAG, "loadPost:onCancelled", databaseError.toException());
                 // [START_EXCLUDE]
-                Toast.makeText(PostDetailActivity.this, "Failed to load post.",
+                Toast.makeText(PostDetailActivityAppointment.this, "Failed to load post.",
                         Toast.LENGTH_SHORT).show();
                 // [END_EXCLUDE]
             }
@@ -306,3 +307,4 @@ public class PostDetailActivity extends BaseActivity implements View.OnClickList
 
     }
 }
+*/

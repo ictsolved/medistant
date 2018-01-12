@@ -12,7 +12,8 @@
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  * See the License for the specific language governing permissions and
  * limitations under the License.
- */
+ *//*
+
 
 package com.sglabs.medistant.activities;
 
@@ -31,9 +32,9 @@ import com.sglabs.medistant.fragment.MyPostsFragment;
 import com.sglabs.medistant.fragment.MyTopPostsFragment;
 import com.sglabs.medistant.fragment.RecentPostsFragment;
 
-public class  MainActivity extends BaseActivity {
+public class MainActivityAppointment extends AppointmentBaseActivity {
 
-    private static final String TAG = "MainActivity";
+    private static final String TAG = "MainActivityAppointment";
 
     private FragmentPagerAdapter mPagerAdapter;
     private ViewPager mViewPager;
@@ -41,7 +42,7 @@ public class  MainActivity extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.appointment_main);
 
         // Create the adapter that will return a fragment for each section
         mPagerAdapter = new FragmentPagerAdapter(getSupportFragmentManager()) {
@@ -74,11 +75,11 @@ public class  MainActivity extends BaseActivity {
         TabLayout tabLayout = findViewById(R.id.tabs);
         tabLayout.setupWithViewPager(mViewPager);
 
-        // Button launches NewPostActivity
+        // Button launches NewPostActivityAppointment
         findViewById(R.id.fab_new_post).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, NewPostActivity.class));
+                startActivity(new Intent(MainActivityAppointment.this, NewPostActivityAppointment.class));
             }
         });
     }
@@ -94,7 +95,7 @@ public class  MainActivity extends BaseActivity {
         int i = item.getItemId();
         if (i == R.id.action_logout) {
             FirebaseAuth.getInstance().signOut();
-            startActivity(new Intent(this, SignInActivity.class));
+            startActivity(new Intent(this, SignInActivityAppointment.class));
             finish();
             return true;
         } else {
@@ -103,3 +104,4 @@ public class  MainActivity extends BaseActivity {
     }
 
 }
+*/

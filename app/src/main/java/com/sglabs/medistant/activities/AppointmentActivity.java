@@ -1,3 +1,4 @@
+/*
 package com.sglabs.medistant.activities;
 
 import android.content.Intent;
@@ -107,3 +108,4 @@ public class AppointmentActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 }
+*/

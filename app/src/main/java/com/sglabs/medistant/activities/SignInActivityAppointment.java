@@ -1,3 +1,4 @@
+/*
 package com.sglabs.medistant.activities;
 
 import android.content.Intent;
@@ -19,9 +20,9 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.sglabs.medistant.models.User;
 
-public class SignInActivity extends BaseActivity implements View.OnClickListener {
+public class SignInActivityAppointment extends AppointmentBaseActivity implements View.OnClickListener {
 
-    private static final String TAG = "SignInActivity";
+    private static final String TAG = "SignInActivityAppointment";
 
     private DatabaseReference mDatabase;
     private FirebaseAuth mAuth;
@@ -80,7 +81,7 @@ public class SignInActivity extends BaseActivity implements View.OnClickListener
                         if (task.isSuccessful()) {
                             onAuthSuccess(task.getResult().getUser());
                         } else {
-                            Toast.makeText(SignInActivity.this, "Sign In Failed",
+                            Toast.makeText(SignInActivityAppointment.this, "Sign In Failed",
                                     Toast.LENGTH_SHORT).show();
                         }
                     }
@@ -107,7 +108,7 @@ public class SignInActivity extends BaseActivity implements View.OnClickListener
                         if (task.isSuccessful()) {
                             onAuthSuccess(task.getResult().getUser());
                         } else {
-                            Toast.makeText(SignInActivity.this, "Sign Up Failed",
+                            Toast.makeText(SignInActivityAppointment.this, "Sign Up Failed",
                                     Toast.LENGTH_SHORT).show();
                         }
                     }
@@ -120,8 +121,8 @@ public class SignInActivity extends BaseActivity implements View.OnClickListener
         // Write new user
         writeNewUser(user.getUid(), username, user.getEmail());
 
-        // Go to MainActivity
-        startActivity(new Intent(SignInActivity.this, HomeActivity.class));
+        // Go to MainActivityAppointment
+        startActivity(new Intent(SignInActivityAppointment.this, HomeActivity.class));
         finish();
     }
 
@@ -170,3 +171,4 @@ public class SignInActivity extends BaseActivity implements View.OnClickListener
         }
     }
 }
+*/

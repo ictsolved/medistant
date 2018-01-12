@@ -9,8 +9,8 @@ import android.util.AttributeSet;
 import android.view.View;
 
 import com.sglabs.medistant.R;
-import com.sglabs.medistant.activities.ChatActivity;
 import com.sglabs.medistant.activities.HomeActivity;
+import com.sglabs.medistant.activities.lapitchat.MainActivity;
 
 public class Chat extends PercentRelativeLayout {
     public AppCompatButton textButton3;
@@ -42,7 +42,7 @@ public class Chat extends PercentRelativeLayout {
                     @Override
                     public void onClick(View view) {
                         HomeActivity activity = ((HomeActivity) getContext());
-                        Intent transitionIntent = new Intent(activity, ChatActivity.class);
+                        Intent transitionIntent = new Intent(activity, MainActivity.class);
                         activity.startActivity(transitionIntent);
                     }
                 });
@@ -54,7 +54,7 @@ public class Chat extends PercentRelativeLayout {
                     @Override
                     public void onClick(View view1) {
                         HomeActivity activity1 = ((HomeActivity) getContext());
-                        Intent transitionIntent1 = new Intent(activity1, ChatActivity.class);
+                        Intent transitionIntent1 = new Intent(activity1, MainActivity.class);
                         activity1.startActivity(transitionIntent1);
                     }
                 });
