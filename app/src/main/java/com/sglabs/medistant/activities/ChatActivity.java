@@ -391,47 +391,6 @@ public class ChatActivity extends AppCompatActivity implements
         super.onDestroy();
     }
 
-
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-            case R.id.invite_menu:
-                sendInvitation();
-                return true;
-            case R.id.crash_menu:
-                FirebaseCrash.logcat(Log.ERROR, TAG, "crash caused");
-                causeCrash();
-                return true;
-            case R.id.sign_out_menu:
-                mFirebaseAuth.signOut();
-                Auth.GoogleSignInApi.signOut(mGoogleApiClient);
-                mFirebaseUser = null;
-                mUsername = ANONYMOUS;
-                mPhotoUrl = null;
-                startActivity(new Intent(this, ChatSignInActivity.class));
-                finish();
-                return true;
-            case R.id.fresh_config_menu:
-                fetchConfig();
-                return true;
-            default:
-                return super.onOptionsItemSelected(item);
-        }
-    }
-
-    private void causeCrash() {
-        throw new NullPointerException("Fake null pointer exception");
-    }
-
-    private void sendInvitation() {
-        Intent intent = new AppInviteInvitation.IntentBuilder(getString(R.string.invitation_title))
-                .setMessage(getString(R.string.invitation_message))
-                .setCallToActionText(getString(R.string.invitation_cta))
-                .build();
-        startActivityForResult(intent, REQUEST_INVITE);
-    }
-
     // Fetch the config to determine the allowed length of messages.
     public void fetchConfig() {
         long cacheExpiration = 3600; // 1 hour in seconds
