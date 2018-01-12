@@ -1,17 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <resources>
     <color name="app_bar_text_color7">#FFFFFFFF</color>
-    <color name="app_bar_background_color5">#FF009688</color>
-    <color name="app_bar_background_color4">#FF009688</color>
-    <color name="app_bar_background_color1">#FF009688</color>
-    <color name="app_bar_text_color5">#FFFFFFFF</color>
-    <color name="app_bar_background_color7">#FF009688</color>
-    <color name="app_bar_text_color4">#FFFFFFFF</color>
-    <color name="app_bar_text_color">#FFFFFFFF</color>
-    <color name="app_bar_text_color1">#FFFFFFFF</color>
-    <color name="app_bar_text_color3">#FFFFFFFF</color>
-    <color name="app_bar_background_color3">#FF009688</color>
-    <color name="app_bar_background_color">#FF009688</color>
+   <color name="app_bar_background_color5">#FF009688</color>
+   <color name="app_bar_text_color2">#FFFFFFFF</color>
+   <color name="app_bar_background_color4">#FF009688</color>
+   <color name="app_bar_background_color6">#FF009688</color>
+   <color name="app_bar_background_color1">#FF009688</color>
+   <color name="app_bar_text_color5">#FFFFFFFF</color>
+   <color name="app_bar_background_color7">#FF009688</color>
+   <color name="app_bar_text_color6">#FFFFFFFF</color>
+   <color name="app_bar_text_color4">#FFFFFFFF</color>
+   <color name="app_bar_text_color">#FFFFFFFF</color>
+   <color name="app_bar_text_color1">#FFFFFFFF</color>
+   <color name="app_bar_text_color3">#FFFFFFFF</color>
+   <color name="app_bar_background_color3">#FF009688</color>
+   <color name="app_bar_background_color">#FF009688</color>
+   <color name="app_bar_background_color2">#FF009688</color>
 
 
     <!-- Red -->
@@ -32,6 +36,7 @@
     <!-- Indigo -->
 
     <!-- Blue -->
+    <color name="blue_700">#1976D2</color>
     <!-- Blue -->
 
     <!-- Light Blue -->
@@ -118,9 +123,9 @@
 
     <!-- firebase login/signup -->
 
-    <color name="colorPrimary">#ff9800</color>
-    <color name="colorPrimaryDark">#E65100</color>
-    <color name="colorAccent">#2E7D32</color>
+    <color name="colorPrimary">#009688</color>
+    <color name="colorPrimaryDark">#00897B</color>
+    <color name="colorAccent">#26a69a</color>
     <color name="colorTitle">#ffffff</color>
 
     <color name="white">#ffffff</color>
@@ -140,6 +145,13 @@
     <color name="default_colour_grey">#8e8e8e</color>
     <color name="emptyColour">#bababa</color>
     <color name="NotificationTitle">#ffffff</color>
+
+
+
+        <color name="primary_text">#212121</color>
+    <color name="secondary_text">#727272</color>
+    <color name="icons">#212121</color>
+    <color name="divider">#B6B6B6</color>
 
 
 

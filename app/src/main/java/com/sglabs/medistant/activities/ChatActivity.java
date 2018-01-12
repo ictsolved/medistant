@@ -102,7 +102,7 @@ public class ChatActivity extends AppCompatActivity implements
     public static final String MESSAGES_CHILD = "messages";
     private static final int REQUEST_INVITE = 1;
     private static final int REQUEST_IMAGE = 2;
-    public static final int DEFAULT_MSG_LENGTH_LIMIT = 10;
+    public static final int DEFAULT_MSG_LENGTH_LIMIT = 1000;
     public static final String ANONYMOUS = "anonymous";
     private static final String MESSAGE_SENT_EVENT = "message_sent";
     private static final String MESSAGE_URL = "http://friendlychat.firebase.google.com/message/";
@@ -283,7 +283,7 @@ public class ChatActivity extends AppCompatActivity implements
         // Define default config values. Defaults are used when fetched config values are not
         // available. Eg: if an error occurred fetching values from the server.
         Map<String, Object> defaultConfigMap = new HashMap<>();
-        defaultConfigMap.put("friendly_msg_length", 10L);
+        defaultConfigMap.put("friendly_msg_length", 1000L);
 
         // Apply config settings and default values.
         mFirebaseRemoteConfig.setConfigSettings(firebaseRemoteConfigSettings);
@@ -391,12 +391,7 @@ public class ChatActivity extends AppCompatActivity implements
         super.onDestroy();
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.main_menu, menu);
-        return true;
-    }
+
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {

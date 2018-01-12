@@ -6,27 +6,6 @@
              android:gravity="center"
              android:orientation="vertical">
 
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        android:id="@+id/helpline"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="#FFEEEEEE"
-        android:orientation="vertical">
-
-    <android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
-        android:id="@+id/app_bar5"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#FF009688"
-        android:fontFamily="sans-serif-medium"
-        android:textSize="20sp"
-        android:textStyle="normal"
-        android:theme="@style/app_bar_style5"
-        app:title="Medistant"
-        app:titleTextColor="#FFFFFFFF" />
-    </LinearLayout>
-
 
     <com.google.android.gms.common.SignInButton
         android:id="@+id/sign_in_button"

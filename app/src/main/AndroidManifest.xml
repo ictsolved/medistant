@@ -40,6 +40,7 @@
         <activity
             android:name=".activities.SplashActivity"
             android:noHistory="true"
+            android:theme="@style/AppTheme.NoActionBar"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -51,7 +52,8 @@
 
         <activity
             android:name=".activities.BloodDonationActivity"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
                 <category android:name="android.intent.category.DEFAULT" />
@@ -60,7 +62,8 @@
 
         <activity
             android:name=".activities.FirstAidActivity"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
                 <category android:name="android.intent.category.DEFAULT" />
@@ -69,7 +72,8 @@
 
         <activity
             android:name=".activities.HelplineActivity"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
                 <category android:name="android.intent.category.DEFAULT" />
@@ -78,7 +82,8 @@
 
         <activity
             android:name=".activities.HomeActivity"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait"
+            android:label="Home" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.DEFAULT" />
@@ -87,7 +92,9 @@
 
         <activity
             android:name=".activities.AppointmentActivity"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            android:label="Appointment" >
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
                 <category android:name="android.intent.category.DEFAULT" />
@@ -105,7 +112,8 @@
 
         <activity
             android:name=".activities.ReminderActivity"
-            android:theme="@style/StartTheme">
+            android:theme="@style/StartTheme"
+            android:label="Reminder" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.DEFAULT" />
@@ -124,7 +132,7 @@
         <activity
             android:name=".activities.ReminderPreferenceActivity"
             android:label="@string/settings"
-            android:theme="@style/AppTheme" />
+            android:theme="@style/AppThemeReminder" />
 
         <activity
             android:name=".activities.ReminderSnoozeDialogActivity"
@@ -169,7 +177,9 @@
             </intent-filter>
         </receiver>
 
-        <activity android:name="com.sglabs.medistant.activities.ChatActivity">
+        <activity android:name="com.sglabs.medistant.activities.ChatActivity"
+            android:theme="@style/AppThemeChat"
+            android:label="Chat" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.DEFAULT"/>
@@ -186,7 +196,8 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".activities.ChatSignInActivity" />
+        <activity android:name=".activities.ChatSignInActivity"
+        android:theme="@style/AppThemeChat"    />
 
         <service
             android:name=".activities.ChatFirebaseMessagingService"
@@ -209,12 +220,28 @@
             android:value="@string/google_maps_key"/>
 
         <activity
-            android:name=".activities.HealthPlacesActivity">
+            android:name=".activities.HealthPlacesActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
             <intent-filter>
                 <action android:name="android.intent.action.VIEW"/>
                 <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
         </activity>
+
+
+        <activity
+            android:name=".activities.MainActivity"
+            android:label="Appointment"
+            android:theme="@style/AppTheme" />
+        <activity android:name=".activities.NewPostActivity" />
+        <activity android:name=".activities.SignInActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activities.PostDetailActivity"></activity>
 
     </application>
 
