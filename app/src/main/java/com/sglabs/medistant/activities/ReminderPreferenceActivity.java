@@ -8,7 +8,7 @@ import android.view.MenuItem;
 import com.sglabs.medistant.R;
 import com.sglabs.medistant.fragments.ReminderPreferenceFragment;
 
-public class PreferenceActivity extends AppCompatActivity {
+public class ReminderPreferenceActivity extends AppCompatActivity {
 
     @Override
     public void onCreate(Bundle savedInstanceState) {

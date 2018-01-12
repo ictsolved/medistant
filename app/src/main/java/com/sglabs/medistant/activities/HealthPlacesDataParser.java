@@ -13,7 +13,7 @@ import java.util.List;
 /**
  * Created by navneet on 23/7/16.
  */
-public class DataParser {
+public class HealthPlacesDataParser {
     public List<HashMap<String, String>> parse(String jsonData) {
         JSONArray jsonArray = null;
         JSONObject jsonObject;

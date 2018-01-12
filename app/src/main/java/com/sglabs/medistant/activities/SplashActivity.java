@@ -10,7 +10,7 @@ import android.widget.TextView;
 import com.sglabs.medistant.R;
 
 
-public class Splash extends AppCompatActivity {
+public class SplashActivity extends AppCompatActivity {
 
     private TextView it;
 
@@ -23,7 +23,7 @@ public class Splash extends AppCompatActivity {
 
         Animation myanim = AnimationUtils.loadAnimation(this, R.anim.home_anim);
         it.startAnimation(myanim);
-        final Intent i = new Intent(this, SlideActivity.class);
+        final Intent i = new Intent(this, SliderActivity.class);
         Thread timer = new Thread() {
             public void run() {
                 try {

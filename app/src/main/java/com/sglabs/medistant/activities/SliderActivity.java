@@ -25,7 +25,7 @@ import android.widget.TextView;
 import com.sglabs.medistant.R;
 
 
-public class SlideActivity extends AppCompatActivity {
+public class SliderActivity extends AppCompatActivity {
     private ViewPager viewPager;
     private MyViewPagerAdapter myViewPagerAdapter;
     private LinearLayout dotsLayout;
@@ -61,7 +61,7 @@ public class SlideActivity extends AppCompatActivity {
 
         }
     };
-    private PrefManager prefManager;
+    private SliderPrefManager prefManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -69,7 +69,7 @@ public class SlideActivity extends AppCompatActivity {
 
 
         // Checking for first time launch - before calling setContentView()
-        prefManager = new PrefManager(this);
+        prefManager = new SliderPrefManager(this);
         if (!prefManager.isFirstTimeLaunch()) {
             launchHomeScreen();
             finish();
@@ -154,7 +154,7 @@ public class SlideActivity extends AppCompatActivity {
 
     private void launchHomeScreen() {
         prefManager.setFirstTimeLaunch(false);
-        startActivity(new Intent(SlideActivity.this, ChatSignInActivity.class));
+        startActivity(new Intent(SliderActivity.this, ChatSignInActivity.class));
         finish();
     }
 

@@ -9,15 +9,13 @@ import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
-import org.json.JSONObject;
-
 import java.util.HashMap;
 import java.util.List;
 
 /**
  * Created by navneet on 23/7/16.
  */
-public class GetNearbyPlacesData extends AsyncTask<Object, String, String> {
+public class HealthPlacesGetNearbyData extends AsyncTask<Object, String, String> {
 
     String googlePlacesData;
     GoogleMap mMap;
@@ -26,10 +24,10 @@ public class GetNearbyPlacesData extends AsyncTask<Object, String, String> {
     @Override
     protected String doInBackground(Object... params) {
         try {
-            Log.d("GetNearbyPlacesData", "doInBackground entered");
+            Log.d("HealthPlacesGetNearbyData", "doInBackground entered");
             mMap = (GoogleMap) params[0];
             url = (String) params[1];
-            DownloadUrl downloadUrl = new DownloadUrl();
+            HealthPlacesDownloadUrl downloadUrl = new HealthPlacesDownloadUrl();
             googlePlacesData = downloadUrl.readUrl(url);
             Log.d("GooglePlacesReadTask", "doInBackground Exit");
         } catch (Exception e) {
@@ -42,7 +40,7 @@ public class GetNearbyPlacesData extends AsyncTask<Object, String, String> {
     protected void onPostExecute(String result) {
         Log.d("GooglePlacesReadTask", "onPostExecute Entered");
         List<HashMap<String, String>> nearbyPlacesList = null;
-        DataParser dataParser = new DataParser();
+        HealthPlacesDataParser dataParser = new HealthPlacesDataParser();
         nearbyPlacesList =  dataParser.parse(result);
         ShowNearbyPlaces(nearbyPlacesList);
         Log.d("GooglePlacesReadTask", "onPostExecute Exit");

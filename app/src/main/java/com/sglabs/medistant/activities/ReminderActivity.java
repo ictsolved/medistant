@@ -84,7 +84,7 @@ public class ReminderActivity extends AppCompatActivity implements ReminderAdapt
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.action_settings:
-                Intent preferenceIntent = new Intent(this, PreferenceActivity.class);
+                Intent preferenceIntent = new Intent(this, ReminderPreferenceActivity.class);
                 startActivity(preferenceIntent);
                 return true;
         }

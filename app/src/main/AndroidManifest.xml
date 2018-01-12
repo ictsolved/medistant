@@ -38,7 +38,7 @@
         </service>
 
         <activity
-            android:name=".activities.Splash"
+            android:name=".activities.SplashActivity"
             android:noHistory="true"
             android:screenOrientation="portrait">
             <intent-filter>
@@ -77,15 +77,6 @@
         </activity>
 
         <activity
-            android:name=".activities.HealthPlacesActivity"
-            android:screenOrientation="portrait">
-            <intent-filter>
-                <action android:name="android.intent.action.VIEW" />
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </activity>
-
-        <activity
             android:name=".activities.HomeActivity"
             android:screenOrientation="portrait">
             <intent-filter>
@@ -104,7 +95,7 @@
         </activity>
 
         <activity
-            android:name=".activities.SlideActivity"
+            android:name=".activities.SliderActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -131,7 +122,7 @@
             android:theme="@style/AppThemeLight" />
 
         <activity
-            android:name=".activities.PreferenceActivity"
+            android:name=".activities.ReminderPreferenceActivity"
             android:label="@string/settings"
             android:theme="@style/AppTheme" />
 
@@ -218,7 +209,7 @@
             android:value="@string/google_maps_key"/>
 
         <activity
-            android:name=".activities.MapsActivity">
+            android:name=".activities.HealthPlacesActivity">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW"/>
                 <category android:name="android.intent.category.DEFAULT"/>

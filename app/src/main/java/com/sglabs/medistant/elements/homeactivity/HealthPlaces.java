@@ -9,9 +9,8 @@ import android.util.AttributeSet;
 import android.view.View;
 
 import com.sglabs.medistant.R;
-import com.sglabs.medistant.activities.HealthPlacesActivity;
 import com.sglabs.medistant.activities.HomeActivity;
-import com.sglabs.medistant.activities.MapsActivity;
+import com.sglabs.medistant.activities.HealthPlacesActivity;
 
 public class HealthPlaces extends PercentRelativeLayout {
     public AppCompatButton textButton1;
@@ -43,7 +42,7 @@ public class HealthPlaces extends PercentRelativeLayout {
                     @Override
                     public void onClick(View view) {
                         HomeActivity activity = ((HomeActivity) getContext());
-                        Intent transitionIntent = new Intent(activity, MapsActivity.class);
+                        Intent transitionIntent = new Intent(activity, HealthPlacesActivity.class);
                         activity.startActivity(transitionIntent);
                     }
                 });
@@ -55,7 +54,7 @@ public class HealthPlaces extends PercentRelativeLayout {
                     @Override
                     public void onClick(View view1) {
                         HomeActivity activity1 = ((HomeActivity) getContext());
-                        Intent transitionIntent1 = new Intent(activity1, MapsActivity.class);
+                        Intent transitionIntent1 = new Intent(activity1, HealthPlacesActivity.class);
                         activity1.startActivity(transitionIntent1);
                     }
                 });
