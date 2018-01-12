@@ -154,7 +154,7 @@ public class SliderActivity extends AppCompatActivity {
 
     private void launchHomeScreen() {
         prefManager.setFirstTimeLaunch(false);
-        startActivity(new Intent(SliderActivity.this, SignInActivity.class));
+        startActivity(new Intent(SliderActivity.this, ChatSignInActivity.class));
         finish();
     }
 
