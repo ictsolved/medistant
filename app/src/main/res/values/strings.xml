@@ -222,4 +222,99 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="default_status">Hi there, I\'m using Lapit Chat App</string>
+    <string name="welcome">Welcome to Medistant</string>
+
+
+
+
+
+
+    <string-array name="blood_type">
+        <item>A+</item>
+        <item>B+</item>
+        <item>AB+</item>
+        <item>O+</item>
+        <item>A-</item>
+        <item>B-</item>
+        <item>AB-</item>
+        <item>O-</item>
+    </string-array>
+    <string-array name="panch">
+
+        <item>Thalayazham</item>
+        <item>Chempu</item>
+        <item>Maravanthuruthu</item>
+        <item>T V Puram</item>
+        <item>Vechoor</item>
+        <item>Udayanapuram</item>
+        <item>Kaduthuruthy</item>
+        <item>Kallara</item>
+        <item>Mulakkulam</item>
+        <item>Njeezhoor</item>
+        <item>Thalayolaparambu</item>
+        <item>Velloor</item>
+        <item>Neendoor</item>
+        <item>Kumarakom</item>
+        <item>Thiruvarppu</item>
+        <item>Arpookkara</item>
+        <item>Athirampuzha</item>
+        <item>Ettumanoor</item>
+        <item>Aymanam</item>
+        <item>Kadaplamattom</item>
+        <item>Marangattupally</item>
+        <item>Kanakkary</item>
+        <item>Veliyannoor</item>
+        <item>Kuravilangadu</item>
+        <item>Uzhavoor</item>
+        <item>Ramapuram</item>
+        <item>Manjoor</item>
+        <item>Bharananganam</item>
+        <item>Karoor</item>
+        <item>Kozhuvanal</item>
+        <item>Kadanadu</item>
+        <item>Meenachil</item>
+        <item>Mutholy</item>
+        <item>Melukavu</item>
+        <item>Moonnilavu</item>
+        <item>Poonjar</item>
+        <item>Thekkekkara</item>
+        <item>Erattupetta</item>
+        <item>Teekoy</item>
+        <item>Thalanadu</item>
+        <item>Thalappalam</item>
+        <item>Thidanadu</item>
+        <item>Akalakkunnam</item>
+        <item>Elikkulam</item>
+        <item>Kooroppada</item>
+        <item>Pampady</item>
+        <item>Pallickathodu</item>
+        <item>Manarcadu</item>
+        <item>Kidangoor</item>
+        <item>Meenadom</item>
+        <item>Madappally</item>
+        <item>Paippadu</item>
+        <item>Thrikkodithanam</item>
+        <item>Vakathanam</item>
+        <item>Vazhappally</item>
+        <item>Chirakkadavu</item>
+        <item>Kangazha</item>
+        <item>Nedumkunnam</item>
+        <item>Vellavoor</item>
+        <item>Vazhoor</item>
+        <item>Karukachal</item>
+        <item>Manimala</item>
+        <item>Erumely</item>
+        <item>Kanjirappally</item>
+        <item>Koottickal</item>
+        <item>Mundakayam</item>
+        <item>Koruthode</item>
+        <item>Parathodu</item>
+        <item>Pala</item>
+        <item>Kurichy</item>
+        <item>Panachikadu</item>
+        <item>Puthuppally</item>
+        <item>Vijayapuram</item>
+        <item>Ayarkunnam</item>
+
+    </string-array>
 </resources>

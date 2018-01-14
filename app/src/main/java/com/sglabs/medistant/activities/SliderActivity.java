@@ -23,7 +23,9 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.sglabs.medistant.R;
+import com.sglabs.medistant.activities.lapitchat.LoginActivity;
 import com.sglabs.medistant.activities.lapitchat.MainActivity;
+import com.sglabs.medistant.activities.lapitchat.StartActivity;
 
 
 public class SliderActivity extends AppCompatActivity {
@@ -155,7 +157,7 @@ public class SliderActivity extends AppCompatActivity {
 
     private void launchHomeScreen() {
         prefManager.setFirstTimeLaunch(false);
-        startActivity(new Intent(SliderActivity.this, MainActivity.class));
+        startActivity(new Intent(SliderActivity.this, StartActivity.class));
         finish();
     }
 

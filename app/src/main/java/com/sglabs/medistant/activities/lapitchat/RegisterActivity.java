@@ -20,6 +20,7 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.iid.FirebaseInstanceId;
+import com.sglabs.medistant.activities.HomeActivity;
 
 import org.w3c.dom.Text;
 
@@ -130,7 +131,7 @@ public class RegisterActivity extends AppCompatActivity {
 
                                 mRegProgress.dismiss();
 
-                                Intent mainIntent = new Intent(RegisterActivity.this, MainActivity.class);
+                                Intent mainIntent = new Intent(RegisterActivity.this, HomeActivity.class);
                                 mainIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                                 startActivity(mainIntent);
                                 finish();

@@ -11,6 +11,7 @@ import android.view.View;
 import com.sglabs.medistant.R;
 import com.sglabs.medistant.activities.BloodDonationActivity;
 import com.sglabs.medistant.activities.HomeActivity;
+import com.sglabs.medistant.activities.bloodbank.Home;
 
 public class BloodDonation extends PercentRelativeLayout {
     public AppCompatButton textButton2;
@@ -42,7 +43,7 @@ public class BloodDonation extends PercentRelativeLayout {
                     @Override
                     public void onClick(View view) {
                         HomeActivity activity = ((HomeActivity) getContext());
-                        Intent transitionIntent = new Intent(activity, BloodDonationActivity.class);
+                        Intent transitionIntent = new Intent(activity, Home.class);
                         activity.startActivity(transitionIntent);
                     }
                 });
@@ -54,7 +55,7 @@ public class BloodDonation extends PercentRelativeLayout {
                     @Override
                     public void onClick(View view1) {
                         HomeActivity activity1 = ((HomeActivity) getContext());
-                        Intent transitionIntent1 = new Intent(activity1, BloodDonationActivity.class);
+                        Intent transitionIntent1 = new Intent(activity1, Home.class);
                         activity1.startActivity(transitionIntent1);
                     }
                 });

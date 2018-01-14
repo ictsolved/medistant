@@ -260,6 +260,29 @@
 
 
 
+        <activity android:name=".activities.bloodbank.MainActivity"
+            android:theme="@style/AppThemeBlood" />
+        <activity android:name=".activities.bloodbank.Search"
+            android:theme="@style/AppThemeBlood" />
+        <activity android:name=".activities.bloodbank.searchview"
+            android:theme="@style/AppThemeBlood" />
+        <activity android:name=".activities.bloodbank.Home"
+            android:theme="@style/AppThemeBlood" />
+        <activity android:name=".activities.bloodbank.intro"
+            android:theme="@style/AppThemeBlood" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activities.bloodbank.fsave"
+            android:theme="@style/AppThemeBlood" />
+        <activity android:name=".activities.bloodbank.main2"
+            android:theme="@style/AppThemeBlood" ></activity>
+
+
+
     </application>
 
 </manifest>
