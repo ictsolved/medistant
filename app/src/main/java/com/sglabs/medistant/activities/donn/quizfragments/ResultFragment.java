@@ -56,42 +56,22 @@ public class ResultFragment extends Fragment {
 
             sched.setVisibility(View.INVISIBLE);
 
-            resultt.setText("Sorry, You did not pass the test");
+            resultt.setText("Sorry, you did not pass the test!");
 
-            data.setText("\nYou seem to not meet one of the criteria of being a blood donor," +
-                    "this means that your blood isn't safe for transfusion or that blood donation may affect your health or live." +
-                    "\n\nYou can check the 'Learn' Section to know what you are missing.");
+            data.setText("\nYou seem to not meet one of the criterias of being a blood donor. " +
+                    "Either your blood is not safe for transfusion or this blood donation may affect your health.");
 
         } else {
 
-            learn.setVisibility(View.INVISIBLE);
 
-            resultt.setText("Congrats, You passed the test!");
+            resultt.setText("Congrats, you passed the test!");
 
-            data.setText("\nYou met the criteria, and now you can donate your blood to any one who need need it, this is your first step towards change. \n\n" +
-                    "You can go to the nearest hospital and donate your blood, make your own blood donation blood_schedule " +
-                    "or blood_register in the blood donatiob service to make people know that another generous donor is available.");
+            data.setText("\nYou met the criteria. You seem eligble to donate your blood.\n" +
+                    "Make your own blood donation schedule " +
+                    "to notify the donor is available.");
 
 
         }
-
-
-        learn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                Fragment currentFragment = new LearnFragment();
-
-                FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
-                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-
-                fragmentTransaction.setCustomAnimations(R.anim.enter_from_left, R.anim.exit_to_right, R.anim.enter_from_right, R.anim.exit_to_left);
-                fragmentTransaction.replace(R.id.mainFrame, currentFragment);
-                fragmentTransaction.addToBackStack(null);
-                fragmentTransaction.commit();
-
-            }
-        });
 
 
         sched.setOnClickListener(new View.OnClickListener() {

@@ -41,7 +41,7 @@
                         android:layout_marginBottom="5dp"
                         android:gravity="center"
                         android:text="Name"
-                        android:textColor="#2E7D32"
+                        android:textColor="@color/accent"
                         android:textSize="25sp"
                         android:textStyle="bold" />
 
@@ -122,24 +122,14 @@
                         android:textColor="#000" />
 
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="5dp"
-                        android:text="Account Options"
-                        android:textColor="#2E7D32"
-                        android:textSize="25sp"
-                        android:textStyle="bold" />
-
-
                     <Button
                         android:id="@+id/logout"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="7dp"
                         android:layout_marginTop="10dp"
-                        android:background="@color/colorPrimary"
-                        android:text="Logout"
+                        android:background="@color/colorAccent"
+                        android:text="Edit"
                         android:textColor="#fff" />
 
 

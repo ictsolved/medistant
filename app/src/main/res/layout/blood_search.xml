@@ -30,8 +30,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="12dp"
-                android:background="@color/colorPrimary"
-                android:text="Send Requests "
+                android:background="@color/colorAccent"
+                android:text="Send Request"
                 android:textColor="#ffffff"
                 android:textStyle="bold" />
         </LinearLayout>

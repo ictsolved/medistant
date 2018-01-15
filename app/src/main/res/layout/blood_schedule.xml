@@ -36,7 +36,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Last Donation Date"
-                        android:textColor="#2E7D32"
+                        android:textColor="@color/accent"
                         android:textSize="22sp"
                         android:textStyle="bold" />
 
@@ -54,7 +54,7 @@
                         android:id="@+id/setDate"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:background="@color/colorPrimary"
+                        android:background="@color/colorAccent"
                         android:text="Set Last Blood Donation Date"
                         android:textColor="#fff" />
 
@@ -85,7 +85,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="7dp"
                         android:text="Next Donation date"
-                        android:textColor="#2E7D32"
+                        android:textColor="@color/accent"
                         android:textSize="22sp"
                         android:textStyle="bold" />
 
@@ -187,7 +187,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="My Donation Progress"
-                        android:textColor="#2E7D32"
+                        android:textColor="@color/accent"
                         android:textSize="22sp"
                         android:textStyle="bold" />
 
@@ -220,7 +220,7 @@
                                 android:id="@+id/minus"
                                 android:layout_width="39dp"
                                 android:layout_height="39dp"
-                                android:background="@color/colorPrimary"
+                                android:background="@android:color/holo_red_light"
                                 android:text="-"
                                 android:textColor="#fff"
                                 android:textStyle="bold" />
@@ -238,7 +238,7 @@
                                 android:id="@+id/plus"
                                 android:layout_width="39dp"
                                 android:layout_height="39dp"
-                                android:background="@color/colorPrimary"
+                                android:background="@android:color/holo_green_light"
                                 android:text="+"
                                 android:textColor="#fff"
                                 android:textStyle="bold" />
@@ -248,8 +248,9 @@
                             android:id="@+id/share"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:background="@color/colorPrimary"
-                            android:text="Tell the world about it "
+                            android:layout_marginTop="3dp"
+                            android:background="@color/colorAccent"
+                            android:text="Share"
                             android:textColor="#fff" />
 
                     </LinearLayout>

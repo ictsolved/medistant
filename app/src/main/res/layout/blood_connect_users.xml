@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="#ECEFF1"
     android:orientation="vertical"
-    tools:context="com.sglabs.medistant.Main.ConnectUsers">
+    tools:context="com.sglabs.medistant.activities.donn.main.ConnectUsers">
 
 
     <android.support.v7.widget.Toolbar
