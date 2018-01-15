@@ -13,7 +13,6 @@ import android.widget.TextView;
 import com.sglabs.medistant.R;
 import com.sglabs.medistant.activities.donn.needblood.GetBloodFragment;
 import com.sglabs.medistant.activities.donn.needblood.ProfileFragment;
-import com.sglabs.medistant.activities.donn.quizfragments.TakeQuizFragment;
 
 
 public class HomeFragment extends Fragment {

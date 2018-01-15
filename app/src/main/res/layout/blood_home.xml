@@ -43,7 +43,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="4dp"
-                        android:text="Set your blood profile and get notification when someone in your city needs your blood type."
+                        android:text="Set your blood profile and get notification when someone needs your blood type."
                         android:textColor="#000"
                         android:textSize="15sp" />
 
