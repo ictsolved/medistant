@@ -22,7 +22,7 @@
                 android:id="@+id/join"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="5dp">
+                android:layout_margin="3dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -34,8 +34,8 @@
                         android:id="@+id/text"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Join NeedBlood"
-                        android:textColor="#2E7D32"
+                        android:text="My Profile"
+                        android:textColor="@color/accent"
                         android:textSize="25sp"
                         android:textStyle="bold" />
 
@@ -43,7 +43,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="4dp"
-                        android:text="Become a blood donor.\nGet notified when someone in your area or in your city needs your blood type. \n\nYou are a part of the solution!"
+                        android:text="Set your blood profile and get notification when someone in your city needs your blood type."
                         android:textColor="#000"
                         android:textSize="15sp" />
 
@@ -56,7 +56,7 @@
                 android:id="@+id/get"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="5dp">
+                android:layout_margin="3dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -68,8 +68,8 @@
                         android:id="@+id/personc_name"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Get Blood"
-                        android:textColor="#2E7D32"
+                        android:text="Search or Request Blood"
+                        android:textColor="@color/accent"
                         android:textSize="25sp"
                         android:textStyle="bold" />
 
@@ -77,7 +77,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="4dp"
-                        android:text="Donné has many registered donors. They are form different places, with different idiologies. But all of them wants to make a better life for others. They will gladly help anyone in need. \n\nYou can use NeedBlood&apos;s platform to find donors to help you in urgent cases.\n\nChoose your blood type and get notified when a donor matches your type."
+                        android:text="Find donors to help you in urgent cases and get notified when a donor matches your type."
                         android:textColor="#000"
                         android:textSize="15sp" />
 
@@ -90,7 +90,7 @@
                 android:id="@+id/check"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="5dp">
+                android:layout_margin="3dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -103,7 +103,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Check Eligibilty"
-                        android:textColor="#2E7D32"
+                        android:textColor="@color/accent"
                         android:textSize="25sp"
                         android:textStyle="bold" />
 
@@ -112,7 +112,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="4dp"
-                        android:text="Take our eligibility test to check wether you can donate blood or not, and how to be qualified to donate blood."
+                        android:text="Test wether you can donate blood or not, and how to be qualified to donate blood."
                         android:textColor="#000"
                         android:textSize="15sp" />
 

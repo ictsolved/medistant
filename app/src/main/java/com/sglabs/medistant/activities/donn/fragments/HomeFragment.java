@@ -30,7 +30,7 @@ public class HomeFragment extends Fragment {
         root = inflater.inflate(R.layout.blood_home, container, false);
 
         toolbar = (Toolbar) getActivity().findViewById(R.id.toolbar);
-        toolbar.setTitle("Donné");
+        toolbar.setTitle("Blood Donation");
 
         join = (CardView) root.findViewById(R.id.join);
         check = (CardView) root.findViewById(R.id.check);
@@ -38,14 +38,14 @@ public class HomeFragment extends Fragment {
 
         joinText = (TextView) root.findViewById(R.id.text);
 
-        joinText.setText("Donné Profile");
+        joinText.setText("My Profile");
 
 
         get.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                setCurrentFragment(new GetBloodFragment(), "Search for donors");
+                setCurrentFragment(new GetBloodFragment(), "Search or Request Blood");
 
             }
         });
@@ -62,7 +62,7 @@ public class HomeFragment extends Fragment {
             @Override
             public void onClick(View v) {
 
-                setCurrentFragment(new ProfileFragment(), "Donné Profile");
+                setCurrentFragment(new ProfileFragment(), "My Profile");
 
             }
         });

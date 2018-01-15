@@ -38,7 +38,7 @@
                         android:layout_weight="0.05"
                         android:gravity="center"
                         android:text="Question 1"
-                        android:textColor="#2E7D32"
+                        android:textColor="@color/accent"
 
                         android:textSize="25sp"
                         android:textStyle="bold" />
@@ -108,7 +108,7 @@
                         android:layout_weight="0.05"
                         android:gravity="center"
                         android:text="Question 2"
-                        android:textColor="#2E7D32"
+                        android:textColor="@color/accent"
 
                         android:textSize="25sp"
                         android:textStyle="bold" />
@@ -118,7 +118,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="4dp"
                         android:layout_weight="0.23"
-                        android:text="\nAre you Pregnant or just given birth ?\n"
+                        android:text="\nAre you Pregnant or have just given birth ?\n"
                         android:textColor="#000"
                         android:textSize="19sp" />
 
@@ -179,7 +179,7 @@
                         android:layout_weight="0.05"
                         android:gravity="center"
                         android:text="Question 3"
-                        android:textColor="#2E7D32"
+                        android:textColor="@color/accent"
 
                         android:textSize="25sp"
                         android:textStyle="bold" />
@@ -243,7 +243,7 @@
                         android:layout_weight="0.05"
                         android:gravity="center"
                         android:text="Question 4"
-                        android:textColor="#2E7D32"
+                        android:textColor="@color/accent"
 
                         android:textSize="25sp"
                         android:textStyle="bold" />
@@ -307,7 +307,7 @@
                         android:layout_weight="0.05"
                         android:gravity="center"
                         android:text="Question 5"
-                        android:textColor="#2E7D32"
+                        android:textColor="@color/accent"
 
                         android:textSize="25sp"
                         android:textStyle="bold" />
@@ -370,7 +370,7 @@
                         android:layout_weight="0.05"
                         android:gravity="center"
                         android:text="Question 6"
-                        android:textColor="#2E7D32"
+                        android:textColor="@color/accent"
 
                         android:textSize="25sp"
                         android:textStyle="bold" />
@@ -435,7 +435,7 @@
                         android:layout_weight="0.05"
                         android:gravity="center"
                         android:text="Question 7"
-                        android:textColor="#2E7D32"
+                        android:textColor="@color/accent"
 
                         android:textSize="25sp"
                         android:textStyle="bold" />
@@ -500,7 +500,7 @@
                         android:layout_weight="0.05"
                         android:gravity="center"
                         android:text="Question 8"
-                        android:textColor="#2E7D32"
+                        android:textColor="@color/accent"
 
                         android:textSize="25sp"
                         android:textStyle="bold" />
@@ -561,7 +561,7 @@
                         android:id="@+id/result"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:background="@color/colorPrimary"
+                        android:background="@color/colorAccent"
                         android:text="Proceed to Result"
                         android:textColor="#fff" />
 

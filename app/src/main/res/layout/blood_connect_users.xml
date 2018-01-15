@@ -13,7 +13,7 @@
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="#D50000"
+        android:background="@color/colorPrimary"
         android:title="Contact Patient">
 
         <TextView
@@ -149,7 +149,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="15dp"
-                        android:background="@color/colorPrimary"
+                        android:background="@color/colorAccent"
                         android:text="Give them a Call"
 
                         android:textColor="#fff" />
@@ -159,7 +159,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="15dp"
-                        android:background="@color/colorPrimary"
+                        android:background="@color/colorAccent"
                         android:text="Send them a message"
                         android:textColor="#fff" />
 
@@ -168,7 +168,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="15dp"
-                        android:background="@color/colorPrimary"
+                        android:background="@color/colorAccent"
                         android:text="Chat on facebook"
                         android:textColor="#fff" />
 

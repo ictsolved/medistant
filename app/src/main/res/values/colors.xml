@@ -125,7 +125,7 @@
 
     <color name="colorPrimary">#009688</color>
     <color name="colorPrimaryDark">#00897B</color>
-    <color name="colorAccent">#00BCD4</color>
+    <color name="colorAccent">#00bcd4</color>
     <color name="colorTitle">#ffffff</color>
 
     <color name="white">#ffffff</color>
@@ -133,7 +133,7 @@
 
     <color name="primary">#009688</color>
     <color name="primaryDark">#00897B</color>
-    <color name="accent">#00BCD4</color>
+    <color name="accent">#00bcd4</color>
     <color name="accentLight">#ff988db6</color>
     <color name="background">#eeeeee</color>
     <color name="lightGray">#e6e6e6</color>

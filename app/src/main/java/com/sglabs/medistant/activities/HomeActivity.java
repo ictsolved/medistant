@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.LinearLayout;
@@ -18,8 +19,10 @@ import com.google.firebase.analytics.FirebaseAnalytics;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 import com.sglabs.medistant.R;
 import com.sglabs.medistant.activities.lapitchat.MainActivity;
+import com.sglabs.medistant.activities.lapitchat.StartActivity;
 import com.sglabs.medistant.elements.homeactivity.Appointment;
 import com.sglabs.medistant.elements.homeactivity.BloodDonation;
 import com.sglabs.medistant.elements.homeactivity.Chat;
@@ -54,6 +57,8 @@ public class HomeActivity extends AppCompatActivity {
     private DatabaseReference mFirebaseDatabaseReference;
     private FirebaseAnalytics mFirebaseAnalytics;
     private SharedPreferences mSharedPreferences;
+    private FirebaseAuth mAuth;
+    private DatabaseReference mUserRef;
 
 
     @Override
@@ -81,11 +86,6 @@ public class HomeActivity extends AppCompatActivity {
     }
 
     @Override
-    protected void onStart() {
-        super.onStart();
-    }
-
-    @Override
     protected void onStop() {
         super.onStop();
     }
@@ -96,12 +96,44 @@ public class HomeActivity extends AppCompatActivity {
 
         setContentView(R.layout.medistant_home);
 
-        mSharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
-        mUsername = ANONYMOUS;
+        mAuth = FirebaseAuth.getInstance();
+
+        if (mAuth.getCurrentUser() != null) {
+
+
+            mUserRef = FirebaseDatabase.getInstance().getReference().child("Users").child(mAuth.getCurrentUser().getUid());
+
+        }
 
         mMainLayout = (LinearLayout) findViewById(R.id.home);
 
         this.setup();
+    }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+        // Check if user is signed in (non-null) and update UI accordingly.
+        FirebaseUser currentUser = mAuth.getCurrentUser();
+
+        if (currentUser == null) {
+
+            sendToStart();
+
+        } else {
+
+            mUserRef.child("online").setValue("true");
+
+        }
+
+    }
+
+    private void sendToStart() {
+
+        Intent startIntent = new Intent(HomeActivity.this, StartActivity.class);
+        startActivity(startIntent);
+        finish();
+
     }
 
     public HomeActivity getContext() {

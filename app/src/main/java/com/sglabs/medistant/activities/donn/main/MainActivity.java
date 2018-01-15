@@ -63,7 +63,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             }
         }
 
-        setCurrentFragment(new HomeFragment(), "Donné");
+        setCurrentFragment(new HomeFragment(), "Blood Donation");
 
         mFirebaseAuth = FirebaseAuth.getInstance();
         mFirebaseUser = mFirebaseAuth.getCurrentUser();
@@ -77,47 +77,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
             mUserId = mFirebaseUser.getUid();
 
-        }
-
-    }
-
-
-    @Override
-    public void onBackPressed() {
-
-        if (drawer.isDrawerOpen(GravityCompat.START)) {
-
-            drawer.closeDrawer(GravityCompat.START);
-
-
-        } else if (getSupportFragmentManager().getBackStackEntryCount() > 0) {
-
-            if (getSupportFragmentManager().findFragmentById(R.id.mainFrame) instanceof HomeFragment) {
-
-
-                new SweetAlertDialog(MainActivity.this, SweetAlertDialog.WARNING_TYPE)
-                        .setTitleText("Exit ?")
-                        .setCancelText("No")
-                        .setConfirmText("Yes")
-                        .showCancelButton(true)
-                        .setCancelClickListener(new SweetAlertDialog.OnSweetClickListener() {
-                            @Override
-                            public void onClick(SweetAlertDialog sDialog) {
-                                sDialog.dismissWithAnimation();
-                            }
-                        })
-                        .setConfirmClickListener(new SweetAlertDialog.OnSweetClickListener() {
-
-                            @Override
-                            public void onClick(SweetAlertDialog sweetAlertDialog) {
-
-                                finish();
-                            }
-                        }).show();
-
-            } else {
-                getSupportFragmentManager().popBackStack();
-            }
         }
 
     }
@@ -154,14 +113,14 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             case R.id.donor:
 
 
-                setCurrentFragment(new ProfileFragment(), "Donné Profile");
+                setCurrentFragment(new ProfileFragment(), "My Profile");
 
 
                 break;
 
             case R.id.get:
 
-                setCurrentFragment(new GetBloodFragment(), "Search for donors");
+                setCurrentFragment(new GetBloodFragment(), "Search or Request Blood");
 
                 break;
 
@@ -196,7 +155,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     public void loadPreferences() {
 
         nav_donor = navigationView.getMenu().findItem(R.id.donor);
-        nav_donor.setTitle("Donné Profile");
+        nav_donor.setTitle("My Profile");
 
     }
 
@@ -220,7 +179,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        toolbar.setTitle("Donné");
+        toolbar.setTitle("Blood Donation");
 
     }
 
