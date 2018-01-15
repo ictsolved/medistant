@@ -34,7 +34,7 @@ import com.sglabs.medistant.activities.donn.main.MainActivity;
 import java.util.ArrayList;
 import java.util.Locale;
 
-import cn.pedant.SweetAlert.SweetAlertDialog;
+import com.ontbee.legacyforks.cn.pedant.SweetAlert.SweetAlertDialog;
 import dmax.dialog.SpotsDialog;
 
 /**

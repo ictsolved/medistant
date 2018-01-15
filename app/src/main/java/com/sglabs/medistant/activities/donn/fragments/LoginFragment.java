@@ -21,7 +21,7 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.sglabs.medistant.R;
 import com.sglabs.medistant.activities.donn.main.MainActivity;
 
-import cn.pedant.SweetAlert.SweetAlertDialog;
+import com.ontbee.legacyforks.cn.pedant.SweetAlert.SweetAlertDialog;
 import dmax.dialog.SpotsDialog;
 
 /**

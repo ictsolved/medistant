@@ -127,7 +127,7 @@ public class MessagingService extends FirebaseMessagingService {
         PendingIntent contentIntent = PendingIntent.getActivity(this, requestID, notificationIntent, PendingIntent.FLAG_UPDATE_CURRENT);
 
         NotificationCompat.Builder mBuilder = new NotificationCompat.Builder(getApplicationContext())
-                .setSmallIcon(R.drawable.ic_launcher)
+                .setSmallIcon(R.mipmap.ic_launcher)
                 .setContentTitle("Blood Needed")
                 .setStyle(new NotificationCompat.BigTextStyle().bigText(bla))
                 .setContentText(bla).setAutoCancel(true);
