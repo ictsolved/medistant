@@ -245,26 +245,6 @@
             android:theme="@style/AppThemeLapit" />
 
 
-        <activity
-            android:name=".activities.bloodbank.MainActivity"
-            android:theme="@style/AppThemeBlood" />
-        <activity
-            android:name=".activities.bloodbank.Search"
-            android:theme="@style/AppThemeBlood" />
-        <activity
-            android:name=".activities.bloodbank.searchview"
-            android:theme="@style/AppThemeBlood" />
-        <activity
-            android:name=".activities.bloodbank.Home"
-            android:theme="@style/AppThemeBlood" />
-        <activity
-            android:name=".activities.bloodbank.fsave"
-            android:theme="@style/AppThemeBlood" />
-        <activity
-            android:name=".activities.bloodbank.main2"
-            android:theme="@style/AppThemeBlood" />
-
-
         <!-- donne -->
         <activity
             android:name=".activities.donn.main.MainActivity"

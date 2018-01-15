@@ -25,7 +25,7 @@ public class RegisterWelcomeFragment extends Fragment {
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
-        View root = inflater.inflate(R.layout.registerwelocme, container, false);
+        View root = inflater.inflate(R.layout.blood_registerwelocme, container, false);
 
         register = (TextView) root.findViewById(R.id.reg);
         login = (Button) root.findViewById(R.id.login);

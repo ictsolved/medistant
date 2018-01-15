@@ -54,7 +54,7 @@ public class FriendsFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        mMainView = inflater.inflate(R.layout.fragment_friends, container, false);
+        mMainView = inflater.inflate(R.layout.chat_fragment_friends, container, false);
 
         mFriendsList = (RecyclerView) mMainView.findViewById(R.id.friends_list);
         mAuth = FirebaseAuth.getInstance();
@@ -82,7 +82,7 @@ public class FriendsFragment extends Fragment {
         FirebaseRecyclerAdapter<Friends, FriendsViewHolder> friendsRecyclerViewAdapter = new FirebaseRecyclerAdapter<Friends, FriendsViewHolder>(
 
                 Friends.class,
-                R.layout.users_single_layout,
+                R.layout.chat_users_single_layout,
                 FriendsViewHolder.class,
                 mFriendsDatabase
 

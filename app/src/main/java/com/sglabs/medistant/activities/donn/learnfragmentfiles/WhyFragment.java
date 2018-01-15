@@ -16,7 +16,7 @@ public class WhyFragment extends Fragment {
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
-        View root = inflater.inflate(R.layout.why_fragment, container, false);
+        View root = inflater.inflate(R.layout.blood_why_fragment, container, false);
 
 
         return root;

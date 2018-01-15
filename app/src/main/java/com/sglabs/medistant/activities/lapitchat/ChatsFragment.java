@@ -56,7 +56,7 @@ public class ChatsFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        mMainView = inflater.inflate(R.layout.fragment_chats, container, false);
+        mMainView = inflater.inflate(R.layout.chats_fragment, container, false);
 
         mConvList = (RecyclerView) mMainView.findViewById(R.id.conv_list);
         mAuth = FirebaseAuth.getInstance();
@@ -91,7 +91,7 @@ public class ChatsFragment extends Fragment {
 
         FirebaseRecyclerAdapter<Conv, ConvViewHolder> firebaseConvAdapter = new FirebaseRecyclerAdapter<Conv, ConvViewHolder>(
                 Conv.class,
-                R.layout.users_single_layout,
+                R.layout.chat_users_single_layout,
                 ConvViewHolder.class,
                 conversationQuery
         ) {

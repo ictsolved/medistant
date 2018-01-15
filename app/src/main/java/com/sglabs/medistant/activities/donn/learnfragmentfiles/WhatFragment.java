@@ -26,7 +26,7 @@ public class WhatFragment extends Fragment {
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
-        View root = inflater.inflate(R.layout.what_fragment, container, false);
+        View root = inflater.inflate(R.layout.bloodwhat_fragment, container, false);
 
         button = (Button) root.findViewById(R.id.button);
 

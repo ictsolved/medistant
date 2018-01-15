@@ -64,7 +64,7 @@
 
     <!--end of slider strings-->
 
-    <!--login string-->
+    blood_loginogin string-->
 
 
     <string name="hint_confirm_password">Confirm Password</string>
@@ -76,9 +76,9 @@
     <string name="error_email_exists">Email Already Exists</string>
     <string name="error_password_match">Password Does Not Matches</string>
 
-    <!--end of login string-->
+    <!--endblood_loginogin string-->
 
-    <!-- firebase login/signup -->
+    <!-- firebblood_loginogin/signup -->
 
     <string name="action_sign_in_short">Register</string>
     <string name="email">Email</string>

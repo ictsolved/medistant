@@ -46,7 +46,7 @@ public class RegisterActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_register);
+        setContentView(R.layout.chat_register);
 
         //Toolbar Set
         mToolbar = (Toolbar) findViewById(R.id.register_toolbar);

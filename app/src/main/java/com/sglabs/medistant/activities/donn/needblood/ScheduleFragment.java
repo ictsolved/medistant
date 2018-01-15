@@ -45,7 +45,7 @@ public class ScheduleFragment extends Fragment {
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
-        View root = inflater.inflate(R.layout.schedule, container, false);
+        View root = inflater.inflate(R.layout.blood_schedule, container, false);
 
         setDate = (Button) root.findViewById(R.id.setDate);
         plus = (Button) root.findViewById(R.id.plus);
@@ -120,7 +120,7 @@ public class ScheduleFragment extends Fragment {
 
                 share("I've donated my blood for " + spf.getString("times", "0") +
                         " times\n#NeedBlood helped me to record my progress, " +
-                        "you can get it here and help to spread awareness about blood donation : .............");
+                        "you can blood_request it here and help to spread awareness about blood donation : .............");
 
             }
         });

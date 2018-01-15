@@ -45,7 +45,7 @@ public class LoginFragment extends Fragment {
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
-        root = inflater.inflate(R.layout.login, container, false);
+        root = inflater.inflate(R.layout.blood_login, container, false);
 
         login = (Button) root.findViewById(R.id.reg1);
         emailLogin = (EditText) root.findViewById(R.id.editText21);

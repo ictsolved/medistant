@@ -30,7 +30,7 @@ public class ConnectUsers extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_connect_users);
+        setContentView(R.layout.blood_connect_users);
 
         toolbar = (Toolbar) findViewById(R.id.toolbar);
 

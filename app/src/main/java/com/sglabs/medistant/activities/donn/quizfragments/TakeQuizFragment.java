@@ -22,7 +22,7 @@ public class TakeQuizFragment extends Fragment {
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
-        View root = inflater.inflate(R.layout.quiz_welcome, container, false);
+        View root = inflater.inflate(R.layout.blood_welcome, container, false);
 
         goToQuiz = (Button) root.findViewById(R.id.button5);
 

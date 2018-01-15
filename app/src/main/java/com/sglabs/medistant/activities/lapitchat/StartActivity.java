@@ -17,7 +17,7 @@ public class StartActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_start);
+        setContentView(R.layout.chat_start);
 
         mRegBtn = (Button) findViewById(R.id.start_reg_btn);
         mLoginBtn = (Button) findViewById(R.id.start_login_btn);

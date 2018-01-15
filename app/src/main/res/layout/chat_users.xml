@@ -7,7 +7,7 @@
 
     <include
         android:id="@+id/users_appBar"
-        layout="@layout/app_bar_layout" />
+        layout="@layout/chat_app_bar" />
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/users_list"

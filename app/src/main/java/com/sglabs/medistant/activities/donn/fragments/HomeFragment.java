@@ -27,7 +27,7 @@ public class HomeFragment extends Fragment {
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
-        root = inflater.inflate(R.layout.home, container, false);
+        root = inflater.inflate(R.layout.blood_home, container, false);
 
         toolbar = (Toolbar) getActivity().findViewById(R.id.toolbar);
         toolbar.setTitle("Donné");

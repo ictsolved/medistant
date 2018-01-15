@@ -9,7 +9,7 @@
 
     <include
         android:id="@+id/chat_app_bar"
-        layout="@layout/app_bar_layout" />
+        layout="@layout/chat_app_bar" />
 
     <android.support.v4.widget.SwipeRefreshLayout
         android:id="@+id/message_swipe_layout"

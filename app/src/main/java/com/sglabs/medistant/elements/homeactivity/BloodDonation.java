@@ -10,7 +10,6 @@ import android.view.View;
 
 import com.sglabs.medistant.R;
 import com.sglabs.medistant.activities.HomeActivity;
-import com.sglabs.medistant.activities.bloodbank.MainActivity;
 
 public class BloodDonation extends PercentRelativeLayout {
     public AppCompatButton textButton2;

@@ -64,7 +64,7 @@ public class RegisterFragment extends Fragment {
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
-        root = inflater.inflate(R.layout.register, container, false);
+        root = inflater.inflate(R.layout.blood_register, container, false);
         register = (Button) root.findViewById(R.id.reg);
         name = (EditText) root.findViewById(R.id.editText);
         email = (EditText) root.findViewById(R.id.editText2);

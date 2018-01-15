@@ -27,7 +27,7 @@ public class QuizFragment extends Fragment {
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
-        root = inflater.inflate(R.layout.quiz, container, false);
+        root = inflater.inflate(R.layout.blood_eligibility, container, false);
 
         result = (Button) root.findViewById(R.id.result);
 

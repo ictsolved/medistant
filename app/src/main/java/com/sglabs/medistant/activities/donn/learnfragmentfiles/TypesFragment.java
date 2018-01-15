@@ -20,7 +20,7 @@ public class TypesFragment extends Fragment {
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
-        root = inflater.inflate(R.layout.types, container, false);
+        root = inflater.inflate(R.layout.blood_types, container, false);
 
 
         return root;

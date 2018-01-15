@@ -37,7 +37,7 @@ public class StatusActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_status);
+        setContentView(R.layout.chat_status);
 
         //Firebase
         mCurrentUser = FirebaseAuth.getInstance().getCurrentUser();

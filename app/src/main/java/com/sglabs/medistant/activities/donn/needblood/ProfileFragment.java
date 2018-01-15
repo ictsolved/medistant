@@ -45,7 +45,7 @@ public class ProfileFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
 
-        View root = inflater.inflate(R.layout.profile, container, false);
+        View root = inflater.inflate(R.layout.blood_user_profile, container, false);
         Toolbar toolbar = (Toolbar) getActivity().findViewById(R.id.toolbar);
         toolbar.setTitle("Donné Profile");
 

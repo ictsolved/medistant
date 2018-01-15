@@ -30,7 +30,7 @@ public class ResultFragment extends Fragment {
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
-        root = inflater.inflate(R.layout.result, container, false);
+        root = inflater.inflate(R.layout.blood_test_result, container, false);
 
         resultt = (TextView) root.findViewById(R.id.textRes);
         data = (TextView) root.findViewById(R.id.data);
@@ -69,8 +69,8 @@ public class ResultFragment extends Fragment {
             resultt.setText("Congrats, You passed the test!");
 
             data.setText("\nYou met the criteria, and now you can donate your blood to any one who need need it, this is your first step towards change. \n\n" +
-                    "You can go to the nearest hospital and donate your blood, make your own blood donation schedule " +
-                    "or register in the blood donatiob service to make people know that another generous donor is available.");
+                    "You can go to the nearest hospital and donate your blood, make your own blood donation blood_schedule " +
+                    "or blood_register in the blood donatiob service to make people know that another generous donor is available.");
 
 
         }

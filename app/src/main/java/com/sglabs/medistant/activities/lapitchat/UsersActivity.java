@@ -31,7 +31,7 @@ public class UsersActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_users);
+        setContentView(R.layout.chat_users);
 
         mToolbar = (Toolbar) findViewById(R.id.users_appBar);
         setSupportActionBar(mToolbar);
@@ -57,7 +57,7 @@ public class UsersActivity extends AppCompatActivity {
         FirebaseRecyclerAdapter<Users, UsersViewHolder> firebaseRecyclerAdapter = new FirebaseRecyclerAdapter<Users, UsersViewHolder>(
 
                 Users.class,
-                R.layout.users_single_layout,
+                R.layout.chat_users_single_layout,
                 UsersViewHolder.class,
                 mUsersDatabase
 

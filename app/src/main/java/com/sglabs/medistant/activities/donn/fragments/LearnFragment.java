@@ -23,7 +23,7 @@ public class LearnFragment extends Fragment {
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
-        View root = inflater.inflate(R.layout.learn, container, false);
+        View root = inflater.inflate(R.layout.blood_learn, container, false);
 
         TabLayout tabLayout = (TabLayout) root.findViewById(R.id.tabs);
         ViewPager viewPager = (ViewPager) root.findViewById(R.id.viewpager);

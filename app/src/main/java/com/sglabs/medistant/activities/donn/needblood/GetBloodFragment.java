@@ -49,7 +49,7 @@ public class GetBloodFragment extends Fragment {
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
-        root = inflater.inflate(R.layout.get, container, false);
+        root = inflater.inflate(R.layout.blood_request, container, false);
 
         countrySpinner = (Spinner) root.findViewById(R.id.spinner2);
         bloodSpinner = (Spinner) root.findViewById(R.id.spinner3);

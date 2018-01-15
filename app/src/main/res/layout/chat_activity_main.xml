@@ -12,7 +12,7 @@
 
         <include
             android:id="@+id/main_page_toolbar"
-            layout="@layout/app_bar_layout" />
+            layout="@layout/chat_app_bar" />
 
         <android.support.design.widget.TabLayout
             android:id="@+id/main_tabs"
