@@ -17,13 +17,10 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.sglabs.medistant.R;
 import com.sglabs.medistant.activities.donn.fragments.HomeFragment;
-import com.sglabs.medistant.activities.donn.fragments.LearnFragment;
 import com.sglabs.medistant.activities.donn.needblood.GetBloodFragment;
 import com.sglabs.medistant.activities.donn.needblood.ProfileFragment;
 import com.sglabs.medistant.activities.donn.needblood.ScheduleFragment;
 import com.sglabs.medistant.activities.donn.quizfragments.TakeQuizFragment;
-
-import cn.pedant.SweetAlert.SweetAlertDialog;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -94,12 +91,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             case R.id.home:
 
                 setCurrentFragment(new HomeFragment(), "NeedBlood");
-
-                break;
-
-            case R.id.learn:
-
-                setCurrentFragment(new LearnFragment(), "Learn");
 
                 break;
 

@@ -11,7 +11,6 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.sglabs.medistant.R;
-import com.sglabs.medistant.activities.donn.fragments.LearnFragment;
 import com.sglabs.medistant.activities.donn.needblood.ScheduleFragment;
 
 /**
