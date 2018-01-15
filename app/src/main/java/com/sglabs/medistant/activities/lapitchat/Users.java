@@ -12,8 +12,7 @@ public class Users {
     public String thumb_image;
 
 
-
-    public Users(){
+    public Users() {
 
     }
 

@@ -17,7 +17,7 @@
     <application
         android:name=".Application"
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
@@ -31,17 +31,11 @@
                 android:resource="@xml/provider_paths" />
         </provider>
 
-        <service android:name=".lib.DSFirebaseInstanceIdService">
-            <intent-filter>
-                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
-            </intent-filter>
-        </service>
-
         <activity
             android:name=".activities.SplashActivity"
             android:noHistory="true"
-            android:theme="@style/AppTheme.NoActionBar"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -51,19 +45,9 @@
 
 
         <activity
-            android:name=".activities.BloodDonationActivity"
-            android:screenOrientation="portrait"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
-            <intent-filter>
-                <action android:name="android.intent.action.VIEW" />
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </activity>
-
-        <activity
             android:name=".activities.FirstAidActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
                 <category android:name="android.intent.category.DEFAULT" />
@@ -73,7 +57,7 @@
         <activity
             android:name=".activities.HelplineActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
                 <category android:name="android.intent.category.DEFAULT" />
@@ -82,8 +66,8 @@
 
         <activity
             android:name=".activities.HomeActivity"
-            android:screenOrientation="portrait"
-            android:label="Home" >
+            android:label="Home"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.DEFAULT" />
@@ -92,9 +76,9 @@
 
         <activity
             android:name=".activities.AppointmentActivity"
+            android:label="Appointment"
             android:screenOrientation="portrait"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
-            android:label="Appointment" >
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
                 <category android:name="android.intent.category.DEFAULT" />
@@ -112,8 +96,8 @@
 
         <activity
             android:name=".activities.ReminderActivity"
-            android:theme="@style/StartTheme"
-            android:label="Reminder" >
+            android:label="Reminder"
+            android:theme="@style/StartTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.DEFAULT" />
@@ -179,14 +163,14 @@
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="@string/google_maps_key"/>
+            android:value="@string/google_maps_key" />
 
         <activity
             android:name=".activities.HealthPlacesActivity"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
             <intent-filter>
-                <action android:name="android.intent.action.VIEW"/>
-                <category android:name="android.intent.category.DEFAULT"/>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
 
@@ -206,24 +190,23 @@
         <activity android:name=".activities.PostDetailActivityAppointment"></activity>
 
 
-
-
-
         <service android:name=".activities.lapitchat.FirebaseMessagingService">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>
         </service>
 
-        <activity android:name=".activities.lapitchat.MainActivity"
-            android:theme="@style/AppThemeLapit" >
+        <activity
+            android:name=".activities.lapitchat.MainActivity"
+            android:theme="@style/AppThemeLapit">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name=".activities.lapitchat.StartActivity"
+        <activity
+            android:name=".activities.lapitchat.StartActivity"
             android:theme="@style/AppThemeLapit" />
         <activity
             android:name=".activities.lapitchat.RegisterActivity"
@@ -233,7 +216,8 @@
             android:name=".activities.lapitchat.LoginActivity"
             android:parentActivityName=".activities.lapitchat.StartActivity"
             android:theme="@style/AppThemeLapit" />
-        <activity android:name=".activities.lapitchat.SettingsActivity"
+        <activity
+            android:name=".activities.lapitchat.SettingsActivity"
             android:theme="@style/AppThemeLapit" />
         <activity
             android:name=".activities.lapitchat.StatusActivity"
@@ -246,41 +230,73 @@
             android:name=".activities.lapitchat.UsersActivity"
             android:parentActivityName=".activities.lapitchat.MainActivity"
             android:theme="@style/AppThemeLapit" />
-        <activity android:name=".activities.lapitchat.ProfileActivity"
-            android:theme="@style/AppThemeLapit" >
+        <activity
+            android:name=".activities.lapitchat.ProfileActivity"
+            android:theme="@style/AppThemeLapit">
             <intent-filter>
                 <action android:name="in.tvac.akshaye.lapitchat_TARGET_NOTIFICATION" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name=".activities.lapitchat.ChatActivity"
+        <activity
+            android:name=".activities.lapitchat.ChatActivity"
             android:parentActivityName=".activities.lapitchat.MainActivity"
-            android:theme="@style/AppThemeLapit" ></activity>
+            android:theme="@style/AppThemeLapit" />
 
 
+        <activity
+            android:name=".activities.bloodbank.MainActivity"
+            android:theme="@style/AppThemeBlood" />
+        <activity
+            android:name=".activities.bloodbank.Search"
+            android:theme="@style/AppThemeBlood" />
+        <activity
+            android:name=".activities.bloodbank.searchview"
+            android:theme="@style/AppThemeBlood" />
+        <activity
+            android:name=".activities.bloodbank.Home"
+            android:theme="@style/AppThemeBlood" />
+        <activity
+            android:name=".activities.bloodbank.fsave"
+            android:theme="@style/AppThemeBlood" />
+        <activity
+            android:name=".activities.bloodbank.main2"
+            android:theme="@style/AppThemeBlood" />
 
-        <activity android:name=".activities.bloodbank.MainActivity"
-            android:theme="@style/AppThemeBlood" />
-        <activity android:name=".activities.bloodbank.Search"
-            android:theme="@style/AppThemeBlood" />
-        <activity android:name=".activities.bloodbank.searchview"
-            android:theme="@style/AppThemeBlood" />
-        <activity android:name=".activities.bloodbank.Home"
-            android:theme="@style/AppThemeBlood" />
-        <activity android:name=".activities.bloodbank.intro"
-            android:theme="@style/AppThemeBlood" >
+
+        <!-- donne -->
+        <activity
+            android:name=".activities.donn.main.MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name=".activities.bloodbank.fsave"
-            android:theme="@style/AppThemeBlood" />
-        <activity android:name=".activities.bloodbank.main2"
-            android:theme="@style/AppThemeBlood" ></activity>
 
+        <receiver
+            android:name=".activities.donn.needblood.AlarmReciever"
+            android:process=":remote" />
+
+        <service android:name=".activities.donn.services.MessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <service android:name=".activities.donn.services.IDService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name=".activities.donn.main.LoginSignUp"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activities.donn.main.ConnectUsers"
+            android:theme="@style/AppTheme.NoActionBar" />
 
 
     </application>

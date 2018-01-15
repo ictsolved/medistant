@@ -9,7 +9,6 @@ import android.util.AttributeSet;
 import android.view.View;
 
 import com.sglabs.medistant.R;
-import com.sglabs.medistant.activities.FirstAidActivity;
 import com.sglabs.medistant.activities.HomeActivity;
 import com.sglabs.medistant.activities.lapitchat.UsersActivity;
 

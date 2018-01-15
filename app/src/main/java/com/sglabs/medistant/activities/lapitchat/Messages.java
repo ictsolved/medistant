@@ -7,7 +7,7 @@ package com.sglabs.medistant.activities.lapitchat;
 public class Messages {
 
     private String message, type;
-    private long  time;
+    private long time;
     private boolean seen;
 
     private String from;
@@ -16,19 +16,23 @@ public class Messages {
         this.from = from;
     }
 
+    public Messages(String message, String type, long time, boolean seen) {
+        this.message = message;
+        this.type = type;
+        this.time = time;
+        this.seen = seen;
+    }
+
+    public Messages() {
+
+    }
+
     public String getFrom() {
         return from;
     }
 
     public void setFrom(String from) {
         this.from = from;
-    }
-
-    public Messages(String message, String type, long time, boolean seen) {
-        this.message = message;
-        this.type = type;
-        this.time = time;
-        this.seen = seen;
     }
 
     public String getMessage() {
@@ -61,10 +65,6 @@ public class Messages {
 
     public void setSeen(boolean seen) {
         this.seen = seen;
-    }
-
-    public Messages(){
-
     }
 
 }

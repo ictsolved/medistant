@@ -9,37 +9,38 @@
     android:paddingRight="0dp"
     android:paddingTop="0dp"
     tools:context="com.sglabs.medistant.activities.bloodbank.Search">
+
     <RelativeLayout
         android:layout_width="20dp"
         android:layout_height="70dp"
-        android:background="#ca0f34"
-
-
         android:layout_alignParentEnd="true"
 
-        android:layout_alignParentStart="true">
+
+        android:layout_alignParentStart="true"
+
+        android:background="#ca0f34">
 
         <TextView
-            android:text="Search Result"
+            android:id="@+id/textView3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/textView3"
-            android:textColor="@android:color/background_light"
-            android:textAlignment="center"
-            android:layout_centerVertical="true"
-
-            android:layout_alignParentStart="true"
-
             android:layout_alignParentEnd="true"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:text="Search Result"
+
+            android:textAlignment="center"
+
+            android:textColor="@android:color/background_light"
             android:textSize="24sp" />
     </RelativeLayout>
 
     <ListView
+        android:id="@+id/listview"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/listview"
-        android:layout_marginTop="80dp"
+        android:layout_alignParentStart="true"
 
 
-        android:layout_alignParentStart="true" />
+        android:layout_marginTop="80dp" />
 </RelativeLayout>

@@ -1,8 +1,8 @@
 package com.sglabs.medistant.activities.bloodbank;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
@@ -10,9 +10,10 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
-import com.sglabs.medistant.R;
+
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.sglabs.medistant.R;
 
 public class main2 extends AppCompatActivity {
     private DatabaseReference mFirebaseDatabase;
@@ -22,7 +23,7 @@ public class main2 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main2);
+        setContentView(R.layout.mmipd_activity_main2);
 
 
         // get reference to 'users' node
@@ -34,7 +35,7 @@ public class main2 extends AppCompatActivity {
         final Spinner blood = (Spinner) findViewById(R.id.spinner);
         final AutoCompleteTextView panchhh = (AutoCompleteTextView) findViewById(R.id.panch_auto);
         String[] pa_n = getResources().getStringArray(R.array.panch);
-        ArrayAdapter<String> adapter =new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, pa_n);
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, pa_n);
         panchhh.setAdapter(adapter);
 
 //        usr user = new usr("Cee", "gg","hh");
@@ -58,9 +59,9 @@ public class main2 extends AppCompatActivity {
                 } else {
 
                     mFirebaseDatabase.child("users").child(blood1).child(mobile1).setValue(combo);
-                    Toast.makeText(main2.this,"Donor Added",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(main2.this, "Donor Added", Toast.LENGTH_SHORT).show();
 
-                    Intent home=new Intent(main2.this,Home.class);
+                    Intent home = new Intent(main2.this, Home.class);
                     startActivity(home);
                     finish();
                 }

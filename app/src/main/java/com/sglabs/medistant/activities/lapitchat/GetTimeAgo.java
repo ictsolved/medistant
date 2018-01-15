@@ -7,7 +7,7 @@ import android.content.Context;
  * Created by AkshayeJH on 16/07/17.
  */
 
-public class GetTimeAgo extends Application{
+public class GetTimeAgo extends Application {
 
     /*
  * Copyright 2012 Google Inc.

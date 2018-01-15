@@ -16,7 +16,7 @@ import com.squareup.picasso.Picasso;
  * Created by AkshayeJH on 01/07/17.
  */
 
-public class LapitChat extends Application{
+public class LapitChat extends Application {
 
     private DatabaseReference mUserDatabase;
     private FirebaseAuth mAuth;
@@ -38,7 +38,7 @@ public class LapitChat extends Application{
 
         mAuth = FirebaseAuth.getInstance();
 
-        if(mAuth.getCurrentUser() != null) {
+        if (mAuth.getCurrentUser() != null) {
 
             mUserDatabase = FirebaseDatabase.getInstance()
                     .getReference().child("Users").child(mAuth.getCurrentUser().getUid());

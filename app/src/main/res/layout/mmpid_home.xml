@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/home"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFEEEEEE"
+    android:orientation="vertical">
+
+    <android.support.percent.PercentRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.sglabs.medistant.elements.homeactivity.Appointment
+            android:id="@+id/view12"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="#FFFFFFFF"
+            app:layout_heightPercent="21.999999880791%"
+            app:layout_marginStartPercent="1.999999955297%"
+            app:layout_marginTopPercent="1.999999955297%"
+            app:layout_widthPercent="46.999999880791%">
+
+            <android.support.v7.widget.AppCompatButton
+                android:id="@+id/text_button51"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:background="#FF009688"
+                android:cropToPadding="true"
+                android:fontFamily="sans-serif"
+                android:gravity="center|center"
+                android:letterSpacing="0"
+                android:text="@string/text_button5_text1"
+                android:textColor="#FFFFFFFF"
+                android:textSize="16sp"
+                android:textStyle="normal"
+                app:layout_heightPercent="30.000001192093%"
+                app:layout_marginStartPercent="0%"
+                app:layout_marginTopPercent="69.999998807907%" />
+
+            <android.support.v7.widget.AppCompatImageButton
+                android:id="@+id/image_button1"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:background="#FFFFFFFF"
+                android:cropToPadding="true"
+                android:paddingBottom="5dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:paddingTop="5dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/appointments"
+                app:layout_heightPercent="69.999998807907%"
+                app:layout_marginStartPercent="0%"
+                app:layout_marginTopPercent="0%" />
+        </com.sglabs.medistant.elements.homeactivity.Appointment>
+
+        <com.sglabs.medistant.elements.homeactivity.BloodDonation
+            android:id="@+id/view32"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="#FFFFFFFF"
+            app:layout_heightPercent="21.999999880791%"
+            app:layout_marginStartPercent="50.999999046326%"
+            app:layout_marginTopPercent="1.999999955297%"
+            app:layout_widthPercent="46.999999880791%">
+
+            <android.support.v7.widget.AppCompatButton
+                android:id="@+id/text_button21"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:background="#FF009688"
+                android:cropToPadding="true"
+                android:fontFamily="sans-serif"
+                android:gravity="center|center"
+                android:letterSpacing="0"
+                android:text="@string/text_button2_text1"
+                android:textColor="#FFFFFFFF"
+                android:textSize="16sp"
+                android:textStyle="normal"
+                app:layout_heightPercent="30.000001192093%"
+                app:layout_marginStartPercent="0%"
+                app:layout_marginTopPercent="69.999998807907%" />
+
+            <android.support.v7.widget.AppCompatImageButton
+                android:id="@+id/image_button2"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:background="#FFFFFFFF"
+                android:cropToPadding="true"
+                android:paddingBottom="5dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:paddingTop="5dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/donate_blood"
+                app:layout_heightPercent="69.999998807907%"
+                app:layout_marginStartPercent="0%"
+                app:layout_marginTopPercent="0%" />
+        </com.sglabs.medistant.elements.homeactivity.BloodDonation>
+
+        <com.sglabs.medistant.elements.homeactivity.Doctors
+            android:id="@+id/view42"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="#FFFFFFFF"
+            app:layout_heightPercent="21.999999880791%"
+            app:layout_marginStartPercent="1.999999955297%"
+            app:layout_marginTopPercent="25.999999046326%"
+            app:layout_widthPercent="46.999999880791%">
+
+            <android.support.v7.widget.AppCompatButton
+                android:id="@+id/text_button41"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:background="#FF009688"
+                android:cropToPadding="true"
+                android:fontFamily="sans-serif"
+                android:gravity="center|center"
+                android:letterSpacing="0"
+                android:text="@string/text_button4_text1"
+                android:textColor="#FFFFFFFF"
+                android:textSize="16sp"
+                android:textStyle="normal"
+                app:layout_heightPercent="30.000001192093%"
+                app:layout_marginStartPercent="0%"
+                app:layout_marginTopPercent="69.999998807907%" />
+
+            <android.support.v7.widget.AppCompatImageButton
+                android:id="@+id/image_button7"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:background="#FFFFFFFF"
+                android:cropToPadding="true"
+                android:paddingBottom="5dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:paddingTop="5dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/doctors"
+                app:layout_heightPercent="69.999998807907%"
+                app:layout_marginStartPercent="0%"
+                app:layout_marginTopPercent="0%" />
+        </com.sglabs.medistant.elements.homeactivity.Doctors>
+
+        <com.sglabs.medistant.elements.homeactivity.Chat
+            android:id="@+id/view52"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="#FFFFFFFF"
+            app:layout_heightPercent="21.999999880791%"
+            app:layout_marginStartPercent="50.999999046326%"
+            app:layout_marginTopPercent="25.999999046326%"
+            app:layout_widthPercent="46.999999880791%">
+
+            <android.support.v7.widget.AppCompatButton
+                android:id="@+id/text_button31"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:background="#FF009688"
+                android:cropToPadding="true"
+                android:fontFamily="sans-serif"
+                android:gravity="center|center"
+                android:letterSpacing="0"
+                android:text="@string/text_button3_text1"
+                android:textColor="#FFFFFFFF"
+                android:textSize="16sp"
+                android:textStyle="normal"
+                app:layout_heightPercent="30.000001192093%"
+                app:layout_marginStartPercent="0%"
+                app:layout_marginTopPercent="69.999998807907%" />
+
+            <android.support.v7.widget.AppCompatImageButton
+                android:id="@+id/image_button3"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:background="#FFFFFFFF"
+                android:cropToPadding="true"
+                android:paddingBottom="5dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:paddingTop="5dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/chats"
+                app:layout_heightPercent="69.999998807907%"
+                app:layout_marginStartPercent="0%"
+                app:layout_marginTopPercent="0%" />
+        </com.sglabs.medistant.elements.homeactivity.Chat>
+
+        <com.sglabs.medistant.elements.homeactivity.Reminder
+            android:id="@+id/view22"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="#FFFFFFFF"
+            app:layout_heightPercent="21.999999880791%"
+            app:layout_marginStartPercent="50.999999046326%"
+            app:layout_marginTopPercent="50%"
+            app:layout_widthPercent="46.999999880791%">
+
+            <android.support.v7.widget.AppCompatButton
+                android:id="@+id/text_button61"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:background="#FF009688"
+                android:cropToPadding="true"
+                android:fontFamily="sans-serif"
+                android:gravity="center|center"
+                android:letterSpacing="0"
+                android:text="@string/text_button6_text1"
+                android:textColor="#FFFFFFFF"
+                android:textSize="16sp"
+                android:textStyle="normal"
+                app:layout_heightPercent="30.000001192093%"
+                app:layout_marginStartPercent="0%"
+                app:layout_marginTopPercent="69.999998807907%" />
+
+            <android.support.v7.widget.AppCompatImageButton
+                android:id="@+id/image_button5"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:background="#FFFFFFFF"
+                android:cropToPadding="true"
+                android:paddingBottom="5dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:paddingTop="5dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/reminders"
+                app:layout_heightPercent="69.999998807907%"
+                app:layout_marginStartPercent="0%"
+                app:layout_marginTopPercent="0%" />
+        </com.sglabs.medistant.elements.homeactivity.Reminder>
+
+        <com.sglabs.medistant.elements.homeactivity.HealthPlaces
+            android:id="@+id/view72"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="#FFFFFFFF"
+            app:layout_heightPercent="21.999999880791%"
+            app:layout_marginStartPercent="1.999999955297%"
+            app:layout_marginTopPercent="50%"
+            app:layout_widthPercent="46.999999880791%">
+
+            <android.support.v7.widget.AppCompatButton
+                android:id="@+id/text_button11"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:background="#FF009688"
+                android:cropToPadding="true"
+                android:fontFamily="sans-serif"
+                android:gravity="center|center"
+                android:letterSpacing="0"
+                android:text="@string/text_button1_text1"
+                android:textColor="#FFFFFFFF"
+                android:textSize="16sp"
+                android:textStyle="normal"
+                app:layout_heightPercent="30.000001192093%"
+                app:layout_marginStartPercent="0%"
+                app:layout_marginTopPercent="69.999998807907%" />
+
+            <android.support.v7.widget.AppCompatImageButton
+                android:id="@+id/image_button6"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:background="#FFFFFFFF"
+                android:cropToPadding="true"
+                android:paddingBottom="5dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:paddingTop="5dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/health_center"
+                app:layout_heightPercent="69.999998807907%"
+                app:layout_marginStartPercent="0%"
+                app:layout_marginTopPercent="0%" />
+        </com.sglabs.medistant.elements.homeactivity.HealthPlaces>
+
+        <com.sglabs.medistant.elements.homeactivity.FirstAid
+            android:id="@+id/view62"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="#FFFFFFFF"
+            app:layout_heightPercent="21.999999880791%"
+            app:layout_marginStartPercent="1.999999955297%"
+            app:layout_marginTopPercent="74.000000953674%"
+            app:layout_widthPercent="46.999999880791%">
+
+            <android.support.v7.widget.AppCompatButton
+                android:id="@+id/text_button81"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:background="#FF009688"
+                android:cropToPadding="true"
+                android:fontFamily="sans-serif"
+                android:gravity="center|center"
+                android:letterSpacing="0"
+                android:text="@string/text_button8_text1"
+                android:textColor="#FFFFFFFF"
+                android:textSize="16sp"
+                android:textStyle="normal"
+                app:layout_heightPercent="30.000001192093%"
+                app:layout_marginStartPercent="0%"
+                app:layout_marginTopPercent="69.999998807907%" />
+
+            <android.support.v7.widget.AppCompatImageButton
+                android:id="@+id/image_button4"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:background="#FFFFFFFF"
+                android:cropToPadding="true"
+                android:paddingBottom="5dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:paddingTop="5dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/first_aids"
+                app:layout_heightPercent="69.999998807907%"
+                app:layout_marginStartPercent="0%"
+                app:layout_marginTopPercent="0%" />
+        </com.sglabs.medistant.elements.homeactivity.FirstAid>
+
+        <com.sglabs.medistant.elements.homeactivity.Helpline
+            android:id="@+id/view82"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="#FFFFFFFF"
+            app:layout_heightPercent="21.999999880791%"
+            app:layout_marginStartPercent="50.999999046326%"
+            app:layout_marginTopPercent="74.000000953674%"
+            app:layout_widthPercent="46.999999880791%">
+
+            <android.support.v7.widget.AppCompatButton
+                android:id="@+id/text_button71"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:background="#FF009688"
+                android:cropToPadding="true"
+                android:fontFamily="sans-serif"
+                android:gravity="center|center"
+                android:letterSpacing="0"
+                android:text="@string/text_button7_text1"
+                android:textColor="#FFFFFFFF"
+                android:textSize="16sp"
+                android:textStyle="normal"
+                app:layout_heightPercent="30.000001192093%"
+                app:layout_marginStartPercent="0%"
+                app:layout_marginTopPercent="69.999998807907%" />
+
+            <android.support.v7.widget.AppCompatImageButton
+                android:id="@+id/image_button8"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:background="#FFFFFFFF"
+                android:cropToPadding="true"
+                android:paddingBottom="5dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:paddingTop="5dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/helplines"
+                app:layout_heightPercent="69.999998807907%"
+                app:layout_marginStartPercent="0%"
+                app:layout_marginTopPercent="0%" />
+        </com.sglabs.medistant.elements.homeactivity.Helpline>
+    </android.support.percent.PercentRelativeLayout>
+</LinearLayout>

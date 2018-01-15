@@ -12,111 +12,111 @@
     tools:context="com.sglabs.medistant.activities.bloodbank.searchview">
 
     <TextView
-        android:text="msf Erattupetta Muncipal Committee"
+        android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="18dp"
-        android:id="@+id/textView2"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
+        android:layout_marginBottom="18dp"
+        android:text="msf Erattupetta Muncipal Committee"
         android:textColor="#008000" />
 
     <RelativeLayout
+        android:id="@+id/Rel2"
         android:layout_width="20dp"
         android:layout_height="70dp"
-        android:background="#ca0f34"
-        android:id="@+id/Rel2"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true">
+        android:layout_alignParentRight="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="#ca0f34">
 
         <ImageView
+            android:id="@+id/textView3"
             android:layout_width="120dp"
             android:layout_height="120dp"
-            app:srcCompat="@drawable/typo"
-            android:id="@+id/textView3"
-            android:textColor="@android:color/background_light"
-            android:textAlignment="center"
-            android:textSize="24sp"
             android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true" />
+            android:layout_centerHorizontal="true"
+            android:textAlignment="center"
+            android:textColor="@android:color/background_light"
+            android:textSize="24sp"
+            app:srcCompat="@drawable/typo" />
     </RelativeLayout>
 
 
     <ImageView
+        android:id="@+id/imageView4"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_marginTop="20dp"
-        app:srcCompat="@drawable/search"
         android:layout_below="@id/Rel2"
         android:layout_centerHorizontal="true"
-        android:id="@+id/imageView4" />
+        android:layout_marginTop="20dp"
+        app:srcCompat="@drawable/search" />
 
     <TextView
-        android:text="Search Donor"
+        android:id="@+id/textView11"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/textView11"
-        android:layout_centerHorizontal="true"
         android:layout_below="@id/imageView4"
+        android:layout_centerHorizontal="true"
         android:layout_marginTop="18dp"
+        android:text="Search Donor"
         android:textSize="18sp" />
 
     <Spinner
+        android:id="@+id/spinner3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/spinner3"
-        android:entries="@array/blood_type"
         android:layout_alignTop="@+id/textView12"
-        android:layout_toRightOf="@+id/textView12"
-        android:layout_toEndOf="@+id/textView12"
         android:layout_marginLeft="26dp"
-        android:layout_marginStart="26dp" />
+        android:layout_marginStart="26dp"
+        android:layout_toEndOf="@+id/textView12"
+        android:layout_toRightOf="@+id/textView12"
+        android:entries="@array/blood_type" />
 
     <TextView
-        android:text="Blood Group"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="38dp"
         android:id="@+id/textView12"
-        android:layout_marginLeft="16dp"
-        android:layout_below="@+id/textView11"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
-    <TextView
-        android:text="Panchayat"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/textView13"
-        android:layout_below="@+id/spinner3"
-        android:layout_alignLeft="@+id/textView12"
-        android:layout_marginLeft="1dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/textView11"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="38dp"
+        android:text="Blood Group" />
 
-        android:layout_marginTop="25dp" />
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView12"
+        android:layout_below="@+id/spinner3"
+        android:layout_marginLeft="1dp"
+        android:layout_marginTop="25dp"
+
+        android:text="Panchayat" />
 
     <Spinner
+        android:id="@+id/spinner4"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/spinner4"
-        android:entries="@array/panch"
         android:layout_alignBaseline="@+id/textView13"
         android:layout_alignBottom="@+id/textView13"
-
         android:layout_alignLeft="@+id/spinner3"
-        android:layout_alignStart="@+id/spinner3" />
+
+        android:layout_alignStart="@+id/spinner3"
+        android:entries="@array/panch" />
 
     <Button
-        android:text="Search"
+        android:id="@+id/button3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="29dp"
-        android:id="@+id/button3"
-        android:background="#ca0f34"
-        android:textColor="#ffffff"
         android:layout_below="@+id/spinner4"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="29dp"
+        android:background="#ca0f34"
+        android:text="Search"
+        android:textColor="#ffffff" />
 
 </RelativeLayout>

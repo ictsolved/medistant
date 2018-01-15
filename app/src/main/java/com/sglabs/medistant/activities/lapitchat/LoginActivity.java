@@ -2,16 +2,16 @@ package com.sglabs.medistant.activities.lapitchat;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.TextInputLayout;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
-import com.sglabs.medistant.R;
+
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
@@ -20,6 +20,7 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.iid.FirebaseInstanceId;
+import com.sglabs.medistant.R;
 import com.sglabs.medistant.activities.HomeActivity;
 
 public class LoginActivity extends AppCompatActivity {
@@ -67,7 +68,7 @@ public class LoginActivity extends AppCompatActivity {
                 String email = mLoginEmail.getEditText().getText().toString();
                 String password = mLoginPassword.getEditText().getText().toString();
 
-                if(!TextUtils.isEmpty(email) || !TextUtils.isEmpty(password)){
+                if (!TextUtils.isEmpty(email) || !TextUtils.isEmpty(password)) {
 
                     mLoginProgress.setTitle("Logging In");
                     mLoginProgress.setMessage("Please wait while we check your credentials.");
@@ -85,7 +86,6 @@ public class LoginActivity extends AppCompatActivity {
     }
 
 
-
     private void loginUser(String email, String password) {
 
 
@@ -93,7 +93,7 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
 
-                if(task.isSuccessful()){
+                if (task.isSuccessful()) {
 
                     mLoginProgress.dismiss();
 
@@ -112,8 +112,6 @@ public class LoginActivity extends AppCompatActivity {
 
                         }
                     });
-
-
 
 
                 } else {

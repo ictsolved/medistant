@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<com.sglabs.medistant.elements.appointmentactivity.HistoryPagerView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/history_pager_view"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="#FFEEEEEE"></com.sglabs.medistant.elements.appointmentactivity.HistoryPagerView>

@@ -1,17 +1,15 @@
 package com.sglabs.medistant.activities.bloodbank;
 
-import android.*;
 import android.Manifest;
 import android.app.Dialog;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Build;
+import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
-
 import android.view.View;
 import android.view.Window;
 import android.widget.AdapterView;
@@ -20,33 +18,34 @@ import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
-import com.sglabs.medistant.R;
-import com.google.firebase.analytics.FirebaseAnalytics;
+
 import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.sglabs.medistant.R;
 
 import java.util.ArrayList;
 
 public class Search extends AppCompatActivity {
 
-    private ArrayList<String> result=new ArrayList<>();
-    private ArrayList<String> mylist=new ArrayList<>();
-    public int flag=1;
-    public String phone2;
-    private ListView resultview;
     private static final int PERMS_REQUEST_CODE = 123;
+    public int flag = 1;
+    public String phone2;
+    private ArrayList<String> result = new ArrayList<>();
+    private ArrayList<String> mylist = new ArrayList<>();
+    private ListView resultview;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search);
-        final String bloodgroup=getIntent().getStringExtra("bt");
-        final String pancht=getIntent().getStringExtra("pa");
+        final String bloodgroup = getIntent().getStringExtra("bt");
+        final String pancht = getIntent().getStringExtra("pa");
         FirebaseDatabase database = FirebaseDatabase.getInstance();
 
-        DatabaseReference mRef = database.getReference("users/"+bloodgroup);
+        DatabaseReference mRef = database.getReference("users/" + bloodgroup);
         resultview = (ListView) findViewById(R.id.listview);
 //        final  ArrayList<String> mylist = new ArrayList<String>();
         final ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, result);
@@ -57,8 +56,8 @@ public class Search extends AppCompatActivity {
                 int pos = parent.getPositionForView(view);
                 String na = mylist.get(pos * 3);
                 String pan = mylist.get((pos * 3) + 2);
-               final String ph = mylist.get((pos * 3) + 1);
-                phone2=ph;
+                final String ph = mylist.get((pos * 3) + 1);
+                phone2 = ph;
                 String item = Integer.toString(pos);
 
                 Toast.makeText(Search.this, "Phone : " + phone2 + " Panchayat: " + pan, Toast.LENGTH_SHORT).show();
@@ -76,7 +75,7 @@ public class Search extends AppCompatActivity {
                 TextView t4 = (TextView) dialog.findViewById(R.id.textView8);
 
                 t1.setText(na);
-                t2.setText("Blood Type : "+bloodgroup);
+                t2.setText("Blood Type : " + bloodgroup);
                 t3.setText("Phone : " + ph);
                 t4.setText("Panchayat : " + pan);
                 //adding button click event
@@ -87,7 +86,7 @@ public class Search extends AppCompatActivity {
                     public void onClick(View v) {
                         if (hasPermissions()) {
                             Intent callIntent = new Intent(Intent.ACTION_CALL);
-                            callIntent.setData(Uri.parse("tel:"+ph));
+                            callIntent.setData(Uri.parse("tel:" + ph));
 
                             if (ActivityCompat.checkSelfPermission(getBaseContext(),
                                     android.Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
@@ -116,17 +115,16 @@ public class Search extends AppCompatActivity {
         mRef.addChildEventListener(new ChildEventListener() {
             @Override
             public void onChildAdded(DataSnapshot dataSnapshot, String s) {
-                if(dataSnapshot.getValue()==null)
-                {
-                        Toast.makeText(Search.this,"No users found", Toast.LENGTH_SHORT).show();
-                        finish();
+                if (dataSnapshot.getValue() == null) {
+                    Toast.makeText(Search.this, "No users found", Toast.LENGTH_SHORT).show();
+                    finish();
 
                 }
                 String value = dataSnapshot.getValue(String.class);
                 String[] val = value.split(",");
 
                 if (val[2].equals(pancht)) {
-                    flag=0;
+                    flag = 0;
                     mylist.add(val[0]);
                     mylist.add(val[1]);
                     mylist.add(val[2]);
@@ -158,25 +156,26 @@ public class Search extends AppCompatActivity {
         });
 
 
-
     }
-        private boolean hasPermissions(){
-            int res = 0;
-            //string array of permissions,
-            String[] permissions = new String[]{Manifest.permission.CALL_PHONE};
 
-            for (String perms : permissions){
-                res = checkCallingOrSelfPermission(perms);
-                if (!(res == PackageManager.PERMISSION_GRANTED)){
-                    return false;
-                }
-            }
-            return true;
-        }
-    private void requestPerms(){
+    private boolean hasPermissions() {
+        int res = 0;
+        //string array of permissions,
         String[] permissions = new String[]{Manifest.permission.CALL_PHONE};
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M){
-            requestPermissions(permissions,PERMS_REQUEST_CODE);
+
+        for (String perms : permissions) {
+            res = checkCallingOrSelfPermission(perms);
+            if (!(res == PackageManager.PERMISSION_GRANTED)) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    private void requestPerms() {
+        String[] permissions = new String[]{Manifest.permission.CALL_PHONE};
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            requestPermissions(permissions, PERMS_REQUEST_CODE);
         }
     }
 
@@ -184,10 +183,10 @@ public class Search extends AppCompatActivity {
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
         boolean allowed = true;
 
-        switch (requestCode){
+        switch (requestCode) {
             case PERMS_REQUEST_CODE:
 
-                for (int res : grantResults){
+                for (int res : grantResults) {
                     // if user granted all permissions.
                     allowed = allowed && (res == PackageManager.PERMISSION_GRANTED);
                 }
@@ -199,10 +198,10 @@ public class Search extends AppCompatActivity {
                 break;
         }
 
-        if (allowed){
+        if (allowed) {
             //user granted all permissions we can perform our task.
             Intent callIntent = new Intent(Intent.ACTION_CALL);
-            callIntent.setData(Uri.parse("tel:"+phone2));
+            callIntent.setData(Uri.parse("tel:" + phone2));
 
             if (ActivityCompat.checkSelfPermission(getBaseContext(),
                     android.Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
@@ -210,8 +209,7 @@ public class Search extends AppCompatActivity {
                 return;
             }
             startActivity(callIntent);
-        }
-        else {
+        } else {
             // we will give warning to user that they haven't granted permissions.
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
                 if (shouldShowRequestPermissionRationale(Manifest.permission.WRITE_EXTERNAL_STORAGE)) {
@@ -220,13 +218,12 @@ public class Search extends AppCompatActivity {
             }
 
 
-
         }
 
     }
 
 
-    }
+}
 
 
 

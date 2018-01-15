@@ -15,81 +15,81 @@
     <RelativeLayout
         android:layout_width="20dp"
         android:layout_height="70dp"
-        android:background="#ca0f34"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true">
+        android:layout_alignParentRight="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="#ca0f34">
 
         <ImageView
+            android:id="@+id/textView3"
             android:layout_width="120dp"
             android:layout_height="120dp"
-            app:srcCompat="@drawable/mal"
-            android:id="@+id/textView3"
-            android:textColor="@android:color/background_light"
-            android:textAlignment="center"
-            android:textSize="24sp"
             android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true" />
+            android:layout_centerHorizontal="true"
+            android:textAlignment="center"
+            android:textColor="@android:color/background_light"
+            android:textSize="24sp"
+            app:srcCompat="@drawable/mal" />
     </RelativeLayout>
 
     <TextView
-        android:text="msf Erattupetta Muncipal Committee"
+        android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="18dp"
-        android:id="@+id/textView2"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
+        android:layout_marginBottom="18dp"
+        android:text="msf Erattupetta Muncipal Committee"
         android:textColor="#008000" />
 
     <ImageView
+        android:id="@+id/imageView2"
         android:layout_width="150dp"
         android:layout_height="150dp"
-        app:srcCompat="@drawable/search"
-        android:id="@+id/imageView2"
-        android:layout_marginRight="26dp"
-        android:layout_marginEnd="26dp"
-        android:layout_alignTop="@+id/imageView"
+        android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignTop="@+id/imageView"
+        android:layout_marginEnd="26dp"
+        android:layout_marginRight="26dp"
+        app:srcCompat="@drawable/search" />
 
     <ImageView
+        android:id="@+id/imageView"
         android:layout_width="150dp"
         android:layout_height="150dp"
-        app:srcCompat="@drawable/user"
-        android:id="@+id/imageView"
-
-        android:layout_centerVertical="true"
         android:layout_alignParentLeft="true"
+
         android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
         android:layout_marginLeft="24dp"
-        android:layout_marginStart="24dp" />
+        android:layout_marginStart="24dp"
+        app:srcCompat="@drawable/user" />
 
     <TextView
-        android:text="New Donor"
+        android:id="@+id/textView14"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/textView14"
-        android:layout_marginTop="16dp"
-        android:layout_below="@+id/imageView"
         android:layout_alignLeft="@+id/imageView"
         android:layout_alignStart="@+id/imageView"
+        android:layout_below="@+id/imageView"
         android:layout_marginLeft="31dp"
-        android:layout_marginStart="31dp" />
+        android:layout_marginStart="31dp"
+        android:layout_marginTop="16dp"
+        android:text="New Donor" />
 
     <TextView
-        android:text="Donor Search"
+        android:id="@+id/textView15"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/textView15"
-        android:layout_marginRight="24dp"
-        android:layout_marginEnd="24dp"
         android:layout_alignBaseline="@+id/textView14"
         android:layout_alignBottom="@+id/textView14"
+        android:layout_alignEnd="@+id/imageView2"
         android:layout_alignRight="@+id/imageView2"
-        android:layout_alignEnd="@+id/imageView2" />
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        android:text="Donor Search" />
 
 
 </RelativeLayout>

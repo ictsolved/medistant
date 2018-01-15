@@ -5,7 +5,6 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.LinearLayoutManager;
@@ -15,7 +14,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-import com.sglabs.medistant.R;
+
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
@@ -23,6 +22,7 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.sglabs.medistant.R;
 import com.squareup.picasso.Picasso;
 
 import de.hdodenhof.circleimageview.CircleImageView;
@@ -102,7 +102,7 @@ public class FriendsFragment extends Fragment {
                         final String userName = dataSnapshot.child("name").getValue().toString();
                         String userThumb = dataSnapshot.child("thumb_image").getValue().toString();
 
-                        if(dataSnapshot.hasChild("online")) {
+                        if (dataSnapshot.hasChild("online")) {
 
                             String userOnline = dataSnapshot.child("online").getValue().toString();
                             friendsViewHolder.setUserOnline(userOnline);
@@ -126,7 +126,7 @@ public class FriendsFragment extends Fragment {
                                     public void onClick(DialogInterface dialogInterface, int i) {
 
                                         //Click Event for each item.
-                                        if(i == 0){
+                                        if (i == 0) {
 
                                             Intent profileIntent = new Intent(getContext(), ProfileActivity.class);
                                             profileIntent.putExtra("user_id", list_user_id);
@@ -134,7 +134,7 @@ public class FriendsFragment extends Fragment {
 
                                         }
 
-                                        if(i == 1){
+                                        if (i == 1) {
 
                                             Intent chatIntent = new Intent(getContext(), ChatActivity.class);
                                             chatIntent.putExtra("user_id", list_user_id);
@@ -180,21 +180,21 @@ public class FriendsFragment extends Fragment {
 
         }
 
-        public void setDate(String date){
+        public void setDate(String date) {
 
             TextView userStatusView = (TextView) mView.findViewById(R.id.user_single_status);
             userStatusView.setText(date);
 
         }
 
-        public void setName(String name){
+        public void setName(String name) {
 
             TextView userNameView = (TextView) mView.findViewById(R.id.user_single_name);
             userNameView.setText(name);
 
         }
 
-        public void setUserImage(String thumb_image, Context ctx){
+        public void setUserImage(String thumb_image, Context ctx) {
 
             CircleImageView userImageView = (CircleImageView) mView.findViewById(R.id.user_single_image);
             Picasso.with(ctx).load(thumb_image).placeholder(R.drawable.default_avatar).into(userImageView);
@@ -205,7 +205,7 @@ public class FriendsFragment extends Fragment {
 
             ImageView userOnlineView = (ImageView) mView.findViewById(R.id.user_single_online_icon);
 
-            if(online_status.equals("true")){
+            if (online_status.equals("true")) {
 
                 userOnlineView.setVisibility(View.VISIBLE);
 

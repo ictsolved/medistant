@@ -4,8 +4,9 @@ import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.Intent;
 import android.support.v4.app.NotificationCompat;
-import com.sglabs.medistant.R;
+
 import com.google.firebase.messaging.RemoteMessage;
+import com.sglabs.medistant.R;
 
 /**
  * Created by AkshayeJH on 13/07/17.
@@ -45,8 +46,6 @@ public class FirebaseMessagingService extends com.google.firebase.messaging.Fire
                 );
 
         mBuilder.setContentIntent(resultPendingIntent);
-
-
 
 
         int mNotificationId = (int) System.currentTimeMillis();

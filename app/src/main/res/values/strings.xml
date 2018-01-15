@@ -176,8 +176,7 @@
     </string-array>
 
 
-
-        <string name="welcome_msg">Welcome!</string>
+    <string name="welcome_msg">Welcome!</string>
     <string name="sign_out">Sign Out</string>
     <string name="contacts_permission_rationale">Access to account information is required to sign in.</string>
     <string name="invite_menu_label">Invite</string>
@@ -191,11 +190,8 @@
     <string name="banner_ad_unit_id" translatable="false">ca-app-pub-3940256099942544/6300978111</string>
 
 
-    <string name="google_maps_key">AIzaSyBsXe_RlXTOGQPckLkdli47hzsz0xuVoWE</string>    
+    <string name="google_maps_key">AIzaSyBsXe_RlXTOGQPckLkdli47hzsz0xuVoWE</string>
     <string name="title_activity_maps">Map</string>
-
-
-
 
 
     <string name="menu_login">Log in</string>
@@ -211,9 +207,7 @@
     <string name="heading_my_top_posts">My Top Posts</string>
 
 
-
-
-        <string name="need_a_new_account">NEED A NEW ACCOUNT ?</string>
+    <string name="need_a_new_account">NEED A NEW ACCOUNT ?</string>
     <string name="display_name">Display Name</string>
     <string name="password">Password</string>
     <string name="create_account">CREATE ACCOUNT</string>
@@ -223,10 +217,6 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="default_status">Hi there, I\'m using Lapit Chat App</string>
     <string name="welcome">Welcome to Medistant</string>
-
-
-
-
 
 
     <string-array name="blood_type">
@@ -317,4 +307,22 @@
         <item>Ayarkunnam</item>
 
     </string-array>
+
+    <!-- donne -->
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+
+    <string name="password_hint">Password</string>
+    <string name="email_hint">Email</string>
+    <string name="sign_up_button_label">Sign Up</string>
+    <string name="signup_error_message">Please make sure you enter an email address and password!</string>
+    <string name="signup_error_title">Error!</string>
+    <string name="signup_success">Account successfully created! You can now Login.</string>
+    <string name="login_error_message">Please make sure you enter an email address and password!</string>
+    <string name="login_error_title">Error!</string>
+    <string name="login_button_label">Login</string>
+    <string name="sign_up_text">Sign Up!</string>
+    <string name="add_item">Add New Item</string>
+    <string name="action_logout">Logout</string>
 </resources>

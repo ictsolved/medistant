@@ -18,8 +18,8 @@ public class usr {
 
     public usr(String name, String btype, String town) {
         this.name = name;
-        this.btype=btype;
-        this.town=town;
+        this.btype = btype;
+        this.town = town;
     }
 
 }

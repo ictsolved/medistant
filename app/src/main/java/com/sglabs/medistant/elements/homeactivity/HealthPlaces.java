@@ -9,8 +9,8 @@ import android.util.AttributeSet;
 import android.view.View;
 
 import com.sglabs.medistant.R;
-import com.sglabs.medistant.activities.HomeActivity;
 import com.sglabs.medistant.activities.HealthPlacesActivity;
+import com.sglabs.medistant.activities.HomeActivity;
 
 public class HealthPlaces extends PercentRelativeLayout {
     public AppCompatButton textButton1;

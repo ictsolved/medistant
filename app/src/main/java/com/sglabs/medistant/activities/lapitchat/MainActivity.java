@@ -1,19 +1,20 @@
 package com.sglabs.medistant.activities.lapitchat;
 
 import android.content.Intent;
+import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-import com.sglabs.medistant.R;
+
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ServerValue;
+import com.sglabs.medistant.R;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -30,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.lapit_activity_main);
 
         mAuth = FirebaseAuth.getInstance();
 
@@ -56,8 +57,6 @@ public class MainActivity extends AppCompatActivity {
         mTabLayout.setupWithViewPager(mViewPager);
 
 
-
-
     }
 
     @Override
@@ -66,7 +65,7 @@ public class MainActivity extends AppCompatActivity {
         // Check if user is signed in (non-null) and update UI accordingly.
         FirebaseUser currentUser = mAuth.getCurrentUser();
 
-        if(currentUser == null){
+        if (currentUser == null) {
 
             sendToStart();
 
@@ -85,7 +84,7 @@ public class MainActivity extends AppCompatActivity {
 
         FirebaseUser currentUser = mAuth.getCurrentUser();
 
-        if(currentUser != null) {
+        if (currentUser != null) {
 
             mUserRef.child("online").setValue(ServerValue.TIMESTAMP);
 
@@ -117,7 +116,7 @@ public class MainActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         super.onOptionsItemSelected(item);
 
-        if(item.getItemId() == R.id.main_logout_btn){
+        if (item.getItemId() == R.id.main_logout_btn) {
 
             mUserRef.child("online").setValue(ServerValue.TIMESTAMP);
 
@@ -126,14 +125,14 @@ public class MainActivity extends AppCompatActivity {
 
         }
 
-        if(item.getItemId() == R.id.main_settings_btn){
+        if (item.getItemId() == R.id.main_settings_btn) {
 
             Intent settingsIntent = new Intent(MainActivity.this, SettingsActivity.class);
             startActivity(settingsIntent);
 
         }
 
-        if(item.getItemId() == R.id.main_all_btn){
+        if (item.getItemId() == R.id.main_all_btn) {
 
             Intent settingsIntent = new Intent(MainActivity.this, UsersActivity.class);
             startActivity(settingsIntent);

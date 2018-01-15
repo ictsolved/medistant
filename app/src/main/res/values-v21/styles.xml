@@ -18,4 +18,15 @@
         <item name="android:windowTranslucentNavigation">true</item>
     </style>
 
+
+    <!-- done -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:navigationBarColor">@color/colorPrimaryDark</item>
+    </style>
+
+
 </resources>

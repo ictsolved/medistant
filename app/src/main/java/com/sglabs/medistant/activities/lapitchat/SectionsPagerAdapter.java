@@ -8,7 +8,7 @@ import android.support.v4.app.FragmentPagerAdapter;
  * Created by AkshayeJH on 11/06/17.
  */
 
-class SectionsPagerAdapter extends FragmentPagerAdapter{
+class SectionsPagerAdapter extends FragmentPagerAdapter {
 
 
     public SectionsPagerAdapter(FragmentManager fm) {
@@ -18,21 +18,21 @@ class SectionsPagerAdapter extends FragmentPagerAdapter{
     @Override
     public Fragment getItem(int position) {
 
-        switch(position) {
+        switch (position) {
             case 0:
                 RequestsFragment requestsFragment = new RequestsFragment();
                 return requestsFragment;
 
             case 1:
                 ChatsFragment chatsFragment = new ChatsFragment();
-                return  chatsFragment;
+                return chatsFragment;
 
             case 2:
                 FriendsFragment friendsFragment = new FriendsFragment();
                 return friendsFragment;
 
             default:
-                return  null;
+                return null;
         }
 
     }
@@ -42,7 +42,7 @@ class SectionsPagerAdapter extends FragmentPagerAdapter{
         return 3;
     }
 
-    public CharSequence getPageTitle(int position){
+    public CharSequence getPageTitle(int position) {
 
         switch (position) {
             case 0:

@@ -23,8 +23,6 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.sglabs.medistant.R;
-import com.sglabs.medistant.activities.lapitchat.LoginActivity;
-import com.sglabs.medistant.activities.lapitchat.MainActivity;
 import com.sglabs.medistant.activities.lapitchat.StartActivity;
 
 

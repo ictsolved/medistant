@@ -5,8 +5,8 @@ import android.content.pm.PackageManager;
 import android.graphics.Color;
 import android.location.Location;
 import android.os.Build;
-import android.support.v4.app.ActivityCompat;
 import android.os.Bundle;
+import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -16,7 +16,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
-import com.sglabs.medistant.R;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GoogleApiAvailability;
 import com.google.android.gms.common.api.GoogleApiClient;
@@ -31,6 +30,7 @@ import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
+import com.sglabs.medistant.R;
 
 
 public class HealthPlacesActivity extends AppCompatActivity implements OnMapReadyCallback,
@@ -38,19 +38,19 @@ public class HealthPlacesActivity extends AppCompatActivity implements OnMapRead
         GoogleApiClient.OnConnectionFailedListener,
         LocationListener {
 
-    public HealthPlacesActivity getContext() {
-        return this;
-    }
-
-
-    private GoogleMap mMap;
+    public static final int MY_PERMISSIONS_REQUEST_LOCATION = 99;
     double latitude;
     double longitude;
-    private int PROXIMITY_RADIUS = 10000;
     GoogleApiClient mGoogleApiClient;
     Location mLastLocation;
     Marker mCurrLocationMarker;
     LocationRequest mLocationRequest;
+    private GoogleMap mMap;
+    private int PROXIMITY_RADIUS = 10000;
+
+    public HealthPlacesActivity getContext() {
+        return this;
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -71,9 +71,8 @@ public class HealthPlacesActivity extends AppCompatActivity implements OnMapRead
         if (!CheckGooglePlayServices()) {
             Log.d("onCreate", "Finishing test case since Google Play Services are not available");
             finish();
-        }
-        else {
-            Log.d("onCreate","Google Play Services available.");
+        } else {
+            Log.d("onCreate", "Google Play Services available.");
         }
 
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
@@ -85,8 +84,8 @@ public class HealthPlacesActivity extends AppCompatActivity implements OnMapRead
     private boolean CheckGooglePlayServices() {
         GoogleApiAvailability googleAPI = GoogleApiAvailability.getInstance();
         int result = googleAPI.isGooglePlayServicesAvailable(this);
-        if(result != ConnectionResult.SUCCESS) {
-            if(googleAPI.isUserResolvableError(result)) {
+        if (result != ConnectionResult.SUCCESS) {
+            if (googleAPI.isUserResolvableError(result)) {
                 googleAPI.getErrorDialog(this, result,
                         0).show();
             }
@@ -94,7 +93,6 @@ public class HealthPlacesActivity extends AppCompatActivity implements OnMapRead
         }
         return true;
     }
-
 
     /**
      * Manipulates the map once available.
@@ -118,17 +116,16 @@ public class HealthPlacesActivity extends AppCompatActivity implements OnMapRead
                 buildGoogleApiClient();
                 mMap.setMyLocationEnabled(true);
             }
-        }
-        else {
+        } else {
             buildGoogleApiClient();
             mMap.setMyLocationEnabled(true);
         }
 
 
-
         Button btnHospital = (Button) findViewById(R.id.btnHospital);
         btnHospital.setOnClickListener(new View.OnClickListener() {
             String Hospital = "hospital";
+
             @Override
             public void onClick(View v) {
                 Log.d("onClick", "Button is Clicked");
@@ -140,7 +137,7 @@ public class HealthPlacesActivity extends AppCompatActivity implements OnMapRead
                 Log.d("onClick", url);
                 HealthPlacesGetNearbyData getNearbyPlacesData = new HealthPlacesGetNearbyData();
                 getNearbyPlacesData.execute(DataTransfer);
-                Toast.makeText(HealthPlacesActivity.this,"Nearby Hospitals", Toast.LENGTH_LONG).show();
+                Toast.makeText(HealthPlacesActivity.this, "Nearby Hospitals", Toast.LENGTH_LONG).show();
             }
         });
 
@@ -208,9 +205,9 @@ public class HealthPlacesActivity extends AppCompatActivity implements OnMapRead
         //move map camera
         mMap.moveCamera(CameraUpdateFactory.newLatLng(latLng));
         mMap.animateCamera(CameraUpdateFactory.zoomTo(11));
-        Toast.makeText(HealthPlacesActivity.this,"Your Current Location", Toast.LENGTH_LONG).show();
+        Toast.makeText(HealthPlacesActivity.this, "Your Current Location", Toast.LENGTH_LONG).show();
 
-        Log.d("onLocationChanged", String.format("latitude:%.3f longitude:%.3f",latitude,longitude));
+        Log.d("onLocationChanged", String.format("latitude:%.3f longitude:%.3f", latitude, longitude));
 
         //stop location updates
         if (mGoogleApiClient != null) {
@@ -226,8 +223,7 @@ public class HealthPlacesActivity extends AppCompatActivity implements OnMapRead
 
     }
 
-    public static final int MY_PERMISSIONS_REQUEST_LOCATION = 99;
-    public boolean checkLocationPermission(){
+    public boolean checkLocationPermission() {
         if (ContextCompat.checkSelfPermission(this,
                 Manifest.permission.ACCESS_FINE_LOCATION)
                 != PackageManager.PERMISSION_GRANTED) {
@@ -291,7 +287,6 @@ public class HealthPlacesActivity extends AppCompatActivity implements OnMapRead
             // You can add here other case statements according to your requirement.
         }
     }
-
 
 
     @Override
