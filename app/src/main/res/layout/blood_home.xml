@@ -102,7 +102,7 @@
                         android:id="@+id/person_cname"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Check Eligibilty"
+                        android:text="Donate Blood"
                         android:textColor="@color/accent"
                         android:textSize="25sp"
                         android:textStyle="bold" />
@@ -112,7 +112,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="4dp"
-                        android:text="Test wether you can donate blood or not, and how to be qualified to donate blood."
+                        android:text="Donate blood to the needy and notify other that you are ready for blood donation."
                         android:textColor="#000"
                         android:textSize="15sp" />
 

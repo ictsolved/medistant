@@ -54,7 +54,7 @@ public class HomeFragment extends Fragment {
             @Override
             public void onClick(View v) {
 
-                setCurrentFragment(new TakeQuizFragment(), "Check Eligibility");
+                setCurrentFragment(new QuizFragment(), "Donate Blood");
             }
         });
 
