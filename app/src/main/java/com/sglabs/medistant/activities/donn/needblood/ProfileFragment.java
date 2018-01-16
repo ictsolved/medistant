@@ -73,7 +73,7 @@ public class ProfileFragment extends Fragment {
         final AlertDialog dialog = new SpotsDialog(getActivity(), "Loading..");
 
         dialog.show();
-        mDatabase.child("users").child(mUserId).child("data").addListenerForSingleValueEvent(new ValueEventListener() {
+        mDatabase.child("Users").child(mUserId).addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
 
@@ -104,27 +104,7 @@ public class ProfileFragment extends Fragment {
             @Override
             public void onClick(View v) {
 
-                new SweetAlertDialog(getActivity(), SweetAlertDialog.WARNING_TYPE)
-                        .setTitleText("Edit Details?")
-                        .setCancelText("No")
-                        .setConfirmText("Yes")
-                        .showCancelButton(true)
-                        .setCancelClickListener(new SweetAlertDialog.OnSweetClickListener() {
-                            @Override
-                            public void onClick(SweetAlertDialog sDialog) {
-                                sDialog.dismissWithAnimation();
-                            }
-                        })
-                        .setConfirmClickListener(new SweetAlertDialog.OnSweetClickListener() {
-
-                            @Override
-                            public void onClick(SweetAlertDialog sweetAlertDialog) {
-
                                 setCurrentFragment(new RegisterFragment(), "Edit Details");
-
-
-                            }
-                        }).show();
 
             }
         });

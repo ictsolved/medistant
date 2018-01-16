@@ -96,7 +96,7 @@ public class ConnectUsers extends AppCompatActivity {
                     try {
                         startActivity(callIntent);  //call activity and make phone call
                     } catch (android.content.ActivityNotFoundException ex) {
-                        Toast.makeText(getApplicationContext(), "yourActivity is not founded", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getApplicationContext(), "Your Activity is not found!", Toast.LENGTH_SHORT).show();
                     }
                 }
             }
