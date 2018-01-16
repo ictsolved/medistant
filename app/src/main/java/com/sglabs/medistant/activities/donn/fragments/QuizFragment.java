@@ -247,8 +247,6 @@ public class QuizFragment extends Fragment {
                     FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
                     FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
 
-                    fragmentTransaction.setCustomAnimations(R.anim.enter_from_left, R.anim.exit_to_right, R.anim.enter_from_right, R.anim.exit_to_left);
-
                     currentFragment.setArguments(bundle);
                     fragmentTransaction.replace(R.id.mainFrame, currentFragment);
                     fragmentTransaction.addToBackStack(null);

@@ -106,7 +106,7 @@ public class MainActivity extends AppCompatActivity {
     public void setCurrentFragment(Fragment newFragment, String title) {
 
         fragmentTransaction = getSupportFragmentManager().beginTransaction();
-        fragmentTransaction.setCustomAnimations(R.anim.enter_from_left, R.anim.exit_to_right, R.anim.enter_from_right, R.anim.exit_to_left);
+
         fragmentTransaction.replace(R.id.mainFrame, newFragment);
         fragmentTransaction.addToBackStack(null);
         fragmentTransaction.commit();

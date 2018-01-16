@@ -43,7 +43,6 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="4dp"
                         android:layout_weight="0.23"
                         android:text="\nHow old are you ?\n"
                         android:textColor="#000"
@@ -110,7 +109,6 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="4dp"
                         android:layout_weight="0.23"
                         android:text="\nAre you Pregnant or have just given birth ?\n"
                         android:textColor="#000"
@@ -178,7 +176,6 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="4dp"
                         android:layout_weight="0.23"
                         android:text="\nDo you have a serious heart condition ?\n"
                         android:textColor="#000"
@@ -239,7 +236,6 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="4dp"
                         android:layout_weight="0.23"
                         android:text="\nDo you have any iron problems ?\n"
                         android:textColor="#000"
@@ -300,7 +296,6 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="4dp"
                         android:layout_weight="0.23"
                         android:text="\nHave ever had recreational drugs ?\n"
                         android:textColor="#000"
@@ -360,7 +355,6 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="4dp"
                         android:layout_weight="0.23"
                         android:text="\nDid you travel overseas in the last 4 months ?\n"
                         android:textColor="#000"
@@ -422,7 +416,6 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="4dp"
                         android:layout_weight="0.23"
                         android:text="\nAre you less than 45 Kg in weight ?\n"
                         android:textColor="#000"
@@ -484,7 +477,6 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="4dp"
                         android:layout_weight="0.23"
                         android:text="\nDid you have fever in the past 3 weeks ?\n"
                         android:textColor="#000"

@@ -82,7 +82,6 @@ public class ResultFragment extends Fragment {
                 FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
 
-                fragmentTransaction.setCustomAnimations(R.anim.enter_from_left, R.anim.exit_to_right, R.anim.enter_from_right, R.anim.exit_to_left);
                 fragmentTransaction.replace(R.id.mainFrame, currentFragment);
                 fragmentTransaction.addToBackStack(null);
                 fragmentTransaction.commit();
