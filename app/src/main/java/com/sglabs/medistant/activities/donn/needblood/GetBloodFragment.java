@@ -44,7 +44,7 @@ public class GetBloodFragment extends Fragment {
     ArrayAdapter<String> adapter;
     SharedPreferences.Editor edit;
     Spinner countrySpinner, bloodSpinner;
-    String[] BloodList = {"Select Blood Type", "-------------------", "O-", "O+", "A+", "A-", "B+", "B-", "AB+", "AB-"};
+    String[] BloodList = {"Select Blood Type", "O-", "O+", "A+", "A-", "B+", "B-", "AB+", "AB-"};
 
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -152,8 +152,8 @@ public class GetBloodFragment extends Fragment {
 
                                 new SweetAlertDialog(getActivity(), SweetAlertDialog.SUCCESS_TYPE)
                                         .setTitleText("Request Sent")
-                                        .setContentText("Your request was sent to all available donors, relax and wait for a reply")
-                                        .setConfirmText("Cool!")
+                                        .setContentText("Wait for response from donors.")
+                                        .setConfirmText("OK")
                                         .setConfirmClickListener(new SweetAlertDialog.OnSweetClickListener() {
                                             @Override
                                             public void onClick(SweetAlertDialog sDialog) {
@@ -170,8 +170,8 @@ public class GetBloodFragment extends Fragment {
 
                                 new SweetAlertDialog(getActivity(), SweetAlertDialog.ERROR_TYPE)
                                         .setTitleText("Request was not Sent")
-                                        .setContentText("Your request was not sent, try again later..")
-                                        .setConfirmText("Cool!")
+                                        .setContentText("Your request was not sent, try again later.")
+                                        .setConfirmText("OK")
                                         .setConfirmClickListener(new SweetAlertDialog.OnSweetClickListener() {
                                             @Override
                                             public void onClick(SweetAlertDialog sDialog) {
