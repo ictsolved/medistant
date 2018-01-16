@@ -11,9 +11,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.sglabs.medistant.R;
-import com.sglabs.medistant.activities.firstaid.details.Aasthma;
-import com.sglabs.medistant.activities.firstaid.details.Stroke;
-import com.sglabs.medistant.activities.firstaid.details.Attack;
+import com.sglabs.medistant.activities.firstaid.details.AbdomenPain;
 
 
 public class FirstAidHomeFragment extends Fragment {
@@ -41,7 +39,7 @@ public class FirstAidHomeFragment extends Fragment {
             @Override
             public void onClick(View v) {
 
-                setCurrentFragment(new Stroke(), "Abdominal Pain");
+                setCurrentFragment(new AbdomenPain(), "Abdominal Pain");
 
             }
         });

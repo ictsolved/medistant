@@ -13,16 +13,13 @@ import com.sglabs.medistant.R;
  * Created by rashad on 5/23/16.
  *
  */
-
-
-public class Panic extends Fragment {
+public class AbdomenPain extends Fragment {
 
     View root;
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
-        root = inflater.inflate(R.layout.types, container, false);
-
+        root = inflater.inflate(R.layout.first_aid_abdomial, container, false);
 
         return root;
 

@@ -11,15 +11,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.widget.Toast;
-
+import com.ontbee.legacyforks.cn.pedant.SweetAlert.SweetAlertDialog;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.sglabs.medistant.R;
-import com.sglabs.medistant.activities.firstaid.FirstAidHomeFragment;
-import com.sglabs.medistant.activities.firstaid.details.Aasthma;
-import com.sglabs.medistant.activities.firstaid.details.Panic;
-import com.sglabs.medistant.activities.firstaid.details.Stroke;
-import com.sglabs.medistant.activities.firstaid.details.Attack;
+import com.sglabs.medistant.activities.firstaid.details.AbdomenPain;
 
 public class FirstAidMainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -66,6 +62,19 @@ public class FirstAidMainActivity extends AppCompatActivity implements Navigatio
 
     }
 
+    @Override
+    public void onBackPressed() {
+
+        if (getSupportFragmentManager().getBackStackEntryCount() > 0) {
+
+            if (getSupportFragmentManager().findFragmentById(R.id.mainFrame) instanceof FirstAidHomeFragment) {
+
+                finish();
+            }
+
+        }
+    }
+
 
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
@@ -78,28 +87,7 @@ public class FirstAidMainActivity extends AppCompatActivity implements Navigatio
 
             case R.id.home:
 
-                setCurrentFragment(new Aasthma(), "Facts");
-
-                break;
-
-
-            case R.id.donor:
-
-
-                setCurrentFragment(new Panic(), "Types");
-
-
-                break;
-
-            case R.id.get:
-
-                setCurrentFragment(new Stroke(), "Info");
-
-                break;
-
-            case R.id.bloodsched:
-
-                setCurrentFragment(new Attack(), "Reason");
+                setCurrentFragment(new AbdomenPain(), "Facts");
 
                 break;
 

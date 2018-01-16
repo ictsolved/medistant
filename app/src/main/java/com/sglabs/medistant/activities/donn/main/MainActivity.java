@@ -77,6 +77,18 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
     }
 
+    @Override
+    public void onBackPressed() {
+
+        if (getSupportFragmentManager().getBackStackEntryCount() > 0) {
+
+            if (getSupportFragmentManager().findFragmentById(R.id.mainFrame) instanceof HomeFragment) {
+
+                finish();
+            }
+
+        }
+    }
 
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {

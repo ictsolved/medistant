@@ -7,7 +7,7 @@
     android:background="#ECEFF1"
     android:orientation="vertical"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.com.sglabs.medistante.Main.MainActivity"
+    tools:context="com.sglabs.medistant.activities.donn.main.MainActivity"
     tools:showIn="@layout/blood_app_bar_main">
 
 
