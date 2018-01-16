@@ -21,7 +21,7 @@ public class FirstAidHomeFragment extends Fragment {
     View root;
     Toolbar toolbar;
     TextView joinText;
-    CardView join, check, get;
+    CardView abdominal_pain;
     FragmentTransaction fragmentTransaction;
 
 
@@ -32,37 +32,16 @@ public class FirstAidHomeFragment extends Fragment {
         toolbar = (Toolbar) getActivity().findViewById(R.id.toolbar);
         toolbar.setTitle("First Aid");
 
-        join = (CardView) root.findViewById(R.id.join);
-        check = (CardView) root.findViewById(R.id.check);
-        get = (CardView) root.findViewById(R.id.get);
+        abdominal_pain = (CardView) root.findViewById(R.id.abdominal_pain);
 
         joinText = (TextView) root.findViewById(R.id.text);
 
-        joinText.setText("My Profile");
 
-
-        get.setOnClickListener(new View.OnClickListener() {
+        abdominal_pain.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                setCurrentFragment(new Attack(), "Search or Request Blood");
-
-            }
-        });
-
-        check.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                setCurrentFragment(new Aasthma(), "Donate Blood");
-            }
-        });
-
-        join.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                setCurrentFragment(new Stroke(), "My Profile");
+                setCurrentFragment(new Stroke(), "Abdominal Pain");
 
             }
         });

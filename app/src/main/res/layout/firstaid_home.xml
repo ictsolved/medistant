@@ -19,7 +19,7 @@
 
 
             <android.support.v7.widget.CardView
-                android:id="@+id/join"
+                android:id="@+id/abdominal_pain"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="3dp">
@@ -31,10 +31,10 @@
                     android:padding="16dp">
 
                     <TextView
-                        android:id="@+id/text"
+                        android:id="@+id/abd_pain_text"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Asthma"
+                        android:text="Abdominal Pain"
                         android:textColor="@color/accent"
                         android:textSize="25sp"
                         android:textStyle="bold" />
@@ -43,7 +43,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="4dp"
-                        android:text="Set your blood profile and get notification when someone needs your blood type."
+                        android:text="You might try a heating pad to ease..."
                         android:textColor="#000"
                         android:textSize="15sp" />
 
@@ -53,7 +53,7 @@
 
 
             <android.support.v7.widget.CardView
-                android:id="@+id/get"
+                android:id="@+id/animal_bites"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="3dp">
@@ -65,10 +65,10 @@
                     android:padding="14dp">
 
                     <TextView
-                        android:id="@+id/personc_name"
+                        android:id="@+id/anim_bite_text"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Stroke"
+                        android:text="Animal Bites"
                         android:textColor="@color/accent"
                         android:textSize="25sp"
                         android:textStyle="bold" />
@@ -77,7 +77,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="4dp"
-                        android:text="Find donors to help you in urgent cases and get notified when a donor matches your type."
+                        android:text="Gently clean with soap and warm water..."
                         android:textColor="#000"
                         android:textSize="15sp" />
 
@@ -87,7 +87,7 @@
 
 
             <android.support.v7.widget.CardView
-                android:id="@+id/check"
+                android:id="@+id/bld_in_urine"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="3dp">
@@ -99,26 +99,160 @@
                     android:padding="16dp">
 
                     <TextView
-                        android:id="@+id/person_cname"
+                        android:id="@+id/bld_in_urine_text"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Pain"
+                        android:text="Blood in Urine"
                         android:textColor="@color/accent"
                         android:textSize="25sp"
                         android:textStyle="bold" />
 
                     <TextView
-                        android:id="@+id/person_acge"
+                        android:id="@+id/bld_in_urine_det"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="4dp"
-                        android:text="Donate blood to the needy and notify other that you are ready for blood donation."
+                        android:text="Most causes of blood in the urine are..."
                         android:textColor="#000"
                         android:textSize="15sp" />
 
                 </LinearLayout>
 
             </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/bruises"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="14dp">
+
+                    <TextView
+                        android:id="@+id/bruises_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Bruises"
+                        android:textColor="@color/accent"
+                        android:textSize="25sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="You may bruise more easily because of a..."
+                        android:textColor="#000"
+                        android:textSize="15sp" />
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/burns"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="14dp">
+
+                    <TextView
+                        android:id="@+id/burns_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Burns"
+                        android:textColor="@color/accent"
+                        android:textSize="25sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="Remove smoldering material from the..."
+                        android:textColor="#000"
+                        android:textSize="15sp" />
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/choking"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="14dp">
+
+                    <TextView
+                        android:id="@+id/choking_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Choking"
+                        android:textColor="@color/accent"
+                        android:textSize="25sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="Place your clenched fist just above the..."
+                        android:textColor="#000"
+                        android:textSize="15sp" />
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/cuts"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="14dp">
+
+                    <TextView
+                        android:id="@+id/cuts_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Cuts"
+                        android:textColor="@color/accent"
+                        android:textSize="25sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="Put a sterile bandage on the area..."
+                        android:textColor="#000"
+                        android:textSize="15sp" />
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+
 
 
         </LinearLayout>
