@@ -2,15 +2,14 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorPrimary"
+    android:background="#ECEFF1"
     android:orientation="vertical">
 
     <ScrollView
         android:id="@+id/scrollView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_margin="10dp"
-        android:fillViewport="true">
+        android:fillViewport="false">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -22,14 +21,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
-                android:layout_centerVertical="true">
+                android:layout_centerVertical="true"
+                android:layout_margin="3dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="@color/colorPrimary"
                     android:orientation="vertical"
-                    android:padding="16dp"
+                    android:padding="14dp"
                     android:weightSum="1">
 
 
@@ -39,9 +38,9 @@
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="5dp"
                         android:gravity="center"
-                        android:text="Register to Medistant"
+                        android:text="All fields Required"
                         android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:textColor="#fff"
+                        android:textColor="@color/accent"
                         android:textStyle="bold" />
 
                     <com.wrapp.floatlabelededittext.FloatLabeledEditText
@@ -84,26 +83,20 @@
                             android:inputType="phone" />
                     </com.wrapp.floatlabelededittext.FloatLabeledEditText>
 
-                    <com.wrapp.floatlabelededittext.FloatLabeledEditText
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
-
-                    </com.wrapp.floatlabelededittext.FloatLabeledEditText>
-
                     <Spinner
                         android:id="@+id/spinner"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="5dp"
-                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="10dp"
                         android:spinnerMode="dropdown" />
 
                     <Spinner
                         android:id="@+id/bldtype"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="5dp"
-                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="10dp"
                         android:spinnerMode="dropdown" />
 
 
@@ -113,8 +106,8 @@
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="3dp"
                         android:layout_marginTop="5dp"
-                        android:background="@color/colorPrimary"
-                        android:text="Register"
+                        android:background="@color/accent"
+                        android:text="Update"
                         android:textColor="#fff" />
 
                 </LinearLayout>

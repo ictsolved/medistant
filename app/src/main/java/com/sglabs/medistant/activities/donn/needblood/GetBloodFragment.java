@@ -320,31 +320,9 @@ public class GetBloodFragment extends Fragment {
         countries = new ArrayList<>();
 
         countries.add("Select City");
-        countries.add("Cairo");
-        countries.add("Alexandria");
-        countries.add("Giza");
-        countries.add("Shubra El Kheima");
-        countries.add("Port Said");
-        countries.add("Suez");
-        countries.add("El Mahala El Kubra");
-        countries.add("Luxor");
-        countries.add("Mansoura");
-        countries.add("Tanta");
-        countries.add("Assiut");
-        countries.add("Ismailia");
-        countries.add("Fayoum");
-        countries.add("Zagazig");
-        countries.add("Damietta");
-        countries.add("Aswan");
-        countries.add("Minya");
-        countries.add("Damanhour");
-        countries.add("Beni Suef");
-        countries.add("Hurghada");
-        countries.add("Qena");
-        countries.add("Sohag");
-        countries.add("Shibin El Kom");
-        countries.add("Banha");
-        countries.add("Arish");
+        countries.add("Kathmandu");
+        countries.add("Bhaktapur");
+        countries.add("Lalitpur");
 
     }
 
