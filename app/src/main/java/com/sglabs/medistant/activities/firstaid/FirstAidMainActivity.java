@@ -17,7 +17,7 @@ import com.google.firebase.auth.FirebaseUser;
 import com.sglabs.medistant.R;
 import com.sglabs.medistant.activities.firstaid.details.AbdomenPain;
 
-public class FirstAidMainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
+public class FirstAidMainActivity extends AppCompatActivity {
 
     int id;
 
@@ -37,8 +37,6 @@ public class FirstAidMainActivity extends AppCompatActivity implements Navigatio
         setContentView(R.layout.firstaid_main);
 
         setupToolbar();
-        setupNavigationActivity();
-        loadPreferences();
 
         if (getIntent().getExtras() != null) {
 
@@ -63,6 +61,16 @@ public class FirstAidMainActivity extends AppCompatActivity implements Navigatio
     }
 
     @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                onBackPressed();
+                return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
+    @Override
     public void onBackPressed() {
 
         if (getSupportFragmentManager().getBackStackEntryCount() > 0) {
@@ -80,30 +88,6 @@ public class FirstAidMainActivity extends AppCompatActivity implements Navigatio
     }
 
 
-    @Override
-    public boolean onNavigationItemSelected(MenuItem item) {
-
-        id = item.getItemId();
-        navigationView.getMenu().findItem(R.id.home).setChecked(false);
-
-
-        switch (id) {
-
-            case R.id.home:
-
-                setCurrentFragment(new AbdomenPain(), "Facts");
-
-                break;
-
-
-        }
-
-        drawer.closeDrawer(GravityCompat.START);
-
-        return true;
-    }
-
-
     public void setCurrentFragment(Fragment newFragment, String title) {
 
         fragmentTransaction = getSupportFragmentManager().beginTransaction();
@@ -113,28 +97,6 @@ public class FirstAidMainActivity extends AppCompatActivity implements Navigatio
         fragmentTransaction.commit();
 
         toolbar.setTitle(title);
-
-    }
-
-
-    public void loadPreferences() {
-
-        nav_donor = navigationView.getMenu().findItem(R.id.donor);
-        nav_donor.setTitle("My Profile");
-
-    }
-
-
-    public void setupNavigationActivity() {
-
-        drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-        toggle = new ActionBarDrawerToggle(this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
-        drawer.setDrawerListener(toggle);
-        toggle.syncState();
-
-        navigationView = (NavigationView) findViewById(R.id.nav_view);
-        navigationView.setNavigationItemSelectedListener(this);
-        navigationView.getMenu().findItem(R.id.home).setChecked(true);
 
     }
 

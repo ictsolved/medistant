@@ -21,7 +21,7 @@ import com.sglabs.medistant.activities.donn.needblood.GetBloodFragment;
 import com.sglabs.medistant.activities.donn.needblood.ProfileFragment;
 import com.sglabs.medistant.activities.donn.needblood.ScheduleFragment;
 
-public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
+public class MainActivity extends AppCompatActivity {
 
     int id;
 
@@ -41,8 +41,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         setContentView(R.layout.blood_main);
 
         setupToolbar();
-        setupNavigationActivity();
-        loadPreferences();
 
         if (getIntent().getExtras() != null) {
 
@@ -78,6 +76,16 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     }
 
     @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                onBackPressed();
+                return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
+    @Override
     public void onBackPressed() {
 
         if (getSupportFragmentManager().getBackStackEntryCount() > 0) {
@@ -94,50 +102,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         }
     }
 
-    @Override
-    public boolean onNavigationItemSelected(MenuItem item) {
-
-        id = item.getItemId();
-        navigationView.getMenu().findItem(R.id.home).setChecked(false);
-
-
-        switch (id) {
-
-            case R.id.home:
-
-                setCurrentFragment(new HomeFragment(), "NeedBlood");
-
-                break;
-
-
-            case R.id.donor:
-
-
-                setCurrentFragment(new ProfileFragment(), "My Profile");
-
-
-                break;
-
-            case R.id.get:
-
-                setCurrentFragment(new GetBloodFragment(), "Search or Request Blood");
-
-                break;
-
-            case R.id.bloodsched:
-
-                setCurrentFragment(new ScheduleFragment(), "Donation Schedule");
-
-                break;
-
-
-        }
-
-        drawer.closeDrawer(GravityCompat.START);
-
-        return true;
-    }
-
 
     public void setCurrentFragment(Fragment newFragment, String title) {
 
@@ -148,28 +112,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         fragmentTransaction.commit();
 
         toolbar.setTitle(title);
-
-    }
-
-
-    public void loadPreferences() {
-
-        nav_donor = navigationView.getMenu().findItem(R.id.donor);
-        nav_donor.setTitle("My Profile");
-
-    }
-
-
-    public void setupNavigationActivity() {
-
-        drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-        toggle = new ActionBarDrawerToggle(this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
-        drawer.setDrawerListener(toggle);
-        toggle.syncState();
-
-        navigationView = (NavigationView) findViewById(R.id.nav_view);
-        navigationView.setNavigationItemSelectedListener(this);
-        navigationView.getMenu().findItem(R.id.home).setChecked(true);
 
     }
 
