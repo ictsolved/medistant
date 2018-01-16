@@ -87,6 +87,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 finish();
             }
 
+            else {
+                getSupportFragmentManager().popBackStack();
+            }
+
         }
     }
 

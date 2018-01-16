@@ -72,6 +72,10 @@ public class FirstAidMainActivity extends AppCompatActivity implements Navigatio
                 finish();
             }
 
+            else {
+                getSupportFragmentManager().popBackStack();
+            }
+
         }
     }
 
