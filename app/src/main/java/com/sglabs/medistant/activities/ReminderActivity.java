@@ -34,6 +34,12 @@ public class ReminderActivity extends AppCompatActivity implements ReminderAdapt
     private boolean fabIsHidden = false;
 
     @Override
+    public boolean onSupportNavigateUp() {
+        onBackPressed();
+        return true;
+    }
+
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         super.onCreate(savedInstanceState);
@@ -41,9 +47,8 @@ public class ReminderActivity extends AppCompatActivity implements ReminderAdapt
         ButterKnife.bind(this);
 
         setSupportActionBar(toolbar);
-        if (getSupportActionBar() != null) {
-            getSupportActionBar().setTitle(null);
-        }
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
 
         ViewPageAdapter adapter = new ViewPageAdapter(getSupportFragmentManager());
         viewPager.setAdapter(adapter);
