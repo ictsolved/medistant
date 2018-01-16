@@ -279,6 +279,18 @@
             android:name=".activities.donn.main.ConnectUsers"
             android:theme="@style/AppTheme.NoActionBar" />
 
+        <!--firstaid-->
+        <activity
+            android:name=".activities.firstaid.FirstAidMainActivity"
+            android:label="First Aid"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
 
     </application>
 

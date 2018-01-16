@@ -5,6 +5,7 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -24,6 +25,8 @@ import com.sglabs.medistant.R;
 import com.ontbee.legacyforks.cn.pedant.SweetAlert.SweetAlertDialog;
 import dmax.dialog.SpotsDialog;
 
+import com.sglabs.medistant.activities.donn.fragments.RegisterFragment;
+
 /**
  * .
  * Created by rashad on 5/31/16.
@@ -38,16 +41,18 @@ public class ProfileFragment extends Fragment {
     Button logout;
     TextView name, email, phone, blood, facebook, country;
 
-
     String mUserId;
     FirebaseUser mFirebaseUser;
+
+    FragmentTransaction fragmentTransaction;
+    Toolbar toolbar;
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
 
         View root = inflater.inflate(R.layout.blood_user_profile, container, false);
         Toolbar toolbar = (Toolbar) getActivity().findViewById(R.id.toolbar);
-        toolbar.setTitle("Donné Profile");
+        toolbar.setTitle("My Profile");
 
 
         name = (TextView) root.findViewById(R.id.name);
@@ -57,7 +62,7 @@ public class ProfileFragment extends Fragment {
         facebook = (TextView) root.findViewById(R.id.facebook);
         blood = (TextView) root.findViewById(R.id.blood);
 
-        logout = (Button) root.findViewById(R.id.logout);
+        logout = (Button) root.findViewById(R.id.edit);
 
         mFirebaseAuth = FirebaseAuth.getInstance();
         mFirebaseUser = mFirebaseAuth.getCurrentUser();
@@ -100,7 +105,7 @@ public class ProfileFragment extends Fragment {
             public void onClick(View v) {
 
                 new SweetAlertDialog(getActivity(), SweetAlertDialog.WARNING_TYPE)
-                        .setTitleText("Logout ?")
+                        .setTitleText("Edit Details?")
                         .setCancelText("No")
                         .setConfirmText("Yes")
                         .showCancelButton(true)
@@ -115,8 +120,8 @@ public class ProfileFragment extends Fragment {
                             @Override
                             public void onClick(SweetAlertDialog sweetAlertDialog) {
 
-                                mFirebaseAuth.signOut();
-                                getActivity().recreate();
+                                setCurrentFragment(new RegisterFragment(), "Edit Details");
+
 
                             }
                         }).show();
@@ -135,6 +140,20 @@ public class ProfileFragment extends Fragment {
         SharedPreferences.Editor edit = spf.edit();
         edit.putString(key, value);
         edit.commit();
+
+    }
+
+    public void setCurrentFragment(Fragment newFragment, String title) {
+
+        toolbar = (Toolbar) getActivity().findViewById(R.id.toolbar);
+
+        fragmentTransaction = getActivity().getSupportFragmentManager().beginTransaction();
+        fragmentTransaction.setCustomAnimations(R.anim.enter_from_left, R.anim.exit_to_right, R.anim.enter_from_right, R.anim.exit_to_left);
+        fragmentTransaction.replace(R.id.mainFrame, newFragment);
+        fragmentTransaction.addToBackStack(null);
+        fragmentTransaction.commit();
+
+        toolbar.setTitle(title);
 
     }
 

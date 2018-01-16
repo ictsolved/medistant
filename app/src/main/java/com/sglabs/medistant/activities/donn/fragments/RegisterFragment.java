@@ -147,57 +147,6 @@ public class RegisterFragment extends Fragment {
                                         mDatabase.child("users").child(mUserId).child("data").child("city").setValue((country));
 
 
-                                        save("email", emailStr);
-                                        save("phone", phoneStr);
-                                        save("facebook", facebookStr);
-                                        save("name", nameStr);
-
-
-                                        mFirebaseAuth.signInWithEmailAndPassword(emailStr, passwordStr)
-                                                .addOnCompleteListener(getActivity(), new OnCompleteListener<AuthResult>() {
-                                                    @Override
-                                                    public void onComplete(@NonNull Task<AuthResult> task) {
-                                                        if (task.isSuccessful()) {
-
-                                                            FirebaseMessaging.getInstance().subscribeToTopic("Ap");
-                                                            FirebaseMessaging.getInstance().subscribeToTopic("Am");
-                                                            FirebaseMessaging.getInstance().subscribeToTopic("Bp");
-                                                            FirebaseMessaging.getInstance().subscribeToTopic("Bm");
-                                                            FirebaseMessaging.getInstance().subscribeToTopic("Op");
-                                                            FirebaseMessaging.getInstance().subscribeToTopic("Om");
-                                                            FirebaseMessaging.getInstance().subscribeToTopic("ABp");
-                                                            FirebaseMessaging.getInstance().subscribeToTopic("ABm");
-
-
-                                                            Log.d("AndroidBash", "Subscribed");
-                                                            Toast.makeText(getActivity(), "Subscribed", Toast.LENGTH_SHORT).show();
-                                                            String token = FirebaseInstanceId.getInstance().getToken();
-                                                            Log.d("AndroidBash", token);
-
-
-                                                            dialog.dismiss();
-                                                            startActivity(new Intent(getActivity(), MainActivity.class));
-                                                            getActivity().finish();
-                                                            save("code", "1");
-
-                                                        } else {
-
-                                                            new SweetAlertDialog(getActivity(), SweetAlertDialog.ERROR_TYPE)
-                                                                    .setTitleText("Error")
-                                                                    .setContentText(task.getException().getMessage())
-                                                                    .setConfirmText("Retry")
-                                                                    .setConfirmClickListener(new SweetAlertDialog.OnSweetClickListener() {
-                                                                        @Override
-                                                                        public void onClick(SweetAlertDialog sDialog) {
-                                                                            sDialog.dismissWithAnimation();
-                                                                        }
-                                                                    })
-                                                                    .show();
-
-                                                        }
-                                                    }
-                                                });
-
 
                                     } else {
 

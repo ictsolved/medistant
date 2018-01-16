@@ -9,8 +9,9 @@ import android.util.AttributeSet;
 import android.view.View;
 
 import com.sglabs.medistant.R;
-import com.sglabs.medistant.activities.FirstAidActivity;
 import com.sglabs.medistant.activities.HomeActivity;
+import com.sglabs.medistant.activities.firstaid.FirstAidMainActivity;
+
 
 public class FirstAid extends PercentRelativeLayout {
     public AppCompatButton textButton8;
@@ -42,7 +43,7 @@ public class FirstAid extends PercentRelativeLayout {
                     @Override
                     public void onClick(View view) {
                         HomeActivity activity = ((HomeActivity) getContext());
-                        Intent transitionIntent = new Intent(activity, FirstAidActivity.class);
+                        Intent transitionIntent = new Intent(activity, FirstAidMainActivity.class);
                         activity.startActivity(transitionIntent);
                     }
                 });
@@ -54,7 +55,7 @@ public class FirstAid extends PercentRelativeLayout {
                     @Override
                     public void onClick(View view1) {
                         HomeActivity activity1 = ((HomeActivity) getContext());
-                        Intent transitionIntent1 = new Intent(activity1, FirstAidActivity.class);
+                        Intent transitionIntent1 = new Intent(activity1, FirstAidMainActivity.class);
                         activity1.startActivity(transitionIntent1);
                     }
                 });
