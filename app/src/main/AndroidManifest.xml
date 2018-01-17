@@ -254,6 +254,17 @@
             android:name=".activities.donn.main.ConnectUsers"
             android:theme="@style/AppTheme.NoActionBar" />
 
+        <activity
+            android:name=".activities.lapitchat.EditDetailsActivity"
+            android:label="Edit Profile"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
         <!--firstaid-->
         <activity
             android:name=".activities.firstaid.FirstAidMainActivity"

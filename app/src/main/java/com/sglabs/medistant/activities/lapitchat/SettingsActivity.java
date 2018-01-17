@@ -52,6 +52,7 @@ public class SettingsActivity extends AppCompatActivity {
     private TextView mStatus;
     private Button mStatusBtn;
     private Button mImageBtn;
+    private Button EditBtn;
     // Storage Firebase
     private StorageReference mImageStorage;
 
@@ -80,6 +81,7 @@ public class SettingsActivity extends AppCompatActivity {
 
         mStatusBtn = (Button) findViewById(R.id.settings_status_btn);
         mImageBtn = (Button) findViewById(R.id.settings_image_btn);
+        EditBtn = (Button) findViewById(R.id.edit_details);
 
         mImageStorage = FirebaseStorage.getInstance().getReference();
 
@@ -143,6 +145,19 @@ public class SettingsActivity extends AppCompatActivity {
                 Intent status_intent = new Intent(SettingsActivity.this, StatusActivity.class);
                 status_intent.putExtra("status_value", status_value);
                 startActivity(status_intent);
+
+            }
+        });
+
+
+        EditBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+
+                Intent edit_details = new Intent(SettingsActivity.this, EditDetailsActivity.class);
+
+                startActivity(edit_details);
 
             }
         });
