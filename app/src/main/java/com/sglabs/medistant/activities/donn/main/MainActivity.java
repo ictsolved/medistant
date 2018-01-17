@@ -64,7 +64,7 @@ public class MainActivity extends AppCompatActivity {
 
         if (mFirebaseUser == null) {
 
-            startActivity(new Intent(this, LoginSignUp.class));
+            startActivity(new Intent(this, com.sglabs.medistant.activities.lapitchat.StartActivity.class));
             finish();
 
         } else {

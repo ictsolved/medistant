@@ -263,9 +263,6 @@
         </service>
 
         <activity
-            android:name=".activities.donn.main.LoginSignUp"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
             android:name=".activities.donn.main.ConnectUsers"
             android:theme="@style/AppTheme.NoActionBar" />
 

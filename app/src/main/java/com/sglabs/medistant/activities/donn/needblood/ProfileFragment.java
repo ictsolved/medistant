@@ -38,7 +38,7 @@ import com.sglabs.medistant.activities.donn.fragments.RegisterFragment;
 public class ProfileFragment extends Fragment {
 
     FirebaseAuth mFirebaseAuth;
-    Button logout;
+    Button edit;
     TextView name, email, phone, blood, facebook, country;
 
     String mUserId;
@@ -62,7 +62,7 @@ public class ProfileFragment extends Fragment {
         facebook = (TextView) root.findViewById(R.id.facebook);
         blood = (TextView) root.findViewById(R.id.blood);
 
-        logout = (Button) root.findViewById(R.id.edit);
+        edit = (Button) root.findViewById(R.id.edit);
 
         mFirebaseAuth = FirebaseAuth.getInstance();
         mFirebaseUser = mFirebaseAuth.getCurrentUser();
@@ -100,7 +100,7 @@ public class ProfileFragment extends Fragment {
         });
 
 
-        logout.setOnClickListener(new View.OnClickListener() {
+        edit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 

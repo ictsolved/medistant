@@ -5,7 +5,6 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
-import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
@@ -19,9 +18,6 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
 
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
-import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
@@ -34,7 +30,6 @@ import com.sglabs.medistant.activities.donn.main.MainActivity;
 import java.util.ArrayList;
 import java.util.Locale;
 
-import com.ontbee.legacyforks.cn.pedant.SweetAlert.SweetAlertDialog;
 import dmax.dialog.SpotsDialog;
 
 /**
@@ -48,7 +43,7 @@ public class RegisterFragment extends Fragment {
     Locale[] locale;
     Spinner spinner;
     Spinner bloodspinner;
-    Button register;
+    Button update;
     String country;
     String bloodlist;
     SharedPreferences spf;
@@ -67,8 +62,8 @@ public class RegisterFragment extends Fragment {
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
-        root = inflater.inflate(R.layout.blood_register, container, false);
-        register = (Button) root.findViewById(R.id.reg);
+        root = inflater.inflate(R.layout.blood_prof_update, container, false);
+        update = (Button) root.findViewById(R.id.update);
         name = (EditText) root.findViewById(R.id.editText);
         phone = (EditText) root.findViewById(R.id.editText3);
         facebook = (EditText) root.findViewById(R.id.editText5);
@@ -122,7 +117,7 @@ public class RegisterFragment extends Fragment {
         });
 
 
-        register.setOnClickListener(new View.OnClickListener() {
+        update.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
