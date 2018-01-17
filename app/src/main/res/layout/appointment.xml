@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:android="http://schemas.android.com/apk/res/android" android:background="#FFEEEEEE" android:orientation="vertical" android:layout_height="match_parent" android:layout_width="match_parent" android:id="@+id/appointment">
+   <android.support.v7.widget.Toolbar
+       android:id="@+id/toolbar"
+       android:layout_width="match_parent"
+       android:layout_height="?attr/actionBarSize"
+       android:background="?attr/colorPrimary"
+       android:theme="@style/Toolbar"
+       app:popupTheme="@style/Theme.AppCompat.Light.DarkActionBar"
+       app:title="Appointment" />
+   <android.support.percent.PercentRelativeLayout android:layout_height="wrap_content" android:layout_width="match_parent">
+      <com.sglabs.medistant.elements.appointmentactivity.ApptScroll android:background="#FFFFFFFF" android:fillViewport="true" android:scrollbars="vertical" android:layout_marginStart="0dp" android:layout_marginTop="0dp" android:layout_width="match_parent" android:layout_height="match_parent" android:id="@+id/appt_scroll">
+         <android.support.percent.PercentRelativeLayout android:layout_height="match_parent" android:layout_width="wrap_content"></android.support.percent.PercentRelativeLayout>
+      </com.sglabs.medistant.elements.appointmentactivity.ApptScroll>
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:id="@+id/appt_view_pager_container" android:orientation="vertical" app:layout_marginTopPercent="0%" app:layout_marginStartPercent="0%" android:layout_width="match_parent" android:layout_height="match_parent">
+         <android.support.design.widget.TabLayout app:tabGravity="fill" app:tabMode="fixed" app:tabSelectedTextColor="#FFFFFFFF" app:tabTextColor="#FFFFFFFF" app:tabIndicatorColor="#FFFFFFFF" app:tabTextAppearance="@android:style/TextAppearance.Widget.TabWidget" app:tabMinWidth="40dp" android:theme="@style/ThemeOverlay.AppCompat.ActionBar" android:background="#FF009688" android:layout_height="wrap_content" android:layout_width="match_parent" android:id="@+id/appt_view_pager_tabs"/>
+         <com.sglabs.medistant.elements.appointmentactivity.ApptViewPager android:background="#FFFFFFFF" android:layout_height="match_parent" android:layout_width="match_parent" android:id="@+id/appt_view_pager"/>
+      </LinearLayout>
+   </android.support.percent.PercentRelativeLayout>
+</LinearLayout>

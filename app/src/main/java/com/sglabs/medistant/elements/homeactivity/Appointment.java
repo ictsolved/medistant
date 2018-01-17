@@ -9,6 +9,7 @@ import android.util.AttributeSet;
 import android.view.View;
 
 import com.sglabs.medistant.R;
+import com.sglabs.medistant.activities.AppointmentActivity;
 import com.sglabs.medistant.activities.HomeActivity;
 /*import com.sglabs.medistant.activities.MainActivityAppointment;*/
 
@@ -42,7 +43,7 @@ public class Appointment extends PercentRelativeLayout {
                     @Override
                     public void onClick(View view) {
                         HomeActivity activity = ((HomeActivity) getContext());
-                        Intent transitionIntent = new Intent(activity, HomeActivity.class);
+                        Intent transitionIntent = new Intent(activity, AppointmentActivity.class);
                         activity.startActivity(transitionIntent);
                     }
                 });
@@ -54,7 +55,7 @@ public class Appointment extends PercentRelativeLayout {
                     @Override
                     public void onClick(View view1) {
                         HomeActivity activity1 = ((HomeActivity) getContext());
-                        Intent transitionIntent1 = new Intent(activity1, HomeActivity.class);
+                        Intent transitionIntent1 = new Intent(activity1, AppointmentActivity.class);
                         activity1.startActivity(transitionIntent1);
                     }
                 });

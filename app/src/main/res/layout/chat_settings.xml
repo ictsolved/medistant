@@ -30,9 +30,9 @@
         android:id="@+id/settings_status_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
+        android:layout_above="@+id/edit_details"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="30dp"
+        android:layout_marginBottom="10dp"
         android:backgroundTint="@color/white"
         android:paddingLeft="20dp"
         android:paddingRight="20dp"
@@ -56,13 +56,24 @@
         android:id="@+id/edit_details"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_above="@+id/logout"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="10dp"
-        android:layout_above="@+id/settings_image_btn"
         android:backgroundTint="@color/white"
-        android:paddingLeft="33dp"
-        android:paddingRight="33dp"
-        android:text="EDIT DETAILS"
+        android:text="VIEW FULL PROFILE"
+        android:textColor="@color/colorAccent" />
+
+    <Button
+        android:id="@+id/logout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:backgroundTint="@color/white"
+        android:paddingLeft="50dp"
+        android:paddingRight="50dp"
+        android:text="LOGOUT"
         android:textColor="@color/colorAccent" />
 
     <TextView

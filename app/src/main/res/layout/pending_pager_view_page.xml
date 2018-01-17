@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.sglabs.medistant.elements.appointmentactivity.PendingPagerView xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:android="http://schemas.android.com/apk/res/android" android:background="#FFEEEEEE" android:layout_height="match_parent" android:layout_width="match_parent" android:id="@+id/pending_pager_view">
+   <android.support.design.widget.FloatingActionButton android:backgroundTint="#FF009688" android:src="@drawable/plus_sign_ffffffff" app:borderWidth="0dp" app:layout_marginTopPercent="83.999997377396%" app:layout_marginStartPercent="79.000002145767%" android:layout_height="wrap_content" android:layout_width="wrap_content" android:id="@+id/floating_action_button11"/>
+</com.sglabs.medistant.elements.appointmentactivity.PendingPagerView>

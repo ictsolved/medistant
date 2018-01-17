@@ -76,7 +76,7 @@ public class EditDetailsActivity extends AppCompatActivity {
 
         if (getSupportFragmentManager().getBackStackEntryCount() > 0) {
 
-            if (getSupportFragmentManager().findFragmentById(R.id.mainFrame) instanceof ProfileFragment) {
+            if (getSupportFragmentManager().findFragmentById(R.id.mainFrame) instanceof com.sglabs.medistant.activities.lapitchat.ProfileFragment) {
 
                 finish();
             }
