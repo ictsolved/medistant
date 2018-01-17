@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" >
 
-    <item
+   <item
         android:id="@+id/main_settings_btn"
-        android:title="Account Settings" />
+        android:icon="@drawable/profile"
+        android:orderInCategory="70"
+        android:title="@string/action_edit"
+        app:showAsAction="always" />
    
-    <item
-        android:id="@+id/main_logout_btn"
-        android:title="@string/log_out" />
 </menu>

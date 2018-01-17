@@ -192,15 +192,6 @@ public class HomeActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         super.onOptionsItemSelected(item);
 
-        if (item.getItemId() == R.id.main_logout_btn) {
-
-            mUserRef.child("online").setValue(ServerValue.TIMESTAMP);
-
-            FirebaseAuth.getInstance().signOut();
-            sendToStart();
-
-        }
-
         if (item.getItemId() == R.id.main_settings_btn) {
 
             Intent settingsIntent = new Intent(HomeActivity.this, SettingsActivity.class);

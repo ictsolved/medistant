@@ -20,6 +20,7 @@ import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ServerValue;
 import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
@@ -53,6 +54,7 @@ public class SettingsActivity extends AppCompatActivity {
     private Button mStatusBtn;
     private Button mImageBtn;
     private Button EditBtn;
+    private Button LogoutBtn;
     // Storage Firebase
     private StorageReference mImageStorage;
 
@@ -82,6 +84,7 @@ public class SettingsActivity extends AppCompatActivity {
         mStatusBtn = (Button) findViewById(R.id.settings_status_btn);
         mImageBtn = (Button) findViewById(R.id.settings_image_btn);
         EditBtn = (Button) findViewById(R.id.edit_details);
+        LogoutBtn= (Button) findViewById(R.id.logout);
 
         mImageStorage = FirebaseStorage.getInstance().getReference();
 
@@ -162,6 +165,16 @@ public class SettingsActivity extends AppCompatActivity {
             }
         });
 
+        LogoutBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                FirebaseAuth.getInstance().signOut();
+                sendToStart();
+
+            }
+        });
+
 
         mImageBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -184,6 +197,14 @@ public class SettingsActivity extends AppCompatActivity {
             }
         });
 
+
+    }
+
+    private void sendToStart() {
+
+        Intent startIntent = new Intent(SettingsActivity.this, StartActivity.class);
+        startActivity(startIntent);
+        finish();
 
     }
 

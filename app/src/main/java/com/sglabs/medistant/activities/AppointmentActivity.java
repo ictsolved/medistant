@@ -96,7 +96,7 @@ public class AppointmentActivity extends AppCompatActivity {
   }
 
   private void setup() {
-    
+
     this.apptScroll = (ApptScroll) findViewById(R.id.appt_scroll);
 
     apptViewPager = (ApptViewPager) findViewById(R.id.appt_view_pager);
