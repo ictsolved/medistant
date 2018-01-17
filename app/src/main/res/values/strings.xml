@@ -215,7 +215,7 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="default_status">Hi there, I\'m using Lapit Chat App</string>
+    <string name="default_status">Medistant is my Medical Assistant</string>
     <string name="welcome">Welcome to Medistant</string>
 
 

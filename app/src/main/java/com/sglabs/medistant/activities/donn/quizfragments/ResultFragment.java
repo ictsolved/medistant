@@ -34,7 +34,6 @@ public class ResultFragment extends Fragment {
         resultt = (TextView) root.findViewById(R.id.textRes);
         data = (TextView) root.findViewById(R.id.data);
 
-        learn = (Button) root.findViewById(R.id.learn);
         sched = (Button) root.findViewById(R.id.sched);
 
 

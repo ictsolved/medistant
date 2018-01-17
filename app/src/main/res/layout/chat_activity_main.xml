@@ -14,6 +14,11 @@
             android:id="@+id/main_page_toolbar"
             layout="@layout/chat_app_bar" />
 
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/line_separator_height"
+            android:background="@color/teal_600" />
+
         <android.support.design.widget.TabLayout
             android:id="@+id/main_tabs"
             android:layout_width="match_parent"

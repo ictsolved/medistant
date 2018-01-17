@@ -29,6 +29,12 @@ public class MainActivity extends AppCompatActivity {
     private TabLayout mTabLayout;
 
     @Override
+    public boolean onSupportNavigateUp() {
+        onBackPressed();
+        return true;
+    }
+
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.chat_activity_main);
@@ -37,7 +43,9 @@ public class MainActivity extends AppCompatActivity {
 
         mToolbar = (Toolbar) findViewById(R.id.main_page_toolbar);
         setSupportActionBar(mToolbar);
-        getSupportActionBar().setTitle("Lapit Chat");
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        getSupportActionBar().setTitle("Chat");
 
         if (mAuth.getCurrentUser() != null) {
 
@@ -100,45 +108,13 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        super.onCreateOptionsMenu(menu);
-
-        getMenuInflater().inflate(R.menu.main_menu, menu);
-
-
-        return true;
-    }
-
-
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        super.onOptionsItemSelected(item);
-
-        if (item.getItemId() == R.id.main_logout_btn) {
-
-            mUserRef.child("online").setValue(ServerValue.TIMESTAMP);
-
-            FirebaseAuth.getInstance().signOut();
-            sendToStart();
-
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                onBackPressed();
+                return true;
         }
-
-        if (item.getItemId() == R.id.main_settings_btn) {
-
-            Intent settingsIntent = new Intent(MainActivity.this, SettingsActivity.class);
-            startActivity(settingsIntent);
-
-        }
-
-        if (item.getItemId() == R.id.main_all_btn) {
-
-            Intent settingsIntent = new Intent(MainActivity.this, UsersActivity.class);
-            startActivity(settingsIntent);
-
-        }
-
-        return true;
+        return super.onOptionsItemSelected(item);
     }
 }

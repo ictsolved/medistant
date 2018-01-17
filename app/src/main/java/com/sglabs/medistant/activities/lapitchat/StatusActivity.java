@@ -77,6 +77,7 @@ public class StatusActivity extends AppCompatActivity {
                         if (task.isSuccessful()) {
 
                             mProgress.dismiss();
+                            finish();
 
                         } else {
 

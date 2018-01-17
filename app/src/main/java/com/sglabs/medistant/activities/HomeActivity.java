@@ -20,9 +20,12 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ServerValue;
 import com.sglabs.medistant.R;
 import com.sglabs.medistant.activities.lapitchat.MainActivity;
+import com.sglabs.medistant.activities.lapitchat.SettingsActivity;
 import com.sglabs.medistant.activities.lapitchat.StartActivity;
+import com.sglabs.medistant.activities.lapitchat.UsersActivity;
 import com.sglabs.medistant.elements.homeactivity.Appointment;
 import com.sglabs.medistant.elements.homeactivity.BloodDonation;
 import com.sglabs.medistant.elements.homeactivity.Chat;
@@ -181,21 +184,31 @@ public class HomeActivity extends AppCompatActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu_db, menu);
+        getMenuInflater().inflate(R.menu.main_menu, menu);
         return true;
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        int i = item.getItemId();
-        if (i == R.id.action_logout) {
+        super.onOptionsItemSelected(item);
+
+        if (item.getItemId() == R.id.main_logout_btn) {
+
+            mUserRef.child("online").setValue(ServerValue.TIMESTAMP);
+
             FirebaseAuth.getInstance().signOut();
-            startActivity(new Intent(this, MainActivity.class));
-            finish();
-            return true;
-        } else {
-            return super.onOptionsItemSelected(item);
+            sendToStart();
+
         }
+
+        if (item.getItemId() == R.id.main_settings_btn) {
+
+            Intent settingsIntent = new Intent(HomeActivity.this, SettingsActivity.class);
+            startActivity(settingsIntent);
+
+        }
+
+        return true;
     }
 
 
